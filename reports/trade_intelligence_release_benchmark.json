@@ -1,0 +1,57 @@
+{
+  "release_id": "ti-3349f6e0cb6dde75fe7d5323af71463748cad3232bc7bcb476c6ff6dcd8cd41b",
+  "dataset_fingerprint": "sha256:4b65676dc1766ebd869df52fef1c3786beffb11fcc838a99eb14a3818e4c136e",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.6",
+    "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel"
+  },
+  "method": "One local Python process, sequential regeneration and independent validation against an existing release, followed by a separate engine load and five warm calls per case. OS disk cache uncontrolled. Query timings include JSON encoding, excluding console transport.",
+  "repetitions_per_warm_query": 5,
+  "regeneration_seconds": 72.34466400020756,
+  "validation_seconds": 47.204368700040504,
+  "regeneration_stages": {
+    "sqlite_engine_initialization_seconds": 9.823993399972096,
+    "sqlite_load_seconds_inside_initialization": 2.685389699647203,
+    "parquet_scan_seconds": 6.293564300052822,
+    "independent_fingerprint_seconds": 3.8466827999800444,
+    "generation_and_validation_seconds_before_publish": 72.28264730004594
+  },
+  "standalone_engine_initialization_seconds": 9.49276930000633,
+  "summary_artifacts_total_bytes": 39011861,
+  "manifest_bytes": 9678,
+  "reproducibility": "byte_identical_to_existing_release",
+  "memory": {
+    "peak_bytes": 832299008,
+    "method": "Windows PeakWorkingSetSize for the benchmark process"
+  },
+  "warm_queries": {
+    "product": {
+      "filters": {
+        "product_code": "010111"
+      },
+      "query_ms": 0.34529995173215866,
+      "serialization_ms": 0.3074000123888254,
+      "query_and_serialization_ms": 0.6526999641209841,
+      "response_bytes": 70348
+    },
+    "exporter": {
+      "filters": {
+        "exporter_code": 4
+      },
+      "query_ms": 1.2673998717218637,
+      "serialization_ms": 0.31409994699060917,
+      "query_and_serialization_ms": 1.583899836987257,
+      "response_bytes": 69980
+    },
+    "importer": {
+      "filters": {
+        "importer_code": 894
+      },
+      "query_ms": 11.738100089132786,
+      "serialization_ms": 0.39599998854100704,
+      "query_and_serialization_ms": 12.24990002810955,
+      "response_bytes": 70292
+    }
+  }
+}

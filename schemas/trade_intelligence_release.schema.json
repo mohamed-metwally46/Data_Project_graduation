@@ -1,0 +1,450 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Globiq Trade Intelligence Release Manifest",
+  "type": "object",
+  "required": [
+    "manifest_schema_version",
+    "release_id",
+    "status",
+    "dataset_fingerprint",
+    "year",
+    "methodology",
+    "generation",
+    "dataset",
+    "inputs",
+    "contracts",
+    "artifact_directory",
+    "artifacts",
+    "statistics",
+    "limitations",
+    "validation"
+  ],
+  "properties": {
+    "manifest_schema_version": {
+      "const": "1.0"
+    },
+    "release_id": {
+      "type": "string",
+      "pattern": "^ti-[0-9a-f]{64}$"
+    },
+    "status": {
+      "enum": [
+        "generated",
+        "validated",
+        "invalid",
+        "incomplete"
+      ]
+    },
+    "dataset_fingerprint": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "methodology": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generation": {
+      "type": "object",
+      "required": [
+        "command",
+        "deterministic",
+        "configuration"
+      ],
+      "properties": {
+        "command": {
+          "type": "string",
+          "minLength": 1
+        },
+        "deterministic": {
+          "type": "boolean"
+        },
+        "configuration": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "dataset": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "dataset_version",
+        "year",
+        "eligibility",
+        "record_grain",
+        "eligible_records",
+        "unique_composite_keys",
+        "observed_self_links",
+        "observed_exporters",
+        "observed_importers",
+        "observed_products",
+        "observed_routes",
+        "reciprocal_pairs",
+        "coverage"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "1.0"
+        },
+        "dataset_version": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "eligibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_grain": {
+          "const": [
+            "year",
+            "exporter_code",
+            "importer_code",
+            "product_code"
+          ]
+        },
+        "eligible_records": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unique_composite_keys": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observed_self_links": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observed_exporters": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observed_importers": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observed_products": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observed_routes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reciprocal_pairs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "coverage": {
+          "type": "object",
+          "required": [
+            "complete_global_coverage",
+            "source",
+            "limitation",
+            "absence_meaning"
+          ],
+          "properties": {
+            "complete_global_coverage": {
+              "const": false
+            },
+            "source": {
+              "type": "string",
+              "minLength": 1
+            },
+            "limitation": {
+              "type": "string",
+              "minLength": 1
+            },
+            "absence_meaning": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "inputs": {
+      "type": "object",
+      "required": [
+        "enriched_parquet",
+        "processed_sqlite",
+        "enrichment_summary",
+        "country_reference",
+        "product_reference",
+        "country_iso2_overrides"
+      ],
+      "properties": {
+        "enriched_parquet": {
+          "$ref": "#/$defs/source"
+        },
+        "processed_sqlite": {
+          "$ref": "#/$defs/source"
+        },
+        "enrichment_summary": {
+          "$ref": "#/$defs/source"
+        },
+        "country_reference": {
+          "$ref": "#/$defs/source"
+        },
+        "product_reference": {
+          "$ref": "#/$defs/source"
+        },
+        "country_iso2_overrides": {
+          "$ref": "#/$defs/source"
+        }
+      },
+      "additionalProperties": false
+    },
+    "contracts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/stamp"
+      },
+      "minItems": 1
+    },
+    "artifact_directory": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_./-]+$"
+    },
+    "artifacts": {
+      "type": "object",
+      "required": [
+        "country_intelligence",
+        "product_intelligence",
+        "route_intelligence",
+        "market_opportunity_summary"
+      ],
+      "properties": {
+        "country_intelligence": {
+          "$ref": "#/$defs/artifact"
+        },
+        "product_intelligence": {
+          "$ref": "#/$defs/artifact"
+        },
+        "route_intelligence": {
+          "$ref": "#/$defs/artifact"
+        },
+        "market_opportunity_summary": {
+          "$ref": "#/$defs/artifact"
+        }
+      },
+      "additionalProperties": false
+    },
+    "statistics": {
+      "type": "object",
+      "required": [
+        "year",
+        "eligible_records",
+        "unique_composite_keys",
+        "duplicated_composite_keys",
+        "records_on_duplicated_composite_keys",
+        "self_trade_records",
+        "observed_exporters",
+        "observed_importers",
+        "country_profiles",
+        "zero_observation_country_profiles",
+        "product_profiles",
+        "mapped_products",
+        "unmapped_products",
+        "unobserved_reference_products",
+        "directional_routes",
+        "routes_with_reverse",
+        "reciprocal_pairs",
+        "market_universe"
+      ],
+      "properties": {
+        "year": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "eligible_records": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unique_composite_keys": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "duplicated_composite_keys": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "records_on_duplicated_composite_keys": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "self_trade_records": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observed_exporters": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observed_importers": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "country_profiles": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "zero_observation_country_profiles": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "product_profiles": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mapped_products": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unmapped_products": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unobserved_reference_products": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "directional_routes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "routes_with_reverse": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reciprocal_pairs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "market_universe": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "validation": {
+      "$ref": "#/$defs/stamp"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "stamp": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256",
+        "size_bytes"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_./-]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256",
+        "size_bytes",
+        "format"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_./-]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "format": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256",
+        "size_bytes",
+        "record_count",
+        "schema",
+        "schema_version",
+        "dataset_fingerprint",
+        "configuration"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_./-]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "record_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "schema": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_./-]+$"
+        },
+        "schema_version": {
+          "const": "1.0"
+        },
+        "dataset_fingerprint": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "configuration": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

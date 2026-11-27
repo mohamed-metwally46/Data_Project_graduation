@@ -1,0 +1,1825 @@
+{
+  "stage": "SM-04A-R",
+  "status": "blocked_pending_structural_scope",
+  "blocking_code": "STRUCTURAL_SCOPE_APPROVAL_REQUIRED",
+  "historical_package": {
+    "fingerprint": "sha256:1ae2075cc7b6203557003416f49bef2f5f815fb05ed55dd0cdb9cab6b854bb91",
+    "status": "superseded_for_future_approval",
+    "plan_id": "sm04a-32558594b63919d38b643c249ef06aa8ba882430a330c30ef2ab959fec02910d",
+    "artifacts": {
+      "commercial_feasibility_report.json": {
+        "path": "commercial_feasibility_report.json",
+        "sha256": "8f481d804b77a77569f7367f35c17b6e39cc74cf9a1a2ef1f39babdb05613eb3",
+        "size_bytes": 972
+      },
+      "commercial_quality_report.json": {
+        "path": "commercial_quality_report.json",
+        "sha256": "9d3ba2ed2dc082c76418bd7dc06ab603760fac21dbd2b8bc6c67b2abe974bd11",
+        "size_bytes": 547431
+      },
+      "listing_commercial_plan.json": {
+        "path": "listing_commercial_plan.json",
+        "sha256": "37ce8e0ce8bae0c536b0c2364a7fdb86738384d7754d72036e12521ad8538ca3",
+        "size_bytes": 665498
+      },
+      "offer_commercial_plan.json": {
+        "path": "offer_commercial_plan.json",
+        "sha256": "23ad64b8583055c6abc745c4fa8f4753acb612b6a8ab8e20d27db60e1f0ccffc",
+        "size_bytes": 675755
+      },
+      "product_commercial_review.md": {
+        "path": "product_commercial_review.md",
+        "sha256": "32433e528022b61e36dba6fc228338201ebb0ecb352d9063d0d0b25ed465e6b8",
+        "size_bytes": 105773
+      },
+      "resolved_product_profiles.json": {
+        "path": "resolved_product_profiles.json",
+        "sha256": "c2e6906b87aa6c64d3cff579361c44a8dc0e85c988a43fdadb6a6bcbe63d739c",
+        "size_bytes": 543769
+      },
+      "rfq_commercial_plan.json": {
+        "path": "rfq_commercial_plan.json",
+        "sha256": "0c5d3f98c8e6407ca6353e1a3344aa8d30ffc3fd07cd18c4b4d12d8d975ecf5e",
+        "size_bytes": 448045
+      }
+    }
+  },
+  "upstream": {
+    "pointer_stamps": [
+      {
+        "path": "data/processed/analytics/trade_intelligence_release.json",
+        "sha256": "f02a382ef38f44740458e845917416c6222dc2c32fdf6d710bf168d3ae0ca3ea",
+        "size_bytes": 9678
+      },
+      {
+        "path": "data/planning/synthetic_marketplace/allocation_plan_manifest.json",
+        "sha256": "231bfaab1c3afae6db4a58d503997ff38f3f47da7faa246c85b6246c25b33945",
+        "size_bytes": 4128
+      },
+      {
+        "path": "data/synthetic/stages/companies/company_stage_manifest.json",
+        "sha256": "c0483fb670cef4052c2ad61919614fd9a8cff2f7144680406b3922e925ccbf35",
+        "size_bytes": 6562
+      },
+      {
+        "path": "data/planning/commercial_feasibility/commercial_plan_manifest.json",
+        "sha256": "e49ff88b819e3a1234486258b0cd6d01ca4125ef52e9161f2a24bb40f6fbecd1",
+        "size_bytes": 9853
+      }
+    ],
+    "source": {
+      "release_id": "ti-3349f6e0cb6dde75fe7d5323af71463748cad3232bc7bcb476c6ff6dcd8cd41b",
+      "dataset_fingerprint": "sha256:4b65676dc1766ebd869df52fef1c3786beffb11fcc838a99eb14a3818e4c136e",
+      "year": 2024
+    },
+    "structural_plan_id": "sm02-90bf5c26373c3d2c45f3fe7f371fbbe8a45b880825f9aa0ee9315de2a96b9ef3",
+    "structural_artifacts": {
+      "allocation_plan.json": {
+        "path": "allocation_plan.json",
+        "sha256": "48e4510a4c278adb69f3729399edc0ea044af93076ae479c5287bc7fdb97c44e",
+        "size_bytes": 788184
+      },
+      "geographic_eligibility.json": {
+        "path": "geographic_eligibility.json",
+        "sha256": "3819398da839787db2821b265cf762aa90d873cdc52f505857a84f7482f2bbcf",
+        "size_bytes": 120319
+      },
+      "product_eligibility.json": {
+        "path": "product_eligibility.json",
+        "sha256": "6227bcef0453d0dd7fa689ad64c32237c0d7b787c1a71b6b0daba9c3458bca17",
+        "size_bytes": 8477492
+      }
+    },
+    "company_stage_id": "sm03b-68a129e0877cc0b7405db11375d2ef72ee862b7545075bd36c06099fa8e42363",
+    "company_artifacts": {
+      "company_stage.json": {
+        "path": "company_stage.json",
+        "sha256": "5d41f334d6c5bac78046e21ca231df826a9c5d844dc89bc47c6c753c1a1abce4",
+        "size_bytes": 2219027
+      },
+      "company_validation_report.json": {
+        "path": "company_validation_report.json",
+        "sha256": "fa1b012c76171f61e7ca41a7cec4ec929e1d30883c6f66f42566f44b6c92d58e",
+        "size_bytes": 22022
+      }
+    }
+  },
+  "identity_reconciliation": {
+    "company_uuids": 500,
+    "company_display_codes": 500,
+    "company_roles": 500,
+    "company_products": 1800,
+    "population_namespace": "6894b6d2-eb16-57fb-88c9-7235a969bd8f",
+    "company_namespace": "7ce475cf-9e06-5ebe-ad70-0d61baa61703",
+    "identifier_policy_fingerprint": "sha256:4d0c8f1db426cf95d8c24e3b6baecaf3975cf235cb8d50ada0a3b2f682df4c24",
+    "fixture_product_uuid": "cbfaeac3-71c0-52aa-b85c-d4c394cd026c",
+    "fixture_listing_uuid": "fb51050e-3b24-59e2-adae-e5a094b16411"
+  },
+  "implementation": {
+    "version": "commercial_implementation_files_v1",
+    "files": [
+      {
+        "path": "requirements-dev.txt",
+        "sha256": "860ab73ec874e98df3218a1ab7820c2cefc7a1ecdf276a82722a90ba28c6f640",
+        "size_bytes": 39
+      },
+      {
+        "path": "requirements.txt",
+        "sha256": "f262ca4ee450296864393b91fecc54c934972e398fb7d88d2b82dfb6ac01bd89",
+        "size_bytes": 17
+      },
+      {
+        "path": "src/analytics/market_opportunity_intelligence.py",
+        "sha256": "9b0071a7409be9c5b94f4f8d271e6495cd3e172560ce60b4ec3bbf6a9a296267",
+        "size_bytes": 19589
+      },
+      {
+        "path": "src/analytics/observed.py",
+        "sha256": "7b7920bfbfb93d7f436facbb05dc12b7321b3cd0be71cfe829b8890581b6f2b9",
+        "size_bytes": 3122
+      },
+      {
+        "path": "src/analytics/release.py",
+        "sha256": "e6cbe82a2c19bc90fd51fe334f7cb699150ad833269f5ff69740b9c785f005e5",
+        "size_bytes": 13954
+      },
+      {
+        "path": "src/analytics/release_validation.py",
+        "sha256": "079f7d9839efd56f4723674318efb5aab7a630ae74f02f8e497be86d16669304",
+        "size_bytes": 19535
+      },
+      {
+        "path": "src/enrichment/references.py",
+        "sha256": "21317199ce429a41aab11998da21b044da1e82454ae48bb4b3fe2e3784d4cda7",
+        "size_bytes": 2003
+      },
+      {
+        "path": "src/pipeline.py",
+        "sha256": "ff896dd92a1ead82efdf1a4efbe4f54e9522aa1ecdd48e498c5af9a0708f3a44",
+        "size_bytes": 11856
+      },
+      {
+        "path": "src/preprocessing/trade.py",
+        "sha256": "49a10fd69a3a15a11ac2d2858bc6e5de4c8485b01db8d16d572a6c8572ff0948",
+        "size_bytes": 2036
+      },
+      {
+        "path": "src/synthetic/allocation.py",
+        "sha256": "ed752b377e2184bc49ba59157b4588235386c32a7c2a4530ceb081e7ed7c2167",
+        "size_bytes": 17495
+      },
+      {
+        "path": "src/synthetic/commercial_config.py",
+        "sha256": "741baf700916d2c832289c853f340500bab776975503f3f6677a7063e3bbf5d6",
+        "size_bytes": 10237
+      },
+      {
+        "path": "src/synthetic/commercial_planning.py",
+        "sha256": "b5c61528072a37101c3c4dbdcfb08f1ba4167fc6e3fca8bdf5e771f536c73d5e",
+        "size_bytes": 11175
+      },
+      {
+        "path": "src/synthetic/commercial_remediation.py",
+        "sha256": "2c8cb075410d59c2c3b4d5ca4a37ef70e49fc47540c762a7652f78676d91b5ae",
+        "size_bytes": 15142
+      },
+      {
+        "path": "src/synthetic/commercial_stage.py",
+        "sha256": "fc29624b3d071945d14c30b7a1b3dfaff4c7e825e238ac3774e0dc7b830cac37",
+        "size_bytes": 18430
+      },
+      {
+        "path": "src/synthetic/commercial_validation.py",
+        "sha256": "8550a7f1466aee7e8991850d824218c0bc6a283ceaa06ddfd3a2664fdb538548",
+        "size_bytes": 15843
+      },
+      {
+        "path": "src/synthetic/company_identity.py",
+        "sha256": "5d81fed69e40e6d7e65c2954e49d3b22dbd71cca52187764b3fbb19a487d4872",
+        "size_bytes": 16116
+      },
+      {
+        "path": "src/synthetic/company_publication.py",
+        "sha256": "87e67be0aa6b340c51bfcd4fe3dbfcb2a141acfe041a54878c4ee3fcbdb404ef",
+        "size_bytes": 16758
+      },
+      {
+        "path": "src/synthetic/company_stage.py",
+        "sha256": "306fc93861c62e435ed0379cb617e3cc9efa83c51c571b8b3cbc56ec6cdf7e70",
+        "size_bytes": 17458
+      },
+      {
+        "path": "src/synthetic/company_validation.py",
+        "sha256": "12782ac5951e182514ca43101d99accacd7d1d3df9527a2a0488a4ae57c1f00b",
+        "size_bytes": 12990
+      },
+      {
+        "path": "src/synthetic/determinism.py",
+        "sha256": "d66e616dcb6570798e2bcc4c1299bb6b102c6979454115e6a6e8f29786ca83f9",
+        "size_bytes": 5077
+      },
+      {
+        "path": "src/synthetic/foundation.py",
+        "sha256": "03ecadf91c5131111455b2f92f6327d8bb1613683f296d544b13d2d57ccbde6c",
+        "size_bytes": 4240
+      },
+      {
+        "path": "src/synthetic/listing_population_validation.py",
+        "sha256": "315444d082d4c1cd235f984a9fd89557d6f68fb579e8fc9bdfd195d347e9cc7e",
+        "size_bytes": 11339
+      },
+      {
+        "path": "src/synthetic/listing_stage.py",
+        "sha256": "27ebb253e399e5bc077db1e0a1ce6be95f42f7e7a361fc4aaca972f5db7be47c",
+        "size_bytes": 17800
+      },
+      {
+        "path": "src/synthetic/planning.py",
+        "sha256": "6a0af219feea1833b33fa8f0cdae00be2e753bf0269d598ceb8c5cab0b141003",
+        "size_bytes": 13297
+      },
+      {
+        "path": "src/synthetic/planning_validation.py",
+        "sha256": "6f67796bdb5c007994c665ee5a58251753cbacc0e6b2f296ce3d7b9b0c08dc11",
+        "size_bytes": 12253
+      },
+      {
+        "path": "src/synthetic/sm04a_remediation.py",
+        "sha256": "bee9a33d3ca2894d24c01851bbf0b3fb7e5625c777af7234d2fa5e70c18786a5",
+        "size_bytes": 11846
+      }
+    ],
+    "fingerprint": "sha256:5ac4990388a3a58c823d2b25d9c972d141ec524b71b0381e75d42f560273467f"
+  },
+  "configuration": {
+    "path": "configs/synthetic/commercial.remediation.v1.json",
+    "sha256": "e0dc3a37aa3ef86b207619fd3ffc031e065c06e2c1274a237e835954223b82fe",
+    "size_bytes": 509415
+  },
+  "configuration_fingerprint": "sha256:cfcd3fa37f10d0ff5a9e7ddf0ca25bf9b9cb730f453b126749b03756bbda55e0",
+  "unit_registry_fingerprint": "sha256:3435d4c3c45847a21c0accd702e26e570eb5bbece5fdf61f264127fd125d2062",
+  "product_suitability_fingerprint": "sha256:82ba000bcca19b3e43b722dcb633d42ab064191ee58ca7c389d9bd98e03f38ac",
+  "commercial_specifications_fingerprint": "sha256:10722288bb3f6b0e0791d3444eb65ad1ce94f5905661627b69fbeb09efcf3471",
+  "price_and_quantity_proposal_fingerprint": "sha256:36b1c36a1698026b1cf23f9405534803c16f557428809b240e77ba919927965e",
+  "decimal_policy": {
+    "version": "1.0.0",
+    "precision": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "final_money_rounding": "ROUND_HALF_UP",
+    "traps": [
+      "InvalidOperation",
+      "DivisionByZero",
+      "Overflow"
+    ],
+    "usd_scale": 2,
+    "quantity_scale": "fixed_configured",
+    "zero_stock": "0"
+  },
+  "schemas": [
+    {
+      "path": "schemas/commercial_remediation.v1.schema.json",
+      "sha256": "368cadd2dfe43dabad78655c37067769a329a13db0fd08f75c8316380729fb2e",
+      "size_bytes": 8763
+    },
+    {
+      "path": "schemas/listing_stage.remediation.v1.schema.json",
+      "sha256": "6fbf41832a3ce92f39751b19ba3a6f00205116181aef0770e56710b36d0c5026",
+      "size_bytes": 13483
+    }
+  ],
+  "impact": {
+    "historical": {
+      "products": 300,
+      "supplier_companies": 300,
+      "importer_companies": 200,
+      "distinct_companies": 500,
+      "supplier_associations": 1200,
+      "importer_associations": 600,
+      "listing_allocations": 1000,
+      "active_listings": 850,
+      "out_of_stock_listings": 100,
+      "inactive_listings": 50,
+      "visible_catalog_listings": 950,
+      "generally_available_listings": 850,
+      "open_rfqs": 420,
+      "targeted_rfqs": 180,
+      "rfq_allocations": 600,
+      "offer_allocations": 900,
+      "response_histogram": {
+        "0": 120,
+        "1": 180,
+        "2": 180,
+        "3": 120
+      },
+      "competitive_rfqs": 300,
+      "category_a_records": 1080,
+      "unique_directional_product_relationships": 300,
+      "active_product_coverage": 300,
+      "listed_supplier_coverage": 300,
+      "active_supplier_coverage": 300,
+      "rfq_importer_coverage": 200,
+      "market_coverage": {
+        "supplier": 25,
+        "importer": 75
+      },
+      "combined_market_coverage": 92,
+      "commercial_group_coverage": {
+        "catalog_only_articles": 1,
+        "fabric_area": 14,
+        "food_bulk": 47,
+        "high_value_items": 17,
+        "industrial_bulk": 44,
+        "length_goods": 6,
+        "liquid_goods": 16,
+        "living_items": 3,
+        "medical_packs": 4,
+        "small_articles": 107,
+        "specialized_equipment": 23,
+        "textile_mass": 6,
+        "timber_volume": 1,
+        "tool_sets": 2,
+        "vehicle_parts": 9
+      }
+    },
+    "offline_excluded": {
+      "products": 13,
+      "supplier_companies": 48,
+      "importer_companies": 28,
+      "distinct_companies": 76,
+      "supplier_associations": 52,
+      "importer_associations": 29,
+      "listing_allocations": 42,
+      "active_listings": 37,
+      "out_of_stock_listings": 3,
+      "inactive_listings": 2,
+      "visible_catalog_listings": 40,
+      "generally_available_listings": 37,
+      "open_rfqs": 17,
+      "targeted_rfqs": 9,
+      "rfq_allocations": 26,
+      "offer_allocations": 42,
+      "response_histogram": {
+        "0": 4,
+        "1": 9,
+        "2": 6,
+        "3": 7
+      },
+      "competitive_rfqs": 13,
+      "category_a_records": 51,
+      "unique_directional_product_relationships": 13,
+      "active_product_coverage": 13,
+      "listed_supplier_coverage": 39,
+      "active_supplier_coverage": 35,
+      "rfq_importer_coverage": 24,
+      "market_coverage": {
+        "supplier": 10,
+        "importer": 12
+      },
+      "combined_market_coverage": 22,
+      "commercial_group_coverage": {
+        "catalog_only_articles": 1,
+        "industrial_bulk": 3,
+        "liquid_goods": 2,
+        "living_items": 1,
+        "medical_packs": 4,
+        "small_articles": 1,
+        "vehicle_parts": 1
+      },
+      "unique_affected_companies_by_role": {
+        "supplier": 48,
+        "importer": 28
+      }
+    },
+    "restriction_only_projection": {
+      "products": 287,
+      "supplier_companies": 300,
+      "importer_companies": 200,
+      "distinct_companies": 500,
+      "supplier_associations": 1148,
+      "importer_associations": 571,
+      "listing_allocations": 958,
+      "active_listings": 813,
+      "out_of_stock_listings": 97,
+      "inactive_listings": 48,
+      "visible_catalog_listings": 910,
+      "generally_available_listings": 813,
+      "open_rfqs": 403,
+      "targeted_rfqs": 171,
+      "rfq_allocations": 574,
+      "offer_allocations": 858,
+      "response_histogram": {
+        "0": 116,
+        "1": 171,
+        "2": 174,
+        "3": 113
+      },
+      "competitive_rfqs": 287,
+      "category_a_records": 1029,
+      "unique_directional_product_relationships": 287,
+      "active_product_coverage": 287,
+      "listed_supplier_coverage": 300,
+      "active_supplier_coverage": 300,
+      "rfq_importer_coverage": 199,
+      "market_coverage": {
+        "supplier": 25,
+        "importer": 75
+      },
+      "combined_market_coverage": 92,
+      "commercial_group_coverage": {
+        "fabric_area": 14,
+        "food_bulk": 47,
+        "high_value_items": 17,
+        "industrial_bulk": 41,
+        "length_goods": 6,
+        "liquid_goods": 14,
+        "living_items": 2,
+        "small_articles": 106,
+        "specialized_equipment": 23,
+        "textile_mass": 6,
+        "timber_volume": 1,
+        "tool_sets": 2,
+        "vehicle_parts": 8
+      }
+    },
+    "overlap": {
+      "supplier": {
+        "lost_all": 0,
+        "partially_affected": 48,
+        "multiple_restricted_associations": 4
+      },
+      "importer": {
+        "lost_all": 0,
+        "partially_affected": 28,
+        "multiple_restricted_associations": 1
+      }
+    },
+    "per_restricted_product": [
+      {
+        "source_product_code": "010600",
+        "reference_description": "Animals: live, n.e.s. in chapter 1",
+        "commercial_group": "living_items",
+        "original_review_notes": [
+          "Broad description. The unit is a provisional demo convention.",
+          "Review catalog suitability before any listing-stage approval."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 2,
+        "distinct_companies": 6,
+        "supplier_associations": 4,
+        "importer_associations": 2,
+        "listing_allocations": 4,
+        "active_listings": 3,
+        "out_of_stock_listings": 1,
+        "inactive_listings": 0,
+        "visible_catalog_listings": 4,
+        "generally_available_listings": 3,
+        "open_rfqs": 1,
+        "targeted_rfqs": 1,
+        "rfq_allocations": 2,
+        "offer_allocations": 4,
+        "response_histogram": {
+          "0": 0,
+          "1": 1,
+          "2": 0,
+          "3": 1
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 5,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 4,
+        "active_supplier_coverage": 3,
+        "rfq_importer_coverage": 2,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "living_items": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 2
+        }
+      },
+      {
+        "source_product_code": "220429",
+        "reference_description": "Wine: still, in containers holding more than 2 litres",
+        "commercial_group": "liquid_goods",
+        "original_review_notes": [
+          "Review catalog suitability before any listing-stage approval."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 2,
+        "distinct_companies": 6,
+        "supplier_associations": 4,
+        "importer_associations": 2,
+        "listing_allocations": 4,
+        "active_listings": 3,
+        "out_of_stock_listings": 1,
+        "inactive_listings": 0,
+        "visible_catalog_listings": 4,
+        "generally_available_listings": 3,
+        "open_rfqs": 1,
+        "targeted_rfqs": 1,
+        "rfq_allocations": 2,
+        "offer_allocations": 4,
+        "response_histogram": {
+          "0": 0,
+          "1": 1,
+          "2": 0,
+          "3": 1
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 5,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 4,
+        "active_supplier_coverage": 3,
+        "rfq_importer_coverage": 2,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "liquid_goods": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 2
+        }
+      },
+      {
+        "source_product_code": "220890",
+        "reference_description": "Spirits, liqueurs and other spirituous beverages: n.e.s. in heading no. 2208",
+        "commercial_group": "liquid_goods",
+        "original_review_notes": [
+          "Broad description. The unit is a provisional demo convention.",
+          "Review catalog suitability before any listing-stage approval."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 2,
+        "distinct_companies": 6,
+        "supplier_associations": 4,
+        "importer_associations": 2,
+        "listing_allocations": 4,
+        "active_listings": 3,
+        "out_of_stock_listings": 0,
+        "inactive_listings": 1,
+        "visible_catalog_listings": 3,
+        "generally_available_listings": 3,
+        "open_rfqs": 1,
+        "targeted_rfqs": 1,
+        "rfq_allocations": 2,
+        "offer_allocations": 3,
+        "response_histogram": {
+          "0": 0,
+          "1": 1,
+          "2": 1,
+          "3": 0
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 4,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 4,
+        "active_supplier_coverage": 3,
+        "rfq_importer_coverage": 2,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "liquid_goods": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 2
+        }
+      },
+      {
+        "source_product_code": "240220",
+        "reference_description": "Cigarettes: containing tobacco",
+        "commercial_group": "small_articles",
+        "original_review_notes": [
+          "Review catalog suitability before any listing-stage approval."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 3,
+        "distinct_companies": 7,
+        "supplier_associations": 4,
+        "importer_associations": 3,
+        "listing_allocations": 3,
+        "active_listings": 3,
+        "out_of_stock_listings": 0,
+        "inactive_listings": 0,
+        "visible_catalog_listings": 3,
+        "generally_available_listings": 3,
+        "open_rfqs": 2,
+        "targeted_rfqs": 0,
+        "rfq_allocations": 2,
+        "offer_allocations": 3,
+        "response_histogram": {
+          "0": 1,
+          "1": 0,
+          "2": 0,
+          "3": 1
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 3,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 3,
+        "active_supplier_coverage": 3,
+        "rfq_importer_coverage": 2,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "small_articles": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 3
+        }
+      },
+      {
+        "source_product_code": "281410",
+        "reference_description": "Ammonia: anhydrous",
+        "commercial_group": "industrial_bulk",
+        "original_review_notes": [
+          "Review catalog suitability before any listing-stage approval."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 2,
+        "distinct_companies": 6,
+        "supplier_associations": 4,
+        "importer_associations": 2,
+        "listing_allocations": 3,
+        "active_listings": 3,
+        "out_of_stock_listings": 0,
+        "inactive_listings": 0,
+        "visible_catalog_listings": 3,
+        "generally_available_listings": 3,
+        "open_rfqs": 1,
+        "targeted_rfqs": 1,
+        "rfq_allocations": 2,
+        "offer_allocations": 4,
+        "response_histogram": {
+          "0": 0,
+          "1": 1,
+          "2": 0,
+          "3": 1
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 5,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 3,
+        "active_supplier_coverage": 3,
+        "rfq_importer_coverage": 2,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "industrial_bulk": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 2
+        }
+      },
+      {
+        "source_product_code": "300220",
+        "reference_description": "Vaccines: for human medicine",
+        "commercial_group": "medical_packs",
+        "original_review_notes": [
+          "Review catalog suitability before any listing-stage approval.",
+          "PCS is a demo retail pack with no dosage or contents specified."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 2,
+        "distinct_companies": 6,
+        "supplier_associations": 4,
+        "importer_associations": 2,
+        "listing_allocations": 3,
+        "active_listings": 2,
+        "out_of_stock_listings": 0,
+        "inactive_listings": 1,
+        "visible_catalog_listings": 2,
+        "generally_available_listings": 2,
+        "open_rfqs": 2,
+        "targeted_rfqs": 0,
+        "rfq_allocations": 2,
+        "offer_allocations": 2,
+        "response_histogram": {
+          "0": 1,
+          "1": 0,
+          "2": 1,
+          "3": 0
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 2,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 3,
+        "active_supplier_coverage": 2,
+        "rfq_importer_coverage": 2,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "medical_packs": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 2
+        }
+      },
+      {
+        "source_product_code": "300239",
+        "reference_description": "Vaccines: for veterinary medicine, for other uses than against foot and mouth disease",
+        "commercial_group": "medical_packs",
+        "original_review_notes": [
+          "Review catalog suitability before any listing-stage approval.",
+          "PCS is a demo retail pack with no dosage or contents specified."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 2,
+        "distinct_companies": 6,
+        "supplier_associations": 4,
+        "importer_associations": 2,
+        "listing_allocations": 3,
+        "active_listings": 3,
+        "out_of_stock_listings": 0,
+        "inactive_listings": 0,
+        "visible_catalog_listings": 3,
+        "generally_available_listings": 3,
+        "open_rfqs": 1,
+        "targeted_rfqs": 1,
+        "rfq_allocations": 2,
+        "offer_allocations": 3,
+        "response_histogram": {
+          "0": 0,
+          "1": 1,
+          "2": 1,
+          "3": 0
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 4,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 3,
+        "active_supplier_coverage": 3,
+        "rfq_importer_coverage": 2,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "medical_packs": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 2
+        }
+      },
+      {
+        "source_product_code": "300490",
+        "reference_description": "Medicaments: consisting of mixed or unmixed products n.e.s. in heading no. 3004, for therapeutic or prophylactic uses, packaged for retail sale",
+        "commercial_group": "medical_packs",
+        "original_review_notes": [
+          "Broad description. The unit is a provisional demo convention.",
+          "PCS is a demo retail pack with no dosage or contents specified."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 3,
+        "distinct_companies": 7,
+        "supplier_associations": 4,
+        "importer_associations": 3,
+        "listing_allocations": 3,
+        "active_listings": 3,
+        "out_of_stock_listings": 0,
+        "inactive_listings": 0,
+        "visible_catalog_listings": 3,
+        "generally_available_listings": 3,
+        "open_rfqs": 1,
+        "targeted_rfqs": 1,
+        "rfq_allocations": 2,
+        "offer_allocations": 3,
+        "response_histogram": {
+          "0": 0,
+          "1": 1,
+          "2": 1,
+          "3": 0
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 4,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 3,
+        "active_supplier_coverage": 3,
+        "rfq_importer_coverage": 2,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "medical_packs": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 3
+        }
+      },
+      {
+        "source_product_code": "300660",
+        "reference_description": "Pharmaceutical goods: chemical contraceptive preparations based on hormones or spermicides",
+        "commercial_group": "medical_packs",
+        "original_review_notes": [
+          "PCS is a demo retail pack with no dosage or contents specified."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 2,
+        "distinct_companies": 6,
+        "supplier_associations": 4,
+        "importer_associations": 2,
+        "listing_allocations": 3,
+        "active_listings": 3,
+        "out_of_stock_listings": 0,
+        "inactive_listings": 0,
+        "visible_catalog_listings": 3,
+        "generally_available_listings": 3,
+        "open_rfqs": 1,
+        "targeted_rfqs": 1,
+        "rfq_allocations": 2,
+        "offer_allocations": 3,
+        "response_histogram": {
+          "0": 0,
+          "1": 1,
+          "2": 1,
+          "3": 0
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 4,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 3,
+        "active_supplier_coverage": 3,
+        "rfq_importer_coverage": 2,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "medical_packs": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 2
+        }
+      },
+      {
+        "source_product_code": "360690",
+        "reference_description": "Ferro-cerium and other pyrophoric alloys in all forms: articles of combustible materials n.e.s. in chapter 36",
+        "commercial_group": "industrial_bulk",
+        "original_review_notes": [
+          "Broad description. The unit is a provisional demo convention.",
+          "Review catalog suitability before any listing-stage approval."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 2,
+        "distinct_companies": 6,
+        "supplier_associations": 4,
+        "importer_associations": 2,
+        "listing_allocations": 3,
+        "active_listings": 3,
+        "out_of_stock_listings": 0,
+        "inactive_listings": 0,
+        "visible_catalog_listings": 3,
+        "generally_available_listings": 3,
+        "open_rfqs": 1,
+        "targeted_rfqs": 1,
+        "rfq_allocations": 2,
+        "offer_allocations": 4,
+        "response_histogram": {
+          "0": 0,
+          "1": 1,
+          "2": 0,
+          "3": 1
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 5,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 3,
+        "active_supplier_coverage": 3,
+        "rfq_importer_coverage": 2,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "industrial_bulk": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 2
+        }
+      },
+      {
+        "source_product_code": "382100",
+        "reference_description": "Culture media, prepared: for development of micro-organisms",
+        "commercial_group": "industrial_bulk",
+        "original_review_notes": [
+          "Review catalog suitability before any listing-stage approval."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 3,
+        "distinct_companies": 7,
+        "supplier_associations": 4,
+        "importer_associations": 3,
+        "listing_allocations": 3,
+        "active_listings": 3,
+        "out_of_stock_listings": 0,
+        "inactive_listings": 0,
+        "visible_catalog_listings": 3,
+        "generally_available_listings": 3,
+        "open_rfqs": 2,
+        "targeted_rfqs": 0,
+        "rfq_allocations": 2,
+        "offer_allocations": 3,
+        "response_histogram": {
+          "0": 1,
+          "1": 0,
+          "2": 0,
+          "3": 1
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 3,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 3,
+        "active_supplier_coverage": 3,
+        "rfq_importer_coverage": 2,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "industrial_bulk": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 3
+        }
+      },
+      {
+        "source_product_code": "681310",
+        "reference_description": "Brake linings and pads: with a basis of asbestos, of other mineral substances or of cellulose",
+        "commercial_group": "vehicle_parts",
+        "original_review_notes": [
+          "Review catalog suitability before any listing-stage approval."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 2,
+        "distinct_companies": 6,
+        "supplier_associations": 4,
+        "importer_associations": 2,
+        "listing_allocations": 3,
+        "active_listings": 3,
+        "out_of_stock_listings": 0,
+        "inactive_listings": 0,
+        "visible_catalog_listings": 3,
+        "generally_available_listings": 3,
+        "open_rfqs": 1,
+        "targeted_rfqs": 1,
+        "rfq_allocations": 2,
+        "offer_allocations": 4,
+        "response_histogram": {
+          "0": 0,
+          "1": 1,
+          "2": 0,
+          "3": 1
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 5,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 3,
+        "active_supplier_coverage": 3,
+        "rfq_importer_coverage": 2,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "vehicle_parts": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 2
+        }
+      },
+      {
+        "source_product_code": "930400",
+        "reference_description": "Firearms: (eg spring, air or gas guns and pistols, truncheons), excluding those of heading no. 9307",
+        "commercial_group": "catalog_only_articles",
+        "original_review_notes": [
+          "Review catalog suitability before any listing-stage approval."
+        ],
+        "historical_suitability": "no_explicit_product_disposition",
+        "disposition": "restricted_offline_qa",
+        "products": 1,
+        "supplier_companies": 4,
+        "importer_companies": 2,
+        "distinct_companies": 6,
+        "supplier_associations": 4,
+        "importer_associations": 2,
+        "listing_allocations": 3,
+        "active_listings": 2,
+        "out_of_stock_listings": 1,
+        "inactive_listings": 0,
+        "visible_catalog_listings": 3,
+        "generally_available_listings": 2,
+        "open_rfqs": 2,
+        "targeted_rfqs": 0,
+        "rfq_allocations": 2,
+        "offer_allocations": 2,
+        "response_histogram": {
+          "0": 1,
+          "1": 0,
+          "2": 1,
+          "3": 0
+        },
+        "competitive_rfqs": 1,
+        "category_a_records": 2,
+        "unique_directional_product_relationships": 1,
+        "active_product_coverage": 1,
+        "listed_supplier_coverage": 3,
+        "active_supplier_coverage": 2,
+        "rfq_importer_coverage": 1,
+        "market_coverage": {
+          "supplier": 1,
+          "importer": 1
+        },
+        "combined_market_coverage": 2,
+        "commercial_group_coverage": {
+          "catalog_only_articles": 1
+        },
+        "unique_affected_companies_by_role": {
+          "supplier": 4,
+          "importer": 2
+        }
+      }
+    ],
+    "resolved_specification_structural_projection": {
+      "products": 240,
+      "supplier_companies": 300,
+      "importer_companies": 199,
+      "distinct_companies": 499,
+      "supplier_associations": 960,
+      "importer_associations": 478,
+      "listing_allocations": 802,
+      "active_listings": 683,
+      "out_of_stock_listings": 80,
+      "inactive_listings": 39,
+      "visible_catalog_listings": 763,
+      "generally_available_listings": 683,
+      "open_rfqs": 339,
+      "targeted_rfqs": 141,
+      "rfq_allocations": 480,
+      "offer_allocations": 712,
+      "response_histogram": {
+        "0": 99,
+        "1": 141,
+        "2": 149,
+        "3": 91
+      },
+      "competitive_rfqs": 240,
+      "category_a_records": 853,
+      "unique_directional_product_relationships": 240,
+      "active_product_coverage": 240,
+      "listed_supplier_coverage": 300,
+      "active_supplier_coverage": 298,
+      "rfq_importer_coverage": 196,
+      "market_coverage": {
+        "supplier": 25,
+        "importer": 75
+      },
+      "combined_market_coverage": 92,
+      "commercial_group_coverage": {
+        "fabric_area": 12,
+        "food_bulk": 46,
+        "high_value_items": 8,
+        "industrial_bulk": 36,
+        "liquid_goods": 10,
+        "living_items": 2,
+        "small_articles": 93,
+        "specialized_equipment": 20,
+        "textile_mass": 4,
+        "timber_volume": 1,
+        "tool_sets": 2,
+        "vehicle_parts": 6
+      }
+    },
+    "pending_specification_structural_scope": {
+      "products": 47,
+      "supplier_companies": 148,
+      "importer_companies": 79,
+      "distinct_companies": 227,
+      "supplier_associations": 188,
+      "importer_associations": 93,
+      "listing_allocations": 156,
+      "active_listings": 130,
+      "out_of_stock_listings": 17,
+      "inactive_listings": 9,
+      "visible_catalog_listings": 147,
+      "generally_available_listings": 130,
+      "open_rfqs": 64,
+      "targeted_rfqs": 30,
+      "rfq_allocations": 94,
+      "offer_allocations": 146,
+      "response_histogram": {
+        "0": 17,
+        "1": 30,
+        "2": 25,
+        "3": 22
+      },
+      "competitive_rfqs": 47,
+      "category_a_records": 176,
+      "unique_directional_product_relationships": 47,
+      "active_product_coverage": 47,
+      "listed_supplier_coverage": 128,
+      "active_supplier_coverage": 111,
+      "rfq_importer_coverage": 71,
+      "market_coverage": {
+        "supplier": 19,
+        "importer": 37
+      },
+      "combined_market_coverage": 53,
+      "commercial_group_coverage": {
+        "fabric_area": 2,
+        "food_bulk": 1,
+        "high_value_items": 9,
+        "industrial_bulk": 5,
+        "length_goods": 6,
+        "liquid_goods": 4,
+        "small_articles": 13,
+        "specialized_equipment": 3,
+        "textile_mass": 2,
+        "vehicle_parts": 2
+      },
+      "unique_affected_companies_by_role": {
+        "supplier": 148,
+        "importer": 79
+      }
+    }
+  },
+  "historical_quality_projections": {
+    "historical": {
+      "product_denominator": 300,
+      "listing_denominator": 1000,
+      "rfq_denominator": 600,
+      "recorded_responses": 900,
+      "structurally_eligible_category_a": 1582,
+      "commercially_compatible": 1290,
+      "eligible_nonresponding": 390,
+      "valid_but_incompatible": 292,
+      "unanswered_with_compatible": 111,
+      "unanswered_without_compatible": 9,
+      "boundary_counts": {
+        "price_boundary_count": 5,
+        "positive_stock_boundary_count": 8,
+        "moq_boundary_count": 124
+      }
+    },
+    "restriction_only_historical_projection": {
+      "product_denominator": 287,
+      "listing_denominator": 958,
+      "rfq_denominator": 574,
+      "recorded_responses": 858,
+      "structurally_eligible_category_a": 1519,
+      "commercially_compatible": 1237,
+      "eligible_nonresponding": 379,
+      "valid_but_incompatible": 282,
+      "unanswered_with_compatible": 108,
+      "unanswered_without_compatible": 8,
+      "boundary_counts": {
+        "price_boundary_count": 5,
+        "positive_stock_boundary_count": 8,
+        "moq_boundary_count": 122
+      }
+    },
+    "resolved_unchanged_measurement_historical_projection": {
+      "product_denominator": 236,
+      "listing_denominator": 789,
+      "rfq_denominator": 472,
+      "recorded_responses": 701,
+      "structurally_eligible_category_a": 1258,
+      "commercially_compatible": 1019,
+      "eligible_nonresponding": 318,
+      "valid_but_incompatible": 239,
+      "unanswered_with_compatible": 90,
+      "unanswered_without_compatible": 8,
+      "boundary_counts": {
+        "price_boundary_count": 5,
+        "positive_stock_boundary_count": 6,
+        "moq_boundary_count": 86
+      }
+    }
+  },
+  "proposed_profiles": {
+    "reviewed": 300,
+    "resolved": 240,
+    "restricted": 13,
+    "review_required": 47,
+    "resolved_units": {
+      "KG": 86,
+      "L": 10,
+      "PCS": 130,
+      "M": 3,
+      "M3": 1,
+      "M2": 9,
+      "SET": 1
+    },
+    "resolved_groups": {
+      "food_bulk": 46,
+      "liquid_goods": 10,
+      "industrial_bulk": 36,
+      "living_items": 2,
+      "small_articles": 93,
+      "length_goods": 3,
+      "timber_volume": 1,
+      "textile_mass": 4,
+      "fabric_area": 9,
+      "vehicle_parts": 6,
+      "high_value_items": 8,
+      "tool_sets": 1,
+      "specialized_equipment": 21
+    },
+    "mandatory_corrections": {
+      "220190": {
+        "product_code": "220190",
+        "reference_description": "Waters: other than mineral and aerated, (not containing added sugar or other sweetening matter nor flavoured), ice and snow",
+        "provisional_group": "prefix-22",
+        "anchor_exporter": 100,
+        "anchor_importer": 28,
+        "planning_only": true,
+        "is_synthetic": true,
+        "is_planning_artifact": true,
+        "backend_importable": false,
+        "full_marketplace_release": false,
+        "commercial_group": "liquid_goods",
+        "group_assignment": "reviewed_category_default",
+        "review_notes": [],
+        "measurement_unit": "L",
+        "permitted_units": [
+          "L",
+          "ML"
+        ],
+        "quantity_precision": 3,
+        "reference_price": "2.49",
+        "reference_price_source": "seeded_group_reference",
+        "price_bounds": [
+          "1.245",
+          "3.735"
+        ],
+        "price_variation": {
+          "listing": [
+            "-0.20",
+            "0.20"
+          ],
+          "rfq": [
+            "-0.15",
+            "0.10"
+          ],
+          "offer": [
+            "-0.10",
+            "0.05"
+          ]
+        },
+        "initial_price_domains": {
+          "listing": [
+            "2.00",
+            "2.98"
+          ],
+          "rfq": [
+            "2.12",
+            "2.73"
+          ]
+        },
+        "currency": "USD",
+        "price_basis_quantity": "1",
+        "price_basis_unit": "L",
+        "quoted_price_precision": 2,
+        "stock_bounds": [
+          "20",
+          "600"
+        ],
+        "moq_bounds": [
+          "2",
+          "30"
+        ],
+        "quantity_increment": "0.5",
+        "rfq_quantity_bounds": [
+          "4",
+          "90"
+        ],
+        "maximum_order_quantity": null,
+        "configuration_version": "1.0.0",
+        "override_fields": [],
+        "commercial_provenance": "proposed_synthetic_parameters"
+      },
+      "321590": {
+        "product_code": "321590",
+        "reference_description": "Ink: writing, drawing and other inks, n.e.s. in heading no. 3215, whether or not concentrated or solid",
+        "provisional_group": "prefix-32",
+        "anchor_exporter": 12,
+        "anchor_importer": 752,
+        "planning_only": true,
+        "is_synthetic": true,
+        "is_planning_artifact": true,
+        "backend_importable": false,
+        "full_marketplace_release": false,
+        "commercial_group": "liquid_goods",
+        "group_assignment": "product_override",
+        "review_notes": [
+          "Broad description. The unit is a provisional demo convention."
+        ],
+        "measurement_unit": "L",
+        "permitted_units": [
+          "L",
+          "ML"
+        ],
+        "quantity_precision": 3,
+        "reference_price": "2.97",
+        "reference_price_source": "seeded_group_reference",
+        "price_bounds": [
+          "1.485",
+          "4.455"
+        ],
+        "price_variation": {
+          "listing": [
+            "-0.20",
+            "0.20"
+          ],
+          "rfq": [
+            "-0.15",
+            "0.10"
+          ],
+          "offer": [
+            "-0.10",
+            "0.05"
+          ]
+        },
+        "initial_price_domains": {
+          "listing": [
+            "2.38",
+            "3.56"
+          ],
+          "rfq": [
+            "2.53",
+            "3.26"
+          ]
+        },
+        "currency": "USD",
+        "price_basis_quantity": "1",
+        "price_basis_unit": "L",
+        "quoted_price_precision": 2,
+        "stock_bounds": [
+          "20",
+          "600"
+        ],
+        "moq_bounds": [
+          "2",
+          "30"
+        ],
+        "quantity_increment": "0.5",
+        "rfq_quantity_bounds": [
+          "4",
+          "90"
+        ],
+        "maximum_order_quantity": null,
+        "configuration_version": "1.0.0",
+        "override_fields": [],
+        "commercial_provenance": "proposed_synthetic_parameters"
+      },
+      "401099": {
+        "product_code": "401099",
+        "reference_description": "Rubber: vulcanised, conveyor or transmission belts or belting, of a width 20cm or less",
+        "provisional_group": "prefix-40",
+        "anchor_exporter": 8,
+        "anchor_importer": 516,
+        "planning_only": true,
+        "is_synthetic": true,
+        "is_planning_artifact": true,
+        "backend_importable": false,
+        "full_marketplace_release": false,
+        "commercial_group": "length_goods",
+        "group_assignment": "product_override",
+        "review_notes": [],
+        "measurement_unit": "M",
+        "permitted_units": [
+          "M"
+        ],
+        "quantity_precision": 3,
+        "reference_price": "12.50",
+        "reference_price_source": "product_override",
+        "price_bounds": [
+          "6.250",
+          "18.750"
+        ],
+        "price_variation": {
+          "listing": [
+            "-0.20",
+            "0.20"
+          ],
+          "rfq": [
+            "-0.15",
+            "0.10"
+          ],
+          "offer": [
+            "-0.10",
+            "0.05"
+          ]
+        },
+        "initial_price_domains": {
+          "listing": [
+            "10.00",
+            "15.00"
+          ],
+          "rfq": [
+            "10.63",
+            "13.75"
+          ]
+        },
+        "currency": "USD",
+        "price_basis_quantity": "1",
+        "price_basis_unit": "M",
+        "quoted_price_precision": 2,
+        "stock_bounds": [
+          "18.000",
+          "300.000"
+        ],
+        "moq_bounds": [
+          "2.000",
+          "20.000"
+        ],
+        "quantity_increment": "0.500",
+        "rfq_quantity_bounds": [
+          "3.000",
+          "55.000"
+        ],
+        "maximum_order_quantity": null,
+        "configuration_version": "1.0.0",
+        "override_fields": [
+          "increment",
+          "moq",
+          "parameters",
+          "reference_price",
+          "rfq",
+          "stock"
+        ],
+        "commercial_provenance": "proposed_synthetic_parameters"
+      },
+      "580632": {
+        "product_code": "580632",
+        "reference_description": "Fabrics, narrow woven fabrics, n.e.s. in heading no. 5806, of man-made fibres (excluding goods of heading no. 5807)",
+        "provisional_group": "prefix-58",
+        "anchor_exporter": 51,
+        "anchor_importer": 703,
+        "planning_only": true,
+        "is_synthetic": true,
+        "is_planning_artifact": true,
+        "backend_importable": false,
+        "full_marketplace_release": false,
+        "commercial_group": "length_goods",
+        "group_assignment": "reviewed_category_default",
+        "review_notes": [
+          "Broad description. The unit is a provisional demo convention."
+        ],
+        "measurement_unit": "M",
+        "permitted_units": [
+          "M"
+        ],
+        "quantity_precision": 3,
+        "reference_price": "3.25",
+        "reference_price_source": "product_override",
+        "price_bounds": [
+          "1.625",
+          "4.875"
+        ],
+        "price_variation": {
+          "listing": [
+            "-0.20",
+            "0.20"
+          ],
+          "rfq": [
+            "-0.15",
+            "0.10"
+          ],
+          "offer": [
+            "-0.10",
+            "0.05"
+          ]
+        },
+        "initial_price_domains": {
+          "listing": [
+            "2.60",
+            "3.90"
+          ],
+          "rfq": [
+            "2.77",
+            "3.57"
+          ]
+        },
+        "currency": "USD",
+        "price_basis_quantity": "1",
+        "price_basis_unit": "M",
+        "quoted_price_precision": 2,
+        "stock_bounds": [
+          "22.000",
+          "420.000"
+        ],
+        "moq_bounds": [
+          "2.000",
+          "22.000"
+        ],
+        "quantity_increment": "0.500",
+        "rfq_quantity_bounds": [
+          "4.000",
+          "60.000"
+        ],
+        "maximum_order_quantity": null,
+        "configuration_version": "1.0.0",
+        "override_fields": [
+          "increment",
+          "moq",
+          "parameters",
+          "reference_price",
+          "rfq",
+          "stock"
+        ],
+        "commercial_provenance": "proposed_synthetic_parameters"
+      },
+      "590610": {
+        "product_code": "590610",
+        "reference_description": "Textile fabrics, rubberised: (excluding those of heading no. 5902), adhesive tape of a width not exceeding 20cm",
+        "provisional_group": "prefix-59",
+        "anchor_exporter": 36,
+        "anchor_importer": 296,
+        "planning_only": true,
+        "is_synthetic": true,
+        "is_planning_artifact": true,
+        "backend_importable": false,
+        "full_marketplace_release": false,
+        "commercial_group": "length_goods",
+        "group_assignment": "reviewed_category_default",
+        "review_notes": [],
+        "measurement_unit": "M",
+        "permitted_units": [
+          "M"
+        ],
+        "quantity_precision": 3,
+        "reference_price": "2.75",
+        "reference_price_source": "product_override",
+        "price_bounds": [
+          "1.375",
+          "4.125"
+        ],
+        "price_variation": {
+          "listing": [
+            "-0.20",
+            "0.20"
+          ],
+          "rfq": [
+            "-0.15",
+            "0.10"
+          ],
+          "offer": [
+            "-0.10",
+            "0.05"
+          ]
+        },
+        "initial_price_domains": {
+          "listing": [
+            "2.20",
+            "3.30"
+          ],
+          "rfq": [
+            "2.34",
+            "3.02"
+          ]
+        },
+        "currency": "USD",
+        "price_basis_quantity": "1",
+        "price_basis_unit": "M",
+        "quoted_price_precision": 2,
+        "stock_bounds": [
+          "25.000",
+          "500.000"
+        ],
+        "moq_bounds": [
+          "2.000",
+          "25.000"
+        ],
+        "quantity_increment": "0.500",
+        "rfq_quantity_bounds": [
+          "4.000",
+          "70.000"
+        ],
+        "maximum_order_quantity": null,
+        "configuration_version": "1.0.0",
+        "override_fields": [
+          "increment",
+          "moq",
+          "parameters",
+          "reference_price",
+          "rfq",
+          "stock"
+        ],
+        "commercial_provenance": "proposed_synthetic_parameters"
+      },
+      "851830": {
+        "product_code": "851830",
+        "reference_description": "Headphones, earphones and combined microphone/speaker sets",
+        "provisional_group": "prefix-85",
+        "anchor_exporter": 24,
+        "anchor_importer": 729,
+        "planning_only": true,
+        "is_synthetic": true,
+        "is_planning_artifact": true,
+        "backend_importable": false,
+        "full_marketplace_release": false,
+        "commercial_group": "specialized_equipment",
+        "group_assignment": "product_override",
+        "review_notes": [],
+        "measurement_unit": "PCS",
+        "permitted_units": [
+          "PCS"
+        ],
+        "quantity_precision": 0,
+        "reference_price": "39.50",
+        "reference_price_source": "product_override",
+        "price_bounds": [
+          "19.750",
+          "59.250"
+        ],
+        "price_variation": {
+          "listing": [
+            "-0.20",
+            "0.20"
+          ],
+          "rfq": [
+            "-0.15",
+            "0.10"
+          ],
+          "offer": [
+            "-0.10",
+            "0.05"
+          ]
+        },
+        "initial_price_domains": {
+          "listing": [
+            "31.60",
+            "47.40"
+          ],
+          "rfq": [
+            "33.58",
+            "43.45"
+          ]
+        },
+        "currency": "USD",
+        "price_basis_quantity": "1",
+        "price_basis_unit": "PCS",
+        "quoted_price_precision": 2,
+        "stock_bounds": [
+          "12",
+          "155"
+        ],
+        "moq_bounds": [
+          "1",
+          "12"
+        ],
+        "quantity_increment": "1",
+        "rfq_quantity_bounds": [
+          "1",
+          "20"
+        ],
+        "maximum_order_quantity": null,
+        "configuration_version": "1.0.0",
+        "override_fields": [
+          "increment",
+          "moq",
+          "parameters",
+          "reference_price",
+          "rfq",
+          "stock"
+        ],
+        "commercial_provenance": "proposed_synthetic_parameters"
+      }
+    },
+    "retained_nominal_variations": {
+      "listing": [
+        "-0.20",
+        "0.20"
+      ],
+      "rfq": [
+        "-0.15",
+        "0.10"
+      ],
+      "offer": [
+        "-0.10",
+        "0.05"
+      ]
+    }
+  },
+  "corrected_full_plan": {
+    "status": "not_executed",
+    "builds": 0,
+    "new_plan_id": null
+  },
+  "exact_listing_approval_package": null,
+  "permanent_product_ids_generated": 0,
+  "permanent_listing_ids_generated": 0,
+  "actual_listings_generated": 0,
+  "actual_rfqs_generated": 0,
+  "actual_offers_generated": 0,
+  "authorization": {
+    "sm04b": "blocked",
+    "sm05": "blocked",
+    "sm06": "blocked",
+    "backend_import": "blocked",
+    "full_marketplace": "blocked"
+  },
+  "evidence_fingerprint": "sha256:eaf60b25a07960d86db0d64481b1e3abf42f2eda284b32d93ee4ef77a7268631",
+  "regression_suite": {
+    "status": "passed",
+    "tests_passed": 66,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "operational": {
+    "peak_working_set": {
+      "peak_bytes": 57995264,
+      "method": "Windows PeakWorkingSetSize for the benchmark process"
+    },
+    "seconds": {
+      "upstream_hash_verification_and_identity_reconciliation": 1.8871883999090642,
+      "scope_projection_and_proposal_checks": 0.3399235000833869,
+      "regression_suite": 40.21332049998455,
+      "total_excluding_report_write": 42.47910699993372
+    }
+  }
+}

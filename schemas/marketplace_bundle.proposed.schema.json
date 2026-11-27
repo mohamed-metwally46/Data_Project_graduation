@@ -1,0 +1,727 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Globiq marketplace transport proposal (Backend confirmation pending)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest",
+    "market_references",
+    "products",
+    "companies",
+    "company_roles",
+    "company_product_associations",
+    "listings",
+    "rfqs",
+    "offers"
+  ],
+  "properties": {
+    "manifest": {
+      "$ref": "#/$defs/manifest"
+    },
+    "market_references": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/market"
+      }
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/product"
+      }
+    },
+    "companies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/company"
+      }
+    },
+    "company_roles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/role"
+      }
+    },
+    "company_product_associations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/association"
+      }
+    },
+    "listings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/listing"
+      }
+    },
+    "rfqs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/rfq"
+      }
+    },
+    "offers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/offer"
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "decimal": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+    },
+    "productCode": {
+      "type": "string",
+      "pattern": "^([0-9]{6}|9999AA)$"
+    },
+    "marketCode": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]*$"
+    },
+    "price": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "amount",
+        "currency",
+        "basis_quantity",
+        "unit"
+      ],
+      "properties": {
+        "amount": {
+          "$ref": "#/$defs/decimal"
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "basis_quantity": {
+          "$ref": "#/$defs/decimal"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_release_id",
+        "dataset_fingerprint",
+        "relationship_id",
+        "category",
+        "source_product_code",
+        "exporter_market_code",
+        "importer_market_code",
+        "product_link_observed",
+        "directional_pair_observed"
+      ],
+      "properties": {
+        "source_release_id": {
+          "type": "string",
+          "pattern": "^ti-[a-f0-9]{64}$"
+        },
+        "dataset_fingerprint": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "relationship_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "enum": [
+            "A",
+            "B"
+          ]
+        },
+        "source_product_code": {
+          "$ref": "#/$defs/productCode"
+        },
+        "exporter_market_code": {
+          "$ref": "#/$defs/marketCode"
+        },
+        "importer_market_code": {
+          "$ref": "#/$defs/marketCode"
+        },
+        "product_link_observed": {
+          "type": "boolean"
+        },
+        "directional_pair_observed": {
+          "const": true
+        }
+      }
+    },
+    "manifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contract_version",
+        "contract_status",
+        "marketplace_release_id",
+        "dataset_type",
+        "is_synthetic",
+        "source_release_id",
+        "dataset_fingerprint",
+        "policy_version",
+        "configuration_sha256",
+        "namespace",
+        "artifacts"
+      ],
+      "properties": {
+        "contract_version": {
+          "const": "0.1.0-draft"
+        },
+        "contract_status": {
+          "const": "proposed_backend_confirmation_pending"
+        },
+        "marketplace_release_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dataset_type": {
+          "const": "synthetic_marketplace"
+        },
+        "is_synthetic": {
+          "const": true
+        },
+        "source_release_id": {
+          "type": "string",
+          "pattern": "^ti-[a-f0-9]{64}$"
+        },
+        "dataset_fingerprint": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "policy_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "configuration_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "namespace": {
+          "$ref": "#/$defs/id"
+        },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "sha256",
+              "record_count"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "record_count": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "market": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "display_code",
+        "source_market_code",
+        "name",
+        "iso2",
+        "iso3",
+        "location_kind",
+        "business_location_eligible"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/id"
+        },
+        "display_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,5}-[0-9]{6}$"
+        },
+        "source_market_code": {
+          "$ref": "#/$defs/marketCode"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "iso2": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Z0-9]{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "iso3": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Z0-9]{3}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "location_kind": {
+          "enum": [
+            "country",
+            "territory",
+            "trade_area",
+            "historical"
+          ]
+        },
+        "business_location_eligible": {
+          "type": "boolean"
+        }
+      }
+    },
+    "product": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "display_code",
+        "source_product_code",
+        "reference_description",
+        "category_code",
+        "catalog_assignment_is_synthetic"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/id"
+        },
+        "display_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,5}-[0-9]{6}$"
+        },
+        "source_product_code": {
+          "$ref": "#/$defs/productCode"
+        },
+        "reference_description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category_code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "catalog_assignment_is_synthetic": {
+          "const": true
+        },
+        "display_name": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "company": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "display_code",
+        "is_synthetic",
+        "market_id",
+        "name",
+        "industry",
+        "verification_status"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/id"
+        },
+        "display_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,5}-[0-9]{6}$"
+        },
+        "is_synthetic": {
+          "const": true
+        },
+        "market_id": {
+          "$ref": "#/$defs/id"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "industry": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verification_status": {
+          "const": "demo_unverified"
+        },
+        "email": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[^\\s@]+@([A-Za-z0-9-]+\\.)+invalid$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "website": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^https://([A-Za-z0-9-]+\\.)+invalid/?$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "phone": {
+          "type": "null"
+        }
+      }
+    },
+    "role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "display_code",
+        "is_synthetic",
+        "company_id",
+        "role"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/id"
+        },
+        "display_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,5}-[0-9]{6}$"
+        },
+        "is_synthetic": {
+          "const": true
+        },
+        "company_id": {
+          "$ref": "#/$defs/id"
+        },
+        "role": {
+          "enum": [
+            "supplier",
+            "importer"
+          ]
+        }
+      }
+    },
+    "association": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "display_code",
+        "is_synthetic",
+        "role_id",
+        "product_id",
+        "source_market_code",
+        "source_product_code",
+        "observed_role",
+        "source_release_id",
+        "dataset_fingerprint"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/id"
+        },
+        "display_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,5}-[0-9]{6}$"
+        },
+        "is_synthetic": {
+          "const": true
+        },
+        "role_id": {
+          "$ref": "#/$defs/id"
+        },
+        "product_id": {
+          "$ref": "#/$defs/id"
+        },
+        "source_market_code": {
+          "$ref": "#/$defs/marketCode"
+        },
+        "source_product_code": {
+          "$ref": "#/$defs/productCode"
+        },
+        "observed_role": {
+          "enum": [
+            "exporter",
+            "importer"
+          ]
+        },
+        "source_release_id": {
+          "type": "string",
+          "pattern": "^ti-[a-f0-9]{64}$"
+        },
+        "dataset_fingerprint": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      }
+    },
+    "listing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "display_code",
+        "is_synthetic",
+        "association_id",
+        "status",
+        "price",
+        "available_quantity",
+        "minimum_order_quantity"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/id"
+        },
+        "display_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,5}-[0-9]{6}$"
+        },
+        "is_synthetic": {
+          "const": true
+        },
+        "association_id": {
+          "$ref": "#/$defs/id"
+        },
+        "status": {
+          "enum": [
+            "active",
+            "out_of_stock",
+            "inactive"
+          ]
+        },
+        "price": {
+          "$ref": "#/$defs/price"
+        },
+        "available_quantity": {
+          "$ref": "#/$defs/decimal"
+        },
+        "minimum_order_quantity": {
+          "$ref": "#/$defs/decimal"
+        }
+      }
+    },
+    "rfq": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "display_code",
+        "is_synthetic",
+        "importer_association_id",
+        "destination_market_id",
+        "type",
+        "status",
+        "quantity",
+        "unit",
+        "currency",
+        "target_supplier_role_id",
+        "evidence"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/id"
+        },
+        "display_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,5}-[0-9]{6}$"
+        },
+        "is_synthetic": {
+          "const": true
+        },
+        "importer_association_id": {
+          "$ref": "#/$defs/id"
+        },
+        "destination_market_id": {
+          "$ref": "#/$defs/id"
+        },
+        "type": {
+          "enum": [
+            "open",
+            "targeted"
+          ]
+        },
+        "status": {
+          "enum": [
+            "open",
+            "closed"
+          ]
+        },
+        "quantity": {
+          "$ref": "#/$defs/decimal"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "target_supplier_role_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/evidence"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "target_price": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/price"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "delivery_term_code": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "if": {
+        "properties": {
+          "type": {
+            "const": "open"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "target_supplier_role_id": {
+            "type": "null"
+          },
+          "evidence": {
+            "type": "null"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "target_supplier_role_id": {
+            "$ref": "#/$defs/id"
+          },
+          "evidence": {
+            "$ref": "#/$defs/evidence"
+          }
+        }
+      }
+    },
+    "offer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "display_code",
+        "is_synthetic",
+        "rfq_id",
+        "listing_id",
+        "quantity",
+        "price",
+        "status",
+        "evidence"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/id"
+        },
+        "display_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,5}-[0-9]{6}$"
+        },
+        "is_synthetic": {
+          "const": true
+        },
+        "rfq_id": {
+          "$ref": "#/$defs/id"
+        },
+        "listing_id": {
+          "$ref": "#/$defs/id"
+        },
+        "quantity": {
+          "$ref": "#/$defs/decimal"
+        },
+        "price": {
+          "$ref": "#/$defs/price"
+        },
+        "status": {
+          "enum": [
+            "submitted",
+            "withdrawn"
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence"
+        },
+        "delivery_term_code": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

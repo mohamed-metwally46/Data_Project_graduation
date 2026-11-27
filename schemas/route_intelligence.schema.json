@@ -1,0 +1,335 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Globiq Route Intelligence",
+  "type": "object",
+  "required": [
+    "metadata",
+    "records"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "year",
+        "route_count",
+        "coverage",
+        "complete_global_coverage",
+        "included_unique_rows",
+        "input_rows",
+        "excluded_rows",
+        "observed_eligible_products",
+        "country_reference_entries",
+        "record_grain",
+        "record_grain_unique",
+        "directed_routes_with_reverse",
+        "reciprocal_pairs",
+        "self_trade_routes",
+        "pairs_with_only_unmapped_codes",
+        "composition_command"
+      ],
+      "properties": {
+        "year": {
+          "$ref": "#/$defs/positive"
+        },
+        "route_count": {
+          "$ref": "#/$defs/count"
+        },
+        "coverage": {
+          "$ref": "#/$defs/coverage"
+        },
+        "complete_global_coverage": {
+          "const": false
+        },
+        "included_unique_rows": {
+          "$ref": "#/$defs/positive"
+        },
+        "input_rows": {
+          "$ref": "#/$defs/positive"
+        },
+        "excluded_rows": {
+          "$ref": "#/$defs/count"
+        },
+        "observed_eligible_products": {
+          "$ref": "#/$defs/positive"
+        },
+        "country_reference_entries": {
+          "$ref": "#/$defs/positive"
+        },
+        "record_grain": {
+          "type": "object",
+          "required": [
+            "eligible_records",
+            "unique_composite_keys",
+            "duplicated_composite_keys",
+            "records_on_duplicated_keys"
+          ],
+          "properties": {
+            "eligible_records": {
+              "$ref": "#/$defs/count"
+            },
+            "unique_composite_keys": {
+              "$ref": "#/$defs/count"
+            },
+            "duplicated_composite_keys": {
+              "$ref": "#/$defs/count"
+            },
+            "records_on_duplicated_keys": {
+              "$ref": "#/$defs/count"
+            }
+          },
+          "additionalProperties": false
+        },
+        "record_grain_unique": {
+          "const": true
+        },
+        "directed_routes_with_reverse": {
+          "$ref": "#/$defs/count"
+        },
+        "reciprocal_pairs": {
+          "$ref": "#/$defs/count"
+        },
+        "self_trade_routes": {
+          "$ref": "#/$defs/count"
+        },
+        "pairs_with_only_unmapped_codes": {
+          "$ref": "#/$defs/count"
+        },
+        "composition_command": {
+          "$ref": "#/$defs/text"
+        }
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "positive": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "percentage": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 100
+    },
+    "routeId": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]*:[1-9][0-9]*:[1-9][0-9]*$"
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "complete_global_coverage",
+        "source_limitation",
+        "observed_exporters",
+        "observed_importers",
+        "imputed_quantity_used",
+        "measure"
+      ],
+      "properties": {
+        "complete_global_coverage": {
+          "const": false
+        },
+        "source_limitation": {
+          "$ref": "#/$defs/text"
+        },
+        "observed_exporters": {
+          "$ref": "#/$defs/count"
+        },
+        "observed_importers": {
+          "$ref": "#/$defs/count"
+        },
+        "imputed_quantity_used": {
+          "const": false
+        },
+        "measure": {
+          "$ref": "#/$defs/text"
+        }
+      },
+      "additionalProperties": false
+    },
+    "market": {
+      "type": "object",
+      "required": [
+        "code",
+        "name",
+        "iso2",
+        "iso3",
+        "reference_mapped"
+      ],
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/positive"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "iso2": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "iso3": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reference_mapped": {
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "record": {
+      "type": "object",
+      "required": [
+        "route_id",
+        "year",
+        "exporter",
+        "importer",
+        "record_count",
+        "distinct_products",
+        "product_reference_coverage",
+        "product_composition",
+        "relative_coverage",
+        "self_trade",
+        "reverse_observed",
+        "reverse_route_id",
+        "coverage"
+      ],
+      "properties": {
+        "route_id": {
+          "$ref": "#/$defs/routeId"
+        },
+        "year": {
+          "$ref": "#/$defs/positive"
+        },
+        "exporter": {
+          "$ref": "#/$defs/market"
+        },
+        "importer": {
+          "$ref": "#/$defs/market"
+        },
+        "record_count": {
+          "$ref": "#/$defs/positive"
+        },
+        "distinct_products": {
+          "$ref": "#/$defs/positive"
+        },
+        "product_reference_coverage": {
+          "type": "object",
+          "required": [
+            "observed_normalized_products",
+            "mapped_products",
+            "unmapped_products",
+            "mapped_percent"
+          ],
+          "properties": {
+            "observed_normalized_products": {
+              "$ref": "#/$defs/positive"
+            },
+            "mapped_products": {
+              "$ref": "#/$defs/positive"
+            },
+            "unmapped_products": {
+              "$ref": "#/$defs/count"
+            },
+            "mapped_percent": {
+              "$ref": "#/$defs/percentage"
+            }
+          },
+          "additionalProperties": false
+        },
+        "product_composition": {
+          "type": "object",
+          "required": [
+            "query_route_id",
+            "ordering",
+            "eligible_products_tied"
+          ],
+          "properties": {
+            "query_route_id": {
+              "$ref": "#/$defs/routeId"
+            },
+            "ordering": {
+              "const": "product_code_ascending"
+            },
+            "eligible_products_tied": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "relative_coverage": {
+          "type": "object",
+          "required": [
+            "percent_of_dataset_records",
+            "percent_of_exporter_records",
+            "percent_of_importer_records",
+            "percent_of_exporter_products",
+            "percent_of_importer_products"
+          ],
+          "properties": {
+            "percent_of_dataset_records": {
+              "$ref": "#/$defs/percentage"
+            },
+            "percent_of_exporter_records": {
+              "$ref": "#/$defs/percentage"
+            },
+            "percent_of_importer_records": {
+              "$ref": "#/$defs/percentage"
+            },
+            "percent_of_exporter_products": {
+              "$ref": "#/$defs/percentage"
+            },
+            "percent_of_importer_products": {
+              "$ref": "#/$defs/percentage"
+            }
+          },
+          "additionalProperties": false
+        },
+        "self_trade": {
+          "type": "boolean"
+        },
+        "reverse_observed": {
+          "type": "boolean"
+        },
+        "reverse_route_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/routeId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "coverage": {
+          "$ref": "#/$defs/coverage"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

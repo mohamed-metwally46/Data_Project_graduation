@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Globiq Country Intelligence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["metadata", "records"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["year", "profile_count", "top_n", "input_rows", "included_unique_rows", "excluded_rows", "coverage", "complete_global_coverage"],
+      "properties": {
+        "year": {"$ref": "#/$defs/year"},
+        "profile_count": {"$ref": "#/$defs/count"},
+        "top_n": {"type": "integer", "minimum": 1},
+        "input_rows": {"$ref": "#/$defs/count"},
+        "included_unique_rows": {"$ref": "#/$defs/count"},
+        "excluded_rows": {"$ref": "#/$defs/count"},
+        "complete_global_coverage": {"const": false},
+        "coverage": {"$ref": "#/$defs/coverage"}
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/profile"}
+    }
+  },
+  "$defs": {
+    "id": {"type": "integer", "minimum": 1},
+    "year": {"type": "integer", "minimum": 1},
+    "count": {"type": "integer", "minimum": 0},
+    "label": {"type": "string", "minLength": 1},
+    "countryLabel": {"type": ["string", "null"]},
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["complete_global_coverage", "source_limitation", "observed_exporters", "observed_importers", "zero_count_meaning", "record_count_meaning", "imputed_quantity_used", "interpretation"],
+      "properties": {
+        "complete_global_coverage": {"const": false},
+        "source_limitation": {"$ref": "#/$defs/label"},
+        "observed_exporters": {"$ref": "#/$defs/count"},
+        "observed_importers": {"$ref": "#/$defs/count"},
+        "zero_count_meaning": {"$ref": "#/$defs/label"},
+        "record_count_meaning": {"$ref": "#/$defs/label"},
+        "imputed_quantity_used": {"const": false},
+        "interpretation": {"$ref": "#/$defs/label"}
+      }
+    },
+    "productRanking": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["product_code", "description", "record_count"],
+        "properties": {
+          "product_code": {"type": "string", "pattern": "^([0-9]{6}|9999AA)$"},
+          "description": {"$ref": "#/$defs/label"},
+          "record_count": {"type": "integer", "minimum": 1}
+        }
+      }
+    },
+    "partnerRanking": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["country_code", "name", "record_count"],
+        "properties": {
+          "country_code": {"$ref": "#/$defs/id"},
+          "name": {"$ref": "#/$defs/label"},
+          "record_count": {"type": "integer", "minimum": 1}
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "name", "iso2", "iso3", "year", "export_record_count", "import_record_count", "export_destinations", "import_sources", "distinct_exported_products", "distinct_imported_products", "top_export_products", "top_import_products", "top_export_destinations", "top_import_sources", "coverage"],
+      "properties": {
+        "code": {"$ref": "#/$defs/id"},
+        "name": {"$ref": "#/$defs/label"},
+        "iso2": {"$ref": "#/$defs/countryLabel"},
+        "iso3": {"$ref": "#/$defs/countryLabel"},
+        "year": {"$ref": "#/$defs/year"},
+        "export_record_count": {"$ref": "#/$defs/count"},
+        "import_record_count": {"$ref": "#/$defs/count"},
+        "export_destinations": {"$ref": "#/$defs/count"},
+        "import_sources": {"$ref": "#/$defs/count"},
+        "distinct_exported_products": {"$ref": "#/$defs/count"},
+        "distinct_imported_products": {"$ref": "#/$defs/count"},
+        "top_export_products": {"$ref": "#/$defs/productRanking"},
+        "top_import_products": {"$ref": "#/$defs/productRanking"},
+        "top_export_destinations": {"$ref": "#/$defs/partnerRanking"},
+        "top_import_sources": {"$ref": "#/$defs/partnerRanking"},
+        "coverage": {"$ref": "#/$defs/coverage"}
+      }
+    }
+  }
+}

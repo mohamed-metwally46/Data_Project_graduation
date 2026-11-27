@@ -1,0 +1,7 @@
+﻿# SM-03 company planning handoff
+
+The [planning manifest](../data/planning/synthetic_marketplace/allocation_plan_manifest.json) identifies the provisional catalog, geography profile, portfolios, and anonymous allocations. Validate them before consuming them. Pin the planning content fingerprint, configuration fingerprint, Trade Intelligence release ID, dataset fingerprint, and plan artifact hashes in any later generation context.
+
+After separate authorization and approvals, SM-03 should bind each approved supplier or importer slot to one stable fictional company identity. Preserve the slot's role, market code, and portfolio product codes. Keep a distinct mapping from planning slot IDs to final company and role identifiers. The role, market and portfolio are inputs to the downstream listing, RFQ and offer witness. A changed slot, role, market or portfolio requires rerunning the allocation validator and publishing a new planning witness before relying on downstream counts.
+
+The recommended baseline is provisional. Approve the geographic mapping, taxonomy, caps, portfolio and scenario distributions, seed and UUID namespace before assigning final identifiers. The Backend contract remains pending. Commercial rules require further validation for SM-04 and SM-05. Full marketplace generation remains blocked. This handoff provides the allocation evidence for preparation and does not authorize company generation.

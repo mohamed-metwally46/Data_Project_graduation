@@ -1,0 +1,486 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "commercial_config.v1",
+  "type": "object",
+  "required": [
+    "version",
+    "parameter_status",
+    "execution",
+    "master_seed",
+    "currency",
+    "quoted_price_precision",
+    "display_price_precision",
+    "total_precision",
+    "rounding",
+    "variation",
+    "inactive_zero",
+    "hard_budgets",
+    "fulfillment",
+    "approved_architecture",
+    "approval_reference",
+    "sm04b_approvals",
+    "units",
+    "groups",
+    "products"
+  ],
+  "properties": {
+    "version": {
+      "const": "1.0.0"
+    },
+    "parameter_status": {
+      "const": "proposed"
+    },
+    "execution": {
+      "const": "SM-04A_only"
+    },
+    "master_seed": {
+      "const": 42
+    },
+    "currency": {
+      "const": "USD"
+    },
+    "quoted_price_precision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 8
+    },
+    "display_price_precision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 8
+    },
+    "total_precision": {
+      "const": 2
+    },
+    "rounding": {
+      "const": "ROUND_HALF_UP"
+    },
+    "variation": {
+      "type": "object",
+      "required": [
+        "listing",
+        "rfq",
+        "offer"
+      ],
+      "properties": {
+        "listing": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "rfq": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "offer": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "additionalProperties": false
+    },
+    "inactive_zero": {
+      "const": 25
+    },
+    "hard_budgets": {
+      "const": false
+    },
+    "fulfillment": {
+      "const": "full_independent_no_reservation"
+    },
+    "approved_architecture": {
+      "type": "object",
+      "required": [
+        "SM-04.R1",
+        "SM-04.R2",
+        "SM-04.R3",
+        "SM-04.R4",
+        "SM-04.R5",
+        "SM-04.R6",
+        "SM-04.R7"
+      ],
+      "properties": {
+        "SM-04.R1": {
+          "const": "D"
+        },
+        "SM-04.R2": {
+          "const": "D"
+        },
+        "SM-04.R3": {
+          "const": "D"
+        },
+        "SM-04.R4": {
+          "const": "D"
+        },
+        "SM-04.R5": {
+          "const": "D"
+        },
+        "SM-04.R6": {
+          "const": "D"
+        },
+        "SM-04.R7": {
+          "const": "D"
+        }
+      },
+      "additionalProperties": false
+    },
+    "approval_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sm04b_approvals": {
+      "type": "object",
+      "required": [
+        "commercial_configuration",
+        "commercial_plan",
+        "product_key",
+        "listing_key",
+        "schemas",
+        "quality_review",
+        "execution"
+      ],
+      "properties": {
+        "commercial_configuration": {
+          "const": null
+        },
+        "commercial_plan": {
+          "const": null
+        },
+        "product_key": {
+          "const": null
+        },
+        "listing_key": {
+          "const": null
+        },
+        "schemas": {
+          "const": null
+        },
+        "quality_review": {
+          "const": null
+        },
+        "execution": {
+          "const": null
+        }
+      },
+      "additionalProperties": false
+    },
+    "units": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "label",
+          "dimension",
+          "precision",
+          "fractional",
+          "factor"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dimension": {
+            "enum": [
+              "mass",
+              "volume",
+              "count",
+              "set",
+              "length",
+              "area"
+            ]
+          },
+          "precision": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 8
+          },
+          "fractional": {
+            "type": "boolean"
+          },
+          "factor": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minProperties": 1
+    },
+    "groups": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "unit",
+          "permitted_units",
+          "group_reference",
+          "increment",
+          "stock",
+          "moq",
+          "rfq",
+          "maximum_order"
+        ],
+        "properties": {
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+          },
+          "permitted_units": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "group_reference": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "increment": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "stock": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "moq": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "rfq": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "maximum_order": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "minProperties": 1
+    },
+    "products": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^([0-9]{6}|9999AA)$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "group",
+          "group_assignment",
+          "review_notes"
+        ],
+        "properties": {
+          "group": {
+            "type": "string",
+            "minLength": 1
+          },
+          "group_assignment": {
+            "enum": [
+              "product_override",
+              "reviewed_category_default"
+            ]
+          },
+          "review_notes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "reference_price": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "variation": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "listing": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "rfq": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "offer": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            },
+            "additionalProperties": false
+          },
+          "parameters": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "unit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+              },
+              "permitted_units": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "group_reference": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "increment": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "stock": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "moq": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "rfq": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "maximum_order": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "price_bounds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "minProperties": 1
+    }
+  },
+  "additionalProperties": false
+}

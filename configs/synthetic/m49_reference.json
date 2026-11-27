@@ -1,0 +1,1252 @@
+{
+  "source": "https://unstats.un.org/unsd/methodology/m49/overview",
+  "revision": "SM-02 M49 reference snapshot, 2026-11-26",
+  "fields": [
+    "m49_code",
+    "region",
+    "iso2"
+  ],
+  "key": "iso3",
+  "rows": {
+    "ABW": [
+      533,
+      "Americas",
+      "AW"
+    ],
+    "AFG": [
+      4,
+      "Asia",
+      "AF"
+    ],
+    "AGO": [
+      24,
+      "Africa",
+      "AO"
+    ],
+    "AIA": [
+      660,
+      "Americas",
+      "AI"
+    ],
+    "ALA": [
+      248,
+      "Europe",
+      "AX"
+    ],
+    "ALB": [
+      8,
+      "Europe",
+      "AL"
+    ],
+    "AND": [
+      20,
+      "Europe",
+      "AD"
+    ],
+    "ARE": [
+      784,
+      "Asia",
+      "AE"
+    ],
+    "ARG": [
+      32,
+      "Americas",
+      "AR"
+    ],
+    "ARM": [
+      51,
+      "Asia",
+      "AM"
+    ],
+    "ASM": [
+      16,
+      "Oceania",
+      "AS"
+    ],
+    "ATA": [
+      10,
+      "",
+      "AQ"
+    ],
+    "ATF": [
+      260,
+      "Africa",
+      "TF"
+    ],
+    "ATG": [
+      28,
+      "Americas",
+      "AG"
+    ],
+    "AUS": [
+      36,
+      "Oceania",
+      "AU"
+    ],
+    "AUT": [
+      40,
+      "Europe",
+      "AT"
+    ],
+    "AZE": [
+      31,
+      "Asia",
+      "AZ"
+    ],
+    "BDI": [
+      108,
+      "Africa",
+      "BI"
+    ],
+    "BEL": [
+      56,
+      "Europe",
+      "BE"
+    ],
+    "BEN": [
+      204,
+      "Africa",
+      "BJ"
+    ],
+    "BES": [
+      535,
+      "Americas",
+      "BQ"
+    ],
+    "BFA": [
+      854,
+      "Africa",
+      "BF"
+    ],
+    "BGD": [
+      50,
+      "Asia",
+      "BD"
+    ],
+    "BGR": [
+      100,
+      "Europe",
+      "BG"
+    ],
+    "BHR": [
+      48,
+      "Asia",
+      "BH"
+    ],
+    "BHS": [
+      44,
+      "Americas",
+      "BS"
+    ],
+    "BIH": [
+      70,
+      "Europe",
+      "BA"
+    ],
+    "BLM": [
+      652,
+      "Americas",
+      "BL"
+    ],
+    "BLR": [
+      112,
+      "Europe",
+      "BY"
+    ],
+    "BLZ": [
+      84,
+      "Americas",
+      "BZ"
+    ],
+    "BMU": [
+      60,
+      "Americas",
+      "BM"
+    ],
+    "BOL": [
+      68,
+      "Americas",
+      "BO"
+    ],
+    "BRA": [
+      76,
+      "Americas",
+      "BR"
+    ],
+    "BRB": [
+      52,
+      "Americas",
+      "BB"
+    ],
+    "BRN": [
+      96,
+      "Asia",
+      "BN"
+    ],
+    "BTN": [
+      64,
+      "Asia",
+      "BT"
+    ],
+    "BVT": [
+      74,
+      "Americas",
+      "BV"
+    ],
+    "BWA": [
+      72,
+      "Africa",
+      "BW"
+    ],
+    "CAF": [
+      140,
+      "Africa",
+      "CF"
+    ],
+    "CAN": [
+      124,
+      "Americas",
+      "CA"
+    ],
+    "CCK": [
+      166,
+      "Oceania",
+      "CC"
+    ],
+    "CHE": [
+      756,
+      "Europe",
+      "CH"
+    ],
+    "CHL": [
+      152,
+      "Americas",
+      "CL"
+    ],
+    "CHN": [
+      156,
+      "Asia",
+      "CN"
+    ],
+    "CIV": [
+      384,
+      "Africa",
+      "CI"
+    ],
+    "CMR": [
+      120,
+      "Africa",
+      "CM"
+    ],
+    "COD": [
+      180,
+      "Africa",
+      "CD"
+    ],
+    "COG": [
+      178,
+      "Africa",
+      "CG"
+    ],
+    "COK": [
+      184,
+      "Oceania",
+      "CK"
+    ],
+    "COL": [
+      170,
+      "Americas",
+      "CO"
+    ],
+    "COM": [
+      174,
+      "Africa",
+      "KM"
+    ],
+    "CPV": [
+      132,
+      "Africa",
+      "CV"
+    ],
+    "CRI": [
+      188,
+      "Americas",
+      "CR"
+    ],
+    "CUB": [
+      192,
+      "Americas",
+      "CU"
+    ],
+    "CUW": [
+      531,
+      "Americas",
+      "CW"
+    ],
+    "CXR": [
+      162,
+      "Oceania",
+      "CX"
+    ],
+    "CYM": [
+      136,
+      "Americas",
+      "KY"
+    ],
+    "CYP": [
+      196,
+      "Asia",
+      "CY"
+    ],
+    "CZE": [
+      203,
+      "Europe",
+      "CZ"
+    ],
+    "DEU": [
+      276,
+      "Europe",
+      "DE"
+    ],
+    "DJI": [
+      262,
+      "Africa",
+      "DJ"
+    ],
+    "DMA": [
+      212,
+      "Americas",
+      "DM"
+    ],
+    "DNK": [
+      208,
+      "Europe",
+      "DK"
+    ],
+    "DOM": [
+      214,
+      "Americas",
+      "DO"
+    ],
+    "DZA": [
+      12,
+      "Africa",
+      "DZ"
+    ],
+    "ECU": [
+      218,
+      "Americas",
+      "EC"
+    ],
+    "EGY": [
+      818,
+      "Africa",
+      "EG"
+    ],
+    "ERI": [
+      232,
+      "Africa",
+      "ER"
+    ],
+    "ESH": [
+      732,
+      "Africa",
+      "EH"
+    ],
+    "ESP": [
+      724,
+      "Europe",
+      "ES"
+    ],
+    "EST": [
+      233,
+      "Europe",
+      "EE"
+    ],
+    "ETH": [
+      231,
+      "Africa",
+      "ET"
+    ],
+    "FIN": [
+      246,
+      "Europe",
+      "FI"
+    ],
+    "FJI": [
+      242,
+      "Oceania",
+      "FJ"
+    ],
+    "FLK": [
+      238,
+      "Americas",
+      "FK"
+    ],
+    "FRA": [
+      250,
+      "Europe",
+      "FR"
+    ],
+    "FRO": [
+      234,
+      "Europe",
+      "FO"
+    ],
+    "FSM": [
+      583,
+      "Oceania",
+      "FM"
+    ],
+    "GAB": [
+      266,
+      "Africa",
+      "GA"
+    ],
+    "GBR": [
+      826,
+      "Europe",
+      "GB"
+    ],
+    "GEO": [
+      268,
+      "Asia",
+      "GE"
+    ],
+    "GGY": [
+      831,
+      "Europe",
+      "GG"
+    ],
+    "GHA": [
+      288,
+      "Africa",
+      "GH"
+    ],
+    "GIB": [
+      292,
+      "Europe",
+      "GI"
+    ],
+    "GIN": [
+      324,
+      "Africa",
+      "GN"
+    ],
+    "GLP": [
+      312,
+      "Americas",
+      "GP"
+    ],
+    "GMB": [
+      270,
+      "Africa",
+      "GM"
+    ],
+    "GNB": [
+      624,
+      "Africa",
+      "GW"
+    ],
+    "GNQ": [
+      226,
+      "Africa",
+      "GQ"
+    ],
+    "GRC": [
+      300,
+      "Europe",
+      "GR"
+    ],
+    "GRD": [
+      308,
+      "Americas",
+      "GD"
+    ],
+    "GRL": [
+      304,
+      "Americas",
+      "GL"
+    ],
+    "GTM": [
+      320,
+      "Americas",
+      "GT"
+    ],
+    "GUF": [
+      254,
+      "Americas",
+      "GF"
+    ],
+    "GUM": [
+      316,
+      "Oceania",
+      "GU"
+    ],
+    "GUY": [
+      328,
+      "Americas",
+      "GY"
+    ],
+    "HKG": [
+      344,
+      "Asia",
+      "HK"
+    ],
+    "HMD": [
+      334,
+      "Oceania",
+      "HM"
+    ],
+    "HND": [
+      340,
+      "Americas",
+      "HN"
+    ],
+    "HRV": [
+      191,
+      "Europe",
+      "HR"
+    ],
+    "HTI": [
+      332,
+      "Americas",
+      "HT"
+    ],
+    "HUN": [
+      348,
+      "Europe",
+      "HU"
+    ],
+    "IDN": [
+      360,
+      "Asia",
+      "ID"
+    ],
+    "IMN": [
+      833,
+      "Europe",
+      "IM"
+    ],
+    "IND": [
+      356,
+      "Asia",
+      "IN"
+    ],
+    "IOT": [
+      86,
+      "Africa",
+      "IO"
+    ],
+    "IRL": [
+      372,
+      "Europe",
+      "IE"
+    ],
+    "IRN": [
+      364,
+      "Asia",
+      "IR"
+    ],
+    "IRQ": [
+      368,
+      "Asia",
+      "IQ"
+    ],
+    "ISL": [
+      352,
+      "Europe",
+      "IS"
+    ],
+    "ISR": [
+      376,
+      "Asia",
+      "IL"
+    ],
+    "ITA": [
+      380,
+      "Europe",
+      "IT"
+    ],
+    "JAM": [
+      388,
+      "Americas",
+      "JM"
+    ],
+    "JEY": [
+      832,
+      "Europe",
+      "JE"
+    ],
+    "JOR": [
+      400,
+      "Asia",
+      "JO"
+    ],
+    "JPN": [
+      392,
+      "Asia",
+      "JP"
+    ],
+    "KAZ": [
+      398,
+      "Asia",
+      "KZ"
+    ],
+    "KEN": [
+      404,
+      "Africa",
+      "KE"
+    ],
+    "KGZ": [
+      417,
+      "Asia",
+      "KG"
+    ],
+    "KHM": [
+      116,
+      "Asia",
+      "KH"
+    ],
+    "KIR": [
+      296,
+      "Oceania",
+      "KI"
+    ],
+    "KNA": [
+      659,
+      "Americas",
+      "KN"
+    ],
+    "KOR": [
+      410,
+      "Asia",
+      "KR"
+    ],
+    "KWT": [
+      414,
+      "Asia",
+      "KW"
+    ],
+    "LAO": [
+      418,
+      "Asia",
+      "LA"
+    ],
+    "LBN": [
+      422,
+      "Asia",
+      "LB"
+    ],
+    "LBR": [
+      430,
+      "Africa",
+      "LR"
+    ],
+    "LBY": [
+      434,
+      "Africa",
+      "LY"
+    ],
+    "LCA": [
+      662,
+      "Americas",
+      "LC"
+    ],
+    "LIE": [
+      438,
+      "Europe",
+      "LI"
+    ],
+    "LKA": [
+      144,
+      "Asia",
+      "LK"
+    ],
+    "LSO": [
+      426,
+      "Africa",
+      "LS"
+    ],
+    "LTU": [
+      440,
+      "Europe",
+      "LT"
+    ],
+    "LUX": [
+      442,
+      "Europe",
+      "LU"
+    ],
+    "LVA": [
+      428,
+      "Europe",
+      "LV"
+    ],
+    "MAC": [
+      446,
+      "Asia",
+      "MO"
+    ],
+    "MAF": [
+      663,
+      "Americas",
+      "MF"
+    ],
+    "MAR": [
+      504,
+      "Africa",
+      "MA"
+    ],
+    "MCO": [
+      492,
+      "Europe",
+      "MC"
+    ],
+    "MDA": [
+      498,
+      "Europe",
+      "MD"
+    ],
+    "MDG": [
+      450,
+      "Africa",
+      "MG"
+    ],
+    "MDV": [
+      462,
+      "Asia",
+      "MV"
+    ],
+    "MEX": [
+      484,
+      "Americas",
+      "MX"
+    ],
+    "MHL": [
+      584,
+      "Oceania",
+      "MH"
+    ],
+    "MKD": [
+      807,
+      "Europe",
+      "MK"
+    ],
+    "MLI": [
+      466,
+      "Africa",
+      "ML"
+    ],
+    "MLT": [
+      470,
+      "Europe",
+      "MT"
+    ],
+    "MMR": [
+      104,
+      "Asia",
+      "MM"
+    ],
+    "MNE": [
+      499,
+      "Europe",
+      "ME"
+    ],
+    "MNG": [
+      496,
+      "Asia",
+      "MN"
+    ],
+    "MNP": [
+      580,
+      "Oceania",
+      "MP"
+    ],
+    "MOZ": [
+      508,
+      "Africa",
+      "MZ"
+    ],
+    "MRT": [
+      478,
+      "Africa",
+      "MR"
+    ],
+    "MSR": [
+      500,
+      "Americas",
+      "MS"
+    ],
+    "MTQ": [
+      474,
+      "Americas",
+      "MQ"
+    ],
+    "MUS": [
+      480,
+      "Africa",
+      "MU"
+    ],
+    "MWI": [
+      454,
+      "Africa",
+      "MW"
+    ],
+    "MYS": [
+      458,
+      "Asia",
+      "MY"
+    ],
+    "MYT": [
+      175,
+      "Africa",
+      "YT"
+    ],
+    "NAM": [
+      516,
+      "Africa",
+      "NA"
+    ],
+    "NCL": [
+      540,
+      "Oceania",
+      "NC"
+    ],
+    "NER": [
+      562,
+      "Africa",
+      "NE"
+    ],
+    "NFK": [
+      574,
+      "Oceania",
+      "NF"
+    ],
+    "NGA": [
+      566,
+      "Africa",
+      "NG"
+    ],
+    "NIC": [
+      558,
+      "Americas",
+      "NI"
+    ],
+    "NIU": [
+      570,
+      "Oceania",
+      "NU"
+    ],
+    "NLD": [
+      528,
+      "Europe",
+      "NL"
+    ],
+    "NOR": [
+      578,
+      "Europe",
+      "NO"
+    ],
+    "NPL": [
+      524,
+      "Asia",
+      "NP"
+    ],
+    "NRU": [
+      520,
+      "Oceania",
+      "NR"
+    ],
+    "NZL": [
+      554,
+      "Oceania",
+      "NZ"
+    ],
+    "OMN": [
+      512,
+      "Asia",
+      "OM"
+    ],
+    "PAK": [
+      586,
+      "Asia",
+      "PK"
+    ],
+    "PAN": [
+      591,
+      "Americas",
+      "PA"
+    ],
+    "PCN": [
+      612,
+      "Oceania",
+      "PN"
+    ],
+    "PER": [
+      604,
+      "Americas",
+      "PE"
+    ],
+    "PHL": [
+      608,
+      "Asia",
+      "PH"
+    ],
+    "PLW": [
+      585,
+      "Oceania",
+      "PW"
+    ],
+    "PNG": [
+      598,
+      "Oceania",
+      "PG"
+    ],
+    "POL": [
+      616,
+      "Europe",
+      "PL"
+    ],
+    "PRI": [
+      630,
+      "Americas",
+      "PR"
+    ],
+    "PRK": [
+      408,
+      "Asia",
+      "KP"
+    ],
+    "PRT": [
+      620,
+      "Europe",
+      "PT"
+    ],
+    "PRY": [
+      600,
+      "Americas",
+      "PY"
+    ],
+    "PSE": [
+      275,
+      "Asia",
+      "PS"
+    ],
+    "PYF": [
+      258,
+      "Oceania",
+      "PF"
+    ],
+    "QAT": [
+      634,
+      "Asia",
+      "QA"
+    ],
+    "REU": [
+      638,
+      "Africa",
+      "RE"
+    ],
+    "ROU": [
+      642,
+      "Europe",
+      "RO"
+    ],
+    "RUS": [
+      643,
+      "Europe",
+      "RU"
+    ],
+    "RWA": [
+      646,
+      "Africa",
+      "RW"
+    ],
+    "SAU": [
+      682,
+      "Asia",
+      "SA"
+    ],
+    "SDN": [
+      729,
+      "Africa",
+      "SD"
+    ],
+    "SEN": [
+      686,
+      "Africa",
+      "SN"
+    ],
+    "SGP": [
+      702,
+      "Asia",
+      "SG"
+    ],
+    "SGS": [
+      239,
+      "Americas",
+      "GS"
+    ],
+    "SHN": [
+      654,
+      "Africa",
+      "SH"
+    ],
+    "SJM": [
+      744,
+      "Europe",
+      "SJ"
+    ],
+    "SLB": [
+      90,
+      "Oceania",
+      "SB"
+    ],
+    "SLE": [
+      694,
+      "Africa",
+      "SL"
+    ],
+    "SLV": [
+      222,
+      "Americas",
+      "SV"
+    ],
+    "SMR": [
+      674,
+      "Europe",
+      "SM"
+    ],
+    "SOM": [
+      706,
+      "Africa",
+      "SO"
+    ],
+    "SPM": [
+      666,
+      "Americas",
+      "PM"
+    ],
+    "SRB": [
+      688,
+      "Europe",
+      "RS"
+    ],
+    "SSD": [
+      728,
+      "Africa",
+      "SS"
+    ],
+    "STP": [
+      678,
+      "Africa",
+      "ST"
+    ],
+    "SUR": [
+      740,
+      "Americas",
+      "SR"
+    ],
+    "SVK": [
+      703,
+      "Europe",
+      "SK"
+    ],
+    "SVN": [
+      705,
+      "Europe",
+      "SI"
+    ],
+    "SWE": [
+      752,
+      "Europe",
+      "SE"
+    ],
+    "SWZ": [
+      748,
+      "Africa",
+      "SZ"
+    ],
+    "SXM": [
+      534,
+      "Americas",
+      "SX"
+    ],
+    "SYC": [
+      690,
+      "Africa",
+      "SC"
+    ],
+    "SYR": [
+      760,
+      "Asia",
+      "SY"
+    ],
+    "TCA": [
+      796,
+      "Americas",
+      "TC"
+    ],
+    "TCD": [
+      148,
+      "Africa",
+      "TD"
+    ],
+    "TGO": [
+      768,
+      "Africa",
+      "TG"
+    ],
+    "THA": [
+      764,
+      "Asia",
+      "TH"
+    ],
+    "TJK": [
+      762,
+      "Asia",
+      "TJ"
+    ],
+    "TKL": [
+      772,
+      "Oceania",
+      "TK"
+    ],
+    "TKM": [
+      795,
+      "Asia",
+      "TM"
+    ],
+    "TLS": [
+      626,
+      "Asia",
+      "TL"
+    ],
+    "TON": [
+      776,
+      "Oceania",
+      "TO"
+    ],
+    "TTO": [
+      780,
+      "Americas",
+      "TT"
+    ],
+    "TUN": [
+      788,
+      "Africa",
+      "TN"
+    ],
+    "TUR": [
+      792,
+      "Asia",
+      "TR"
+    ],
+    "TUV": [
+      798,
+      "Oceania",
+      "TV"
+    ],
+    "TZA": [
+      834,
+      "Africa",
+      "TZ"
+    ],
+    "UGA": [
+      800,
+      "Africa",
+      "UG"
+    ],
+    "UKR": [
+      804,
+      "Europe",
+      "UA"
+    ],
+    "UMI": [
+      581,
+      "Oceania",
+      "UM"
+    ],
+    "URY": [
+      858,
+      "Americas",
+      "UY"
+    ],
+    "USA": [
+      840,
+      "Americas",
+      "US"
+    ],
+    "UZB": [
+      860,
+      "Asia",
+      "UZ"
+    ],
+    "VAT": [
+      336,
+      "Europe",
+      "VA"
+    ],
+    "VCT": [
+      670,
+      "Americas",
+      "VC"
+    ],
+    "VEN": [
+      862,
+      "Americas",
+      "VE"
+    ],
+    "VGB": [
+      92,
+      "Americas",
+      "VG"
+    ],
+    "VIR": [
+      850,
+      "Americas",
+      "VI"
+    ],
+    "VNM": [
+      704,
+      "Asia",
+      "VN"
+    ],
+    "VUT": [
+      548,
+      "Oceania",
+      "VU"
+    ],
+    "WLF": [
+      876,
+      "Oceania",
+      "WF"
+    ],
+    "WSM": [
+      882,
+      "Oceania",
+      "WS"
+    ],
+    "YEM": [
+      887,
+      "Asia",
+      "YE"
+    ],
+    "ZAF": [
+      710,
+      "Africa",
+      "ZA"
+    ],
+    "ZMB": [
+      894,
+      "Africa",
+      "ZM"
+    ],
+    "ZWE": [
+      716,
+      "Africa",
+      "ZW"
+    ]
+  }
+}

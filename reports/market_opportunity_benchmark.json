@@ -1,0 +1,153 @@
+{
+  "dataset_version": "sha256:4b65676dc1766ebd869df52fef1c3786beffb11fcc838a99eb14a3818e4c136e",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.6",
+    "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+    "logical_cpus": 12
+  },
+  "method": "One fresh Python process, one engine load. Cold is its first query, with the OS disk cache uncontrolled. Warm cases use median timings over repeated queries. Phase timings are medians of separate instrumented passes. Serialization measures JSON encoding; query timings exclude console transport.",
+  "repetitions_per_warm_case": 5,
+  "dataset_load_seconds": 2.6738328977953643,
+  "engine_initialization_total_seconds": 10.546628299867734,
+  "summary_generation_seconds": 1.113193100085482,
+  "summary_serialization_and_write_seconds": 0.06446600006893277,
+  "summary_bytes": 2204606,
+  "cold_first_query": {
+    "filters": {
+      "product_code": "392690"
+    },
+    "query_ms": 0.46760006807744503,
+    "serialization_ms": 0.3562001511454582,
+    "query_and_serialization_ms": 0.8238002192229033,
+    "response_bytes": 69644
+  },
+  "warm_queries": {
+    "small_product": {
+      "filters": {
+        "product_code": "293970"
+      },
+      "total_matches": 1,
+      "returned": 1,
+      "query_ms": 0.0202,
+      "serialization_ms": 0.0191,
+      "query_and_serialization_ms": 0.0393,
+      "response_bytes": 2450,
+      "filter_and_count_ms": 0.0013,
+      "pagination_ms": 0.0012,
+      "reference_enrichment_ms": 0.0071
+    },
+    "large_product_first_page": {
+      "filters": {
+        "product_code": "392690"
+      },
+      "total_matches": 6294,
+      "returned": 50,
+      "query_ms": 0.3125,
+      "serialization_ms": 0.3103,
+      "query_and_serialization_ms": 0.6161,
+      "response_bytes": 69644,
+      "filter_and_count_ms": 0.0081,
+      "pagination_ms": 0.0121,
+      "reference_enrichment_ms": 0.280799
+    },
+    "large_product_later_page": {
+      "filters": {
+        "product_code": "392690",
+        "page": 100
+      },
+      "total_matches": 6294,
+      "returned": 50,
+      "query_ms": 0.3362,
+      "serialization_ms": 0.2903,
+      "query_and_serialization_ms": 0.6342,
+      "response_bytes": 67957,
+      "filter_and_count_ms": 0.0076,
+      "pagination_ms": 0.04,
+      "reference_enrichment_ms": 0.2791
+    },
+    "large_exporter": {
+      "filters": {
+        "exporter_code": 56
+      },
+      "total_matches": 415155,
+      "returned": 50,
+      "query_ms": 3.0538,
+      "serialization_ms": 0.3655,
+      "query_and_serialization_ms": 3.4193,
+      "response_bytes": 67846,
+      "filter_and_count_ms": 2.4996,
+      "pagination_ms": 0.0188,
+      "reference_enrichment_ms": 0.332
+    },
+    "importer": {
+      "filters": {
+        "importer_code": 490
+      },
+      "total_matches": 51546,
+      "returned": 50,
+      "query_ms": 23.2963,
+      "serialization_ms": 0.5405,
+      "query_and_serialization_ms": 24.1432,
+      "response_bytes": 70728,
+      "filter_and_count_ms": 14.7978,
+      "pagination_ms": 0.0311,
+      "reference_enrichment_ms": 0.401801
+    },
+    "directional_pair": {
+      "filters": {
+        "exporter_code": 24,
+        "importer_code": 32
+      },
+      "total_matches": 2130,
+      "returned": 50,
+      "query_ms": 2.6544,
+      "serialization_ms": 0.3531,
+      "query_and_serialization_ms": 3.0075,
+      "response_bytes": 73166,
+      "filter_and_count_ms": 1.772,
+      "pagination_ms": 0.025,
+      "reference_enrichment_ms": 0.329901
+    },
+    "category_filtered": {
+      "filters": {
+        "product_code": "392690",
+        "category": "B"
+      },
+      "total_matches": 1976,
+      "returned": 50,
+      "query_ms": 0.4272,
+      "serialization_ms": 0.3404,
+      "query_and_serialization_ms": 0.7612,
+      "response_bytes": 71170,
+      "filter_and_count_ms": 0.0274,
+      "pagination_ms": 0.0155,
+      "reference_enrichment_ms": 0.361799
+    },
+    "no_results": {
+      "filters": {
+        "product_code": "010120"
+      },
+      "total_matches": 0,
+      "returned": 0,
+      "query_ms": 0.0113,
+      "serialization_ms": 0.0145,
+      "query_and_serialization_ms": 0.0258,
+      "response_bytes": 1157,
+      "filter_and_count_ms": 0.0007,
+      "pagination_ms": 0.0003,
+      "reference_enrichment_ms": 0
+    },
+    "individual_lookup": {
+      "relationship_id": "2024:24:010111:124",
+      "query_ms": 0.0121,
+      "serialization_ms": 0.0094,
+      "query_and_serialization_ms": 0.0215,
+      "response_bytes": 1303
+    }
+  },
+  "memory": {
+    "peak_bytes": 104583168,
+    "method": "Windows PeakWorkingSetSize for the benchmark process"
+  }
+}

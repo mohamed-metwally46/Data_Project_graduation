@@ -1,0 +1,327 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Globiq Product Intelligence",
+  "type": "object",
+  "required": [
+    "metadata",
+    "reference_coverage",
+    "records"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "year",
+        "profile_count",
+        "top_n",
+        "input_rows",
+        "included_unique_rows",
+        "excluded_rows",
+        "complete_global_coverage",
+        "coverage"
+      ],
+      "properties": {
+        "year": {
+          "$ref": "#/$defs/positive"
+        },
+        "profile_count": {
+          "$ref": "#/$defs/count"
+        },
+        "top_n": {
+          "$ref": "#/$defs/positive"
+        },
+        "input_rows": {
+          "$ref": "#/$defs/count"
+        },
+        "included_unique_rows": {
+          "$ref": "#/$defs/count"
+        },
+        "excluded_rows": {
+          "$ref": "#/$defs/count"
+        },
+        "complete_global_coverage": {
+          "const": false
+        },
+        "coverage": {
+          "$ref": "#/$defs/coverage"
+        }
+      }
+    },
+    "reference_coverage": {
+      "type": "object",
+      "required": [
+        "observed_products",
+        "mapped_products",
+        "unmapped_products",
+        "products_missing_description",
+        "unobserved_reference_products",
+        "unmapped_product_rows",
+        "unobserved_reference_codes",
+        "unnormalizable_codes"
+      ],
+      "properties": {
+        "observed_products": {
+          "$ref": "#/$defs/count"
+        },
+        "mapped_products": {
+          "$ref": "#/$defs/count"
+        },
+        "unmapped_products": {
+          "$ref": "#/$defs/count"
+        },
+        "products_missing_description": {
+          "$ref": "#/$defs/count"
+        },
+        "unobserved_reference_products": {
+          "$ref": "#/$defs/count"
+        },
+        "unmapped_product_rows": {
+          "$ref": "#/$defs/count"
+        },
+        "unobserved_reference_codes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/code"
+          }
+        },
+        "unnormalizable_codes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "product_code_original",
+              "input_row_count"
+            ],
+            "properties": {
+              "product_code_original": {
+                "type": "string"
+              },
+              "input_row_count": {
+                "$ref": "#/$defs/positive"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/profile"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "positive": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "code": {
+      "type": "string",
+      "minLength": 1
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nullableText": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "complete_global_coverage",
+        "source_limitation",
+        "observed_exporters",
+        "observed_importers",
+        "record_count_meaning",
+        "zero_count_meaning",
+        "percent_denominator",
+        "imputed_quantity_used"
+      ],
+      "properties": {
+        "complete_global_coverage": {
+          "const": false
+        },
+        "source_limitation": {
+          "$ref": "#/$defs/text"
+        },
+        "observed_exporters": {
+          "$ref": "#/$defs/count"
+        },
+        "observed_importers": {
+          "$ref": "#/$defs/count"
+        },
+        "record_count_meaning": {
+          "$ref": "#/$defs/text"
+        },
+        "zero_count_meaning": {
+          "$ref": "#/$defs/text"
+        },
+        "percent_denominator": {
+          "$ref": "#/$defs/text"
+        },
+        "imputed_quantity_used": {
+          "const": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "profile": {
+      "type": "object",
+      "required": [
+        "product_code",
+        "description",
+        "reference_mapped",
+        "year",
+        "input_row_count",
+        "record_count",
+        "exporters",
+        "importers",
+        "distinct_routes",
+        "top_exporters",
+        "top_importers",
+        "top_routes",
+        "coverage"
+      ],
+      "properties": {
+        "product_code": {
+          "$ref": "#/$defs/code"
+        },
+        "description": {
+          "$ref": "#/$defs/nullableText"
+        },
+        "reference_mapped": {
+          "type": "boolean"
+        },
+        "year": {
+          "$ref": "#/$defs/positive"
+        },
+        "input_row_count": {
+          "$ref": "#/$defs/positive"
+        },
+        "record_count": {
+          "$ref": "#/$defs/count"
+        },
+        "exporters": {
+          "$ref": "#/$defs/count"
+        },
+        "importers": {
+          "$ref": "#/$defs/count"
+        },
+        "distinct_routes": {
+          "$ref": "#/$defs/count"
+        },
+        "top_exporters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "exporter_code",
+              "exporter_name",
+              "record_count",
+              "percent_of_product_records"
+            ],
+            "properties": {
+              "exporter_code": {
+                "$ref": "#/$defs/positive"
+              },
+              "exporter_name": {
+                "$ref": "#/$defs/nullableText"
+              },
+              "record_count": {
+                "$ref": "#/$defs/positive"
+              },
+              "percent_of_product_records": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "top_importers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "importer_code",
+              "importer_name",
+              "record_count",
+              "percent_of_product_records"
+            ],
+            "properties": {
+              "importer_code": {
+                "$ref": "#/$defs/positive"
+              },
+              "importer_name": {
+                "$ref": "#/$defs/nullableText"
+              },
+              "record_count": {
+                "$ref": "#/$defs/positive"
+              },
+              "percent_of_product_records": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "top_routes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "exporter_code",
+              "exporter_name",
+              "importer_code",
+              "importer_name",
+              "record_count",
+              "percent_of_product_records"
+            ],
+            "properties": {
+              "exporter_code": {
+                "$ref": "#/$defs/positive"
+              },
+              "exporter_name": {
+                "$ref": "#/$defs/nullableText"
+              },
+              "importer_code": {
+                "$ref": "#/$defs/positive"
+              },
+              "importer_name": {
+                "$ref": "#/$defs/nullableText"
+              },
+              "record_count": {
+                "$ref": "#/$defs/positive"
+              },
+              "percent_of_product_records": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "coverage": {
+          "$ref": "#/$defs/coverage"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

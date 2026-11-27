@@ -1,0 +1,727 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "commercial_plan.v1",
+  "type": "object",
+  "required": [
+    "metadata",
+    "profiles",
+    "listings",
+    "rfqs",
+    "offers"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "is_synthetic",
+        "is_planning_artifact",
+        "backend_importable",
+        "full_marketplace_release",
+        "schema_version",
+        "bindings"
+      ],
+      "properties": {
+        "is_synthetic": {
+          "const": true
+        },
+        "is_planning_artifact": {
+          "const": true
+        },
+        "backend_importable": {
+          "const": false
+        },
+        "full_marketplace_release": {
+          "const": false
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "bindings": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "is_synthetic",
+          "is_planning_artifact",
+          "backend_importable",
+          "full_marketplace_release",
+          "planning_only",
+          "product_code",
+          "reference_description",
+          "provisional_group",
+          "anchor_exporter",
+          "anchor_importer",
+          "commercial_group",
+          "group_assignment",
+          "review_notes",
+          "measurement_unit",
+          "permitted_units",
+          "quantity_precision",
+          "reference_price",
+          "reference_price_source",
+          "price_bounds",
+          "price_variation",
+          "initial_price_domains",
+          "currency",
+          "price_basis_quantity",
+          "price_basis_unit",
+          "quoted_price_precision",
+          "stock_bounds",
+          "moq_bounds",
+          "quantity_increment",
+          "rfq_quantity_bounds",
+          "maximum_order_quantity",
+          "configuration_version",
+          "override_fields",
+          "commercial_provenance"
+        ],
+        "properties": {
+          "is_synthetic": {
+            "const": true
+          },
+          "is_planning_artifact": {
+            "const": true
+          },
+          "backend_importable": {
+            "const": false
+          },
+          "full_marketplace_release": {
+            "const": false
+          },
+          "planning_only": {
+            "const": true
+          },
+          "product_code": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^([0-9]{6}|9999AA)$"
+          },
+          "reference_description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "provisional_group": {
+            "type": "string",
+            "minLength": 1
+          },
+          "anchor_exporter": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "anchor_importer": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "commercial_group": {
+            "type": "string",
+            "minLength": 1
+          },
+          "group_assignment": {
+            "type": "string",
+            "minLength": 1
+          },
+          "review_notes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "measurement_unit": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+          },
+          "permitted_units": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+            },
+            "minItems": 1
+          },
+          "quantity_precision": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 8
+          },
+          "reference_price": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "reference_price_source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "price_bounds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "price_variation": {
+            "type": "object",
+            "required": [
+              "listing",
+              "rfq",
+              "offer"
+            ],
+            "properties": {
+              "listing": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "rfq": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "offer": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            },
+            "additionalProperties": false
+          },
+          "initial_price_domains": {
+            "type": "object",
+            "required": [
+              "listing",
+              "rfq"
+            ],
+            "properties": {
+              "listing": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "rfq": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            },
+            "additionalProperties": false
+          },
+          "currency": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z]{3}$"
+          },
+          "price_basis_quantity": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "price_basis_unit": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+          },
+          "quoted_price_precision": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 8
+          },
+          "stock_bounds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "moq_bounds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "quantity_increment": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "rfq_quantity_bounds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "maximum_order_quantity": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "configuration_version": {
+            "const": "1.0.0"
+          },
+          "override_fields": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "commercial_provenance": {
+            "const": "proposed_synthetic_parameters"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "listings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "is_synthetic",
+          "is_planning_artifact",
+          "backend_importable",
+          "full_marketplace_release",
+          "planning_only",
+          "listing_id",
+          "supplier_slot_id",
+          "product_code",
+          "status",
+          "unit",
+          "stock",
+          "moq",
+          "quantity_increment",
+          "maximum_order_quantity",
+          "price",
+          "commercial_provenance"
+        ],
+        "properties": {
+          "is_synthetic": {
+            "const": true
+          },
+          "is_planning_artifact": {
+            "const": true
+          },
+          "backend_importable": {
+            "const": false
+          },
+          "full_marketplace_release": {
+            "const": false
+          },
+          "planning_only": {
+            "const": true
+          },
+          "listing_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supplier_slot_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "product_code": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^([0-9]{6}|9999AA)$"
+          },
+          "status": {
+            "enum": [
+              "active",
+              "inactive",
+              "out_of_stock"
+            ]
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+          },
+          "stock": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "moq": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "quantity_increment": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "maximum_order_quantity": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "price": {
+            "type": "object",
+            "required": [
+              "amount",
+              "currency",
+              "basis_quantity",
+              "basis_unit"
+            ],
+            "properties": {
+              "amount": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "currency": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[A-Z]{3}$"
+              },
+              "basis_quantity": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "basis_unit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+              }
+            },
+            "additionalProperties": false
+          },
+          "commercial_provenance": {
+            "const": "synthetic_listing_planning_values"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "rfqs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "is_synthetic",
+          "is_planning_artifact",
+          "backend_importable",
+          "full_marketplace_release",
+          "planning_only",
+          "request_id",
+          "buyer_slot_id",
+          "product_code",
+          "destination_market",
+          "type",
+          "response_count",
+          "target_supplier_slot_id",
+          "category",
+          "unit",
+          "requested_quantity",
+          "target_price",
+          "target_price_binding",
+          "commercial_provenance"
+        ],
+        "properties": {
+          "is_synthetic": {
+            "const": true
+          },
+          "is_planning_artifact": {
+            "const": true
+          },
+          "backend_importable": {
+            "const": false
+          },
+          "full_marketplace_release": {
+            "const": false
+          },
+          "planning_only": {
+            "const": true
+          },
+          "request_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "buyer_slot_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "product_code": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^([0-9]{6}|9999AA)$"
+          },
+          "destination_market": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "type": {
+            "enum": [
+              "open",
+              "targeted"
+            ]
+          },
+          "response_count": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "target_supplier_slot_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "category": {
+            "anyOf": [
+              {
+                "const": "A"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+          },
+          "requested_quantity": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "target_price": {
+            "type": "object",
+            "required": [
+              "amount",
+              "currency",
+              "basis_quantity",
+              "basis_unit"
+            ],
+            "properties": {
+              "amount": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "currency": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[A-Z]{3}$"
+              },
+              "basis_quantity": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "basis_unit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+              }
+            },
+            "additionalProperties": false
+          },
+          "target_price_binding": {
+            "const": false
+          },
+          "commercial_provenance": {
+            "const": "synthetic_rfq_planning_values"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "offers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "is_synthetic",
+          "is_planning_artifact",
+          "backend_importable",
+          "full_marketplace_release",
+          "planning_only",
+          "offer_id",
+          "request_id",
+          "listing_id",
+          "supplier_slot_id",
+          "product_code",
+          "category",
+          "unit",
+          "offered_quantity",
+          "price",
+          "extended_product_value",
+          "fulfillment",
+          "commercial_provenance"
+        ],
+        "properties": {
+          "is_synthetic": {
+            "const": true
+          },
+          "is_planning_artifact": {
+            "const": true
+          },
+          "backend_importable": {
+            "const": false
+          },
+          "full_marketplace_release": {
+            "const": false
+          },
+          "planning_only": {
+            "const": true
+          },
+          "offer_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "request_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "listing_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supplier_slot_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "product_code": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^([0-9]{6}|9999AA)$"
+          },
+          "category": {
+            "const": "A"
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+          },
+          "offered_quantity": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "price": {
+            "type": "object",
+            "required": [
+              "amount",
+              "currency",
+              "basis_quantity",
+              "basis_unit"
+            ],
+            "properties": {
+              "amount": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "currency": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[A-Z]{3}$"
+              },
+              "basis_quantity": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "basis_unit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+              }
+            },
+            "additionalProperties": false
+          },
+          "extended_product_value": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "fulfillment": {
+            "const": "full_independent_no_reservation"
+          },
+          "commercial_provenance": {
+            "const": "synthetic_offer_planning_values"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 0
+    }
+  },
+  "additionalProperties": false
+}

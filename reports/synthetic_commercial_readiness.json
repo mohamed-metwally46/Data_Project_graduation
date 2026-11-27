@@ -1,0 +1,300 @@
+{
+  "is_synthetic": true,
+  "is_planning_artifact": true,
+  "backend_importable": false,
+  "full_marketplace_release": false,
+  "status": "validated_provisional",
+  "commercial_plan_id": "sm04a-32558594b63919d38b643c249ef06aa8ba882430a330c30ef2ab959fec02910d",
+  "artifact_directory": "data/planning/commercial_feasibility/plans/sm04a-32558594b63919d38b643c249ef06aa8ba882430a330c30ef2ab959fec02910d",
+  "bindings": {
+    "source": {
+      "release_id": "ti-3349f6e0cb6dde75fe7d5323af71463748cad3232bc7bcb476c6ff6dcd8cd41b",
+      "dataset_fingerprint": "sha256:4b65676dc1766ebd869df52fef1c3786beffb11fcc838a99eb14a3818e4c136e",
+      "year": 2024
+    },
+    "structural_plan_id": "sm02-90bf5c26373c3d2c45f3fe7f371fbbe8a45b880825f9aa0ee9315de2a96b9ef3",
+    "structural_artifacts": {
+      "allocation_plan.json": {
+        "path": "allocation_plan.json",
+        "sha256": "48e4510a4c278adb69f3729399edc0ea044af93076ae479c5287bc7fdb97c44e",
+        "size_bytes": 788184
+      },
+      "geographic_eligibility.json": {
+        "path": "geographic_eligibility.json",
+        "sha256": "3819398da839787db2821b265cf762aa90d873cdc52f505857a84f7482f2bbcf",
+        "size_bytes": 120319
+      },
+      "product_eligibility.json": {
+        "path": "product_eligibility.json",
+        "sha256": "6227bcef0453d0dd7fa689ad64c32237c0d7b787c1a71b6b0daba9c3458bca17",
+        "size_bytes": 8477492
+      }
+    },
+    "company_stage_id": "sm03b-68a129e0877cc0b7405db11375d2ef72ee862b7545075bd36c06099fa8e42363",
+    "company_artifacts": {
+      "company_stage.json": {
+        "path": "company_stage.json",
+        "sha256": "5d41f334d6c5bac78046e21ca231df826a9c5d844dc89bc47c6c753c1a1abce4",
+        "size_bytes": 2219027
+      },
+      "company_validation_report.json": {
+        "path": "company_validation_report.json",
+        "sha256": "fa1b012c76171f61e7ca41a7cec4ec929e1d30883c6f66f42566f44b6c92d58e",
+        "size_bytes": 22022
+      }
+    },
+    "population_id": "globiq-marketplace-baseline-001",
+    "configuration": {
+      "version": "1.0.0",
+      "path": "configs/synthetic/commercial.v1.json",
+      "sha256": "535310c23c23715e5d82c9b8b905227727710c4dce3c2576d9e92b4e7ebf6d2f",
+      "size_bytes": 59017
+    },
+    "configuration_fingerprint": "sha256:d4061563e261596d18094ddaeb4f02f5242786bbf7f9ee2d8bdadb315eb375d1",
+    "schemas": {
+      "commercial_config.v1": {
+        "version": "1.0.0",
+        "path": "schemas/commercial_config.v1.schema.json",
+        "sha256": "37e692dd7e1ce29e9f6a74d3c527c4be15ceb3adc539ff8ecfcfaf8937896243",
+        "size_bytes": 11995
+      },
+      "commercial_plan.v1": {
+        "version": "1.0.0",
+        "path": "schemas/commercial_plan.v1.schema.json",
+        "sha256": "1ae3096269f5d34647ba3337ab7376adcd8f32902d51ff0552cc8475f3107a2d",
+        "size_bytes": 19408
+      },
+      "listing_stage.proposed": {
+        "version": "1.0.0",
+        "path": "schemas/listing_stage.proposed.schema.json",
+        "sha256": "5c0c6cb62b43351503e021120a4b347edb0689425490b6873d087f247346784e",
+        "size_bytes": 12942
+      }
+    },
+    "solver_version": "joint_integer_lattice_v1",
+    "master_seed": 42,
+    "implementation_fingerprint": "sha256:a11b1fd8c7d1603f12cecb18f1b8238e9ba91209635c32c51ca9ca4b9097dcef",
+    "identifier_policy_fingerprint": "sha256:4d0c8f1db426cf95d8c24e3b6baecaf3975cf235cb8d50ada0a3b2f682df4c24"
+  },
+  "target_counts": {
+    "profiles": 300,
+    "listings": 1000,
+    "rfqs": 600,
+    "offers": 900
+  },
+  "resolved_profile_fingerprint": "sha256:b9f74b75d4f2a04a014aecf92fc5440dff885b2c0c92bc087641fc8857506f8e",
+  "deterministic_content_fingerprint": "sha256:60b91020d135d199b53ec8ed8939f642ac00e1ab76b57417a659c6235b992b6e",
+  "solver": {
+    "status": "feasible",
+    "fallback_search_nodes": 0,
+    "method": "exact integer lattice and bounded deterministic quote fallback",
+    "search_limit_per_listing": 2048
+  },
+  "artifacts": {
+    "commercial_feasibility_report.json": {
+      "path": "commercial_feasibility_report.json",
+      "sha256": "8f481d804b77a77569f7367f35c17b6e39cc74cf9a1a2ef1f39babdb05613eb3",
+      "size_bytes": 972
+    },
+    "commercial_quality_report.json": {
+      "path": "commercial_quality_report.json",
+      "sha256": "9d3ba2ed2dc082c76418bd7dc06ab603760fac21dbd2b8bc6c67b2abe974bd11",
+      "size_bytes": 547431
+    },
+    "listing_commercial_plan.json": {
+      "path": "listing_commercial_plan.json",
+      "sha256": "37ce8e0ce8bae0c536b0c2364a7fdb86738384d7754d72036e12521ad8538ca3",
+      "size_bytes": 665498
+    },
+    "offer_commercial_plan.json": {
+      "path": "offer_commercial_plan.json",
+      "sha256": "23ad64b8583055c6abc745c4fa8f4753acb612b6a8ab8e20d27db60e1f0ccffc",
+      "size_bytes": 675755
+    },
+    "product_commercial_review.md": {
+      "path": "product_commercial_review.md",
+      "sha256": "32433e528022b61e36dba6fc228338201ebb0ecb352d9063d0d0b25ed465e6b8",
+      "size_bytes": 105773
+    },
+    "resolved_product_profiles.json": {
+      "path": "resolved_product_profiles.json",
+      "sha256": "c2e6906b87aa6c64d3cff579361c44a8dc0e85c988a43fdadb6a6bcbe63d739c",
+      "size_bytes": 543769
+    },
+    "rfq_commercial_plan.json": {
+      "path": "rfq_commercial_plan.json",
+      "sha256": "0c5d3f98c8e6407ca6353e1a3344aa8d30ffc3fd07cd18c4b4d12d8d975ecf5e",
+      "size_bytes": 448045
+    }
+  },
+  "validation": {
+    "status": "passed",
+    "counts": {
+      "profiles": 300,
+      "listings": 1000,
+      "rfqs": 600,
+      "offers": 900
+    },
+    "listing_statuses": {
+      "active": 850,
+      "inactive": 50,
+      "out_of_stock": 100
+    },
+    "inactive_stock": {
+      "positive": 25,
+      "zero": 25
+    },
+    "rfq_types": {
+      "open": 420,
+      "targeted": 180
+    },
+    "response_histogram": {
+      "2": 180,
+      "0": 120,
+      "3": 120,
+      "1": 180
+    },
+    "competitive_rfqs": 300,
+    "full_fulfillment_responses": 900,
+    "infeasible_responses": 0,
+    "unresolved_scenarios": 0,
+    "bilateral_records": {
+      "A": 1080,
+      "B": 0,
+      "C": 0
+    },
+    "unique_bilateral_relationships": 300,
+    "findings": [
+      {
+        "severity": "INFO",
+        "code": "PROVISIONAL_SCENARIOS_VALIDATED",
+        "detail": "Independent scenarios use full quantities without stock reservations."
+      }
+    ]
+  },
+  "reproducibility": {
+    "byte_identical": true,
+    "builds": [
+      {
+        "commercial_feasibility_report.json": {
+          "path": "commercial_feasibility_report.json",
+          "sha256": "8f481d804b77a77569f7367f35c17b6e39cc74cf9a1a2ef1f39babdb05613eb3",
+          "size_bytes": 972
+        },
+        "commercial_quality_report.json": {
+          "path": "commercial_quality_report.json",
+          "sha256": "9d3ba2ed2dc082c76418bd7dc06ab603760fac21dbd2b8bc6c67b2abe974bd11",
+          "size_bytes": 547431
+        },
+        "listing_commercial_plan.json": {
+          "path": "listing_commercial_plan.json",
+          "sha256": "37ce8e0ce8bae0c536b0c2364a7fdb86738384d7754d72036e12521ad8538ca3",
+          "size_bytes": 665498
+        },
+        "offer_commercial_plan.json": {
+          "path": "offer_commercial_plan.json",
+          "sha256": "23ad64b8583055c6abc745c4fa8f4753acb612b6a8ab8e20d27db60e1f0ccffc",
+          "size_bytes": 675755
+        },
+        "product_commercial_review.md": {
+          "path": "product_commercial_review.md",
+          "sha256": "32433e528022b61e36dba6fc228338201ebb0ecb352d9063d0d0b25ed465e6b8",
+          "size_bytes": 105773
+        },
+        "resolved_product_profiles.json": {
+          "path": "resolved_product_profiles.json",
+          "sha256": "c2e6906b87aa6c64d3cff579361c44a8dc0e85c988a43fdadb6a6bcbe63d739c",
+          "size_bytes": 543769
+        },
+        "rfq_commercial_plan.json": {
+          "path": "rfq_commercial_plan.json",
+          "sha256": "0c5d3f98c8e6407ca6353e1a3344aa8d30ffc3fd07cd18c4b4d12d8d975ecf5e",
+          "size_bytes": 448045
+        }
+      },
+      {
+        "commercial_feasibility_report.json": {
+          "path": "commercial_feasibility_report.json",
+          "sha256": "8f481d804b77a77569f7367f35c17b6e39cc74cf9a1a2ef1f39babdb05613eb3",
+          "size_bytes": 972
+        },
+        "commercial_quality_report.json": {
+          "path": "commercial_quality_report.json",
+          "sha256": "9d3ba2ed2dc082c76418bd7dc06ab603760fac21dbd2b8bc6c67b2abe974bd11",
+          "size_bytes": 547431
+        },
+        "listing_commercial_plan.json": {
+          "path": "listing_commercial_plan.json",
+          "sha256": "37ce8e0ce8bae0c536b0c2364a7fdb86738384d7754d72036e12521ad8538ca3",
+          "size_bytes": 665498
+        },
+        "offer_commercial_plan.json": {
+          "path": "offer_commercial_plan.json",
+          "sha256": "23ad64b8583055c6abc745c4fa8f4753acb612b6a8ab8e20d27db60e1f0ccffc",
+          "size_bytes": 675755
+        },
+        "product_commercial_review.md": {
+          "path": "product_commercial_review.md",
+          "sha256": "32433e528022b61e36dba6fc228338201ebb0ecb352d9063d0d0b25ed465e6b8",
+          "size_bytes": 105773
+        },
+        "resolved_product_profiles.json": {
+          "path": "resolved_product_profiles.json",
+          "sha256": "c2e6906b87aa6c64d3cff579361c44a8dc0e85c988a43fdadb6a6bcbe63d739c",
+          "size_bytes": 543769
+        },
+        "rfq_commercial_plan.json": {
+          "path": "rfq_commercial_plan.json",
+          "sha256": "0c5d3f98c8e6407ca6353e1a3344aa8d30ffc3fd07cd18c4b4d12d8d975ecf5e",
+          "size_bytes": 448045
+        }
+      }
+    ]
+  },
+  "quality_artifact": "commercial_quality_report.json",
+  "exact_approvals": {
+    "commercial_configuration": "pending",
+    "commercial_plan": "pending",
+    "product_key": "pending",
+    "listing_key": "pending",
+    "schemas": "pending",
+    "quality_review": "pending",
+    "execution": "pending"
+  },
+  "execution": "SM-04A_only",
+  "regression_suite": {
+    "status": "passed",
+    "tests_passed": 55,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "operational": {
+    "seconds": {
+      "regression_suite": 51.81918839993887,
+      "sm02_hash_and_load": 0.0854427998419851,
+      "pinned_source_verification_seconds": 142.59487220016308,
+      "source_initialization_seconds": 48.31442100019194,
+      "geographic_and_product_profiling_seconds": 1.1987213999964297,
+      "sm02_independent_validation": 0.4370784000493586,
+      "sm03b_verification": 4.396253899903968,
+      "product_catalog_inspection": 8.87999776750803e-05,
+      "profile_resolution": 0.22038759989663959,
+      "constraint_graph": 0.04732819995842874,
+      "quantity_solving": 0.29028240009211004,
+      "price_solving": 0.8759675999172032,
+      "serialization": 0.4840063997544348,
+      "independent_serialized_validation": 3.845165300182998,
+      "quality_diagnostics": 0.3278532999102026,
+      "rebuild_and_byte_comparison": 6.947555099846795,
+      "planning_publication": 0.05837860004976392,
+      "total_execution": 263.69474370009266
+    },
+    "peak_memory": {
+      "peak_bytes": 825004032,
+      "method": "Windows PeakWorkingSetSize for the benchmark process"
+    },
+    "python": "3.14.6"
+  },
+  "sm04b_status": "blocked",
+  "backend_import": "blocked",
+  "full_marketplace_generation": "blocked"
+}

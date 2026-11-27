@@ -1,0 +1,304 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Globiq remediation proposal v1.1.0",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": "1.1.0"
+    },
+    "authorization_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stage_status": {
+      "const": "STRUCTURAL_SCOPE_APPROVAL_REQUIRED"
+    },
+    "exact_parameters_approved": {
+      "const": false
+    },
+    "suitability_policy_version": {
+      "const": "1.0.0"
+    },
+    "specification_contract_version": {
+      "const": "1.0.0"
+    },
+    "eligibility_policy_version": {
+      "const": "1.0.0"
+    },
+    "baseline_units_and_prices": {
+      "const": "configs/synthetic/commercial.v1.json"
+    },
+    "decimal_policy": {
+      "const": {
+        "version": "1.0.0",
+        "precision": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "final_money_rounding": "ROUND_HALF_UP",
+        "traps": [
+          "InvalidOperation",
+          "DivisionByZero",
+          "Overflow"
+        ],
+        "usd_scale": 2,
+        "quantity_scale": "fixed_configured",
+        "zero_stock": "0"
+      }
+    },
+    "products": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^(?:[0-9]{6}|9999AA)$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "reference_description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "disposition": {
+            "enum": [
+              "marketplace_allowed",
+              "restricted_offline_qa",
+              "review_required"
+            ]
+          },
+          "offline_qa_only": {
+            "type": "boolean"
+          },
+          "commercial_group": {
+            "type": "string",
+            "minLength": 1
+          },
+          "specification": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "specification_key": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "specification_version": {
+                    "const": "1.0.0"
+                  },
+                  "display_name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "physical_form": {
+                    "enum": [
+                      "area_material",
+                      "bulk_net_mass",
+                      "length_material",
+                      "liquid",
+                      "retail_pack",
+                      "saleable_pair",
+                      "solid_volume",
+                      "standalone_device",
+                      "standalone_item",
+                      "tool_assortment"
+                    ]
+                  },
+                  "saleable_unit_definition": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "canonical_uom": {
+                    "type": "string",
+                    "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+                  },
+                  "allowed_uoms": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                  },
+                  "excluded_forms": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "minItems": 0
+                  },
+                  "measurement_assumptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "minItems": 1
+                  },
+                  "is_synthetic": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "specification_key",
+                  "specification_version",
+                  "display_name",
+                  "physical_form",
+                  "saleable_unit_definition",
+                  "canonical_uom",
+                  "allowed_uoms",
+                  "excluded_forms",
+                  "measurement_assumptions",
+                  "is_synthetic"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "commercial_override": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "reference_price": {
+                    "type": "string",
+                    "pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$"
+                  },
+                  "stock": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "moq": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "rfq": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "increment": {
+                    "type": "string",
+                    "pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$"
+                  }
+                },
+                "required": [
+                  "reference_price",
+                  "stock",
+                  "moq",
+                  "rfq",
+                  "increment"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "historical_review_notes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "historical_review": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string",
+                "minLength": 1
+              },
+              "severity": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "recommended_disposition": {
+                "type": "string",
+                "minLength": 1
+              },
+              "human": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "category",
+              "severity",
+              "reason",
+              "recommended_disposition",
+              "human"
+            ],
+            "additionalProperties": false
+          },
+          "historical_unit": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+          },
+          "historical_group": {
+            "type": "string",
+            "minLength": 1
+          },
+          "resolution": {
+            "type": "string",
+            "minLength": 1
+          },
+          "human_review_required": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "reference_description",
+          "disposition",
+          "offline_qa_only",
+          "commercial_group",
+          "specification",
+          "commercial_override",
+          "historical_review_notes",
+          "historical_review",
+          "historical_unit",
+          "historical_group",
+          "resolution",
+          "human_review_required"
+        ],
+        "additionalProperties": false
+      },
+      "minProperties": 300,
+      "maxProperties": 300
+    }
+  },
+  "required": [
+    "version",
+    "authorization_reference",
+    "stage_status",
+    "exact_parameters_approved",
+    "suitability_policy_version",
+    "specification_contract_version",
+    "eligibility_policy_version",
+    "baseline_units_and_prices",
+    "decimal_policy",
+    "products"
+  ],
+  "additionalProperties": false
+}

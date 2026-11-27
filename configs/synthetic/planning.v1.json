@@ -1,0 +1,75 @@
+{
+  "version": "1.0.0",
+  "scenario_id": "sm02-provisional-v1",
+  "approval_status": "proposed",
+  "supplier_market_cap": 20,
+  "importer_market_cap": 6,
+  "product_prefix_cap": 12,
+  "geography": {
+    "source_code_crosswalk": {
+      "699": 356
+    },
+    "territorial_market_codes": [
+      16,
+      60,
+      86,
+      92,
+      136,
+      162,
+      166,
+      175,
+      184,
+      238,
+      258,
+      260,
+      292,
+      304,
+      316,
+      344,
+      446,
+      500,
+      531,
+      533,
+      534,
+      535,
+      540,
+      570,
+      574,
+      580,
+      612,
+      652,
+      654,
+      660,
+      666,
+      772,
+      796,
+      876
+    ],
+    "historical_market_codes": [
+      58,
+      200,
+      278,
+      280,
+      530,
+      736,
+      810,
+      891
+    ],
+    "statistical_market_codes": [
+      490,
+      697,
+      711
+    ],
+    "special_review_market_codes": [
+      251,
+      275,
+      579,
+      757,
+      842,
+      849
+    ]
+  },
+  "sensitivity": {
+    "supplier_market_cap": 8
+  }
+}

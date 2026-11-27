@@ -1,0 +1,2230 @@
+{
+  "version": "1.0.0",
+  "parameter_status": "proposed",
+  "execution": "SM-04A_only",
+  "master_seed": 42,
+  "currency": "USD",
+  "quoted_price_precision": 2,
+  "display_price_precision": 8,
+  "total_precision": 2,
+  "rounding": "ROUND_HALF_UP",
+  "variation": {
+    "listing": [
+      "-0.20",
+      "0.20"
+    ],
+    "rfq": [
+      "-0.15",
+      "0.10"
+    ],
+    "offer": [
+      "-0.10",
+      "0.05"
+    ]
+  },
+  "inactive_zero": 25,
+  "hard_budgets": false,
+  "fulfillment": "full_independent_no_reservation",
+  "approved_architecture": {
+    "SM-04.R1": "D",
+    "SM-04.R2": "D",
+    "SM-04.R3": "D",
+    "SM-04.R4": "D",
+    "SM-04.R5": "D",
+    "SM-04.R6": "D",
+    "SM-04.R7": "D"
+  },
+  "approval_reference": "User attachment 4defc9c5-c0c8-4c4e-9c6d-65cf57f6ec87 sections 1 and 8",
+  "sm04b_approvals": {
+    "commercial_configuration": null,
+    "commercial_plan": null,
+    "product_key": null,
+    "listing_key": null,
+    "schemas": null,
+    "quality_review": null,
+    "execution": null
+  },
+  "units": {
+    "KG": {
+      "label": "kilogram",
+      "dimension": "mass",
+      "precision": 3,
+      "fractional": true,
+      "factor": "1"
+    },
+    "G": {
+      "label": "gram",
+      "dimension": "mass",
+      "precision": 0,
+      "fractional": false,
+      "factor": "0.001"
+    },
+    "TONNE": {
+      "label": "metric tonne",
+      "dimension": "mass",
+      "precision": 6,
+      "fractional": true,
+      "factor": "1000"
+    },
+    "L": {
+      "label": "litre",
+      "dimension": "volume",
+      "precision": 3,
+      "fractional": true,
+      "factor": "1"
+    },
+    "ML": {
+      "label": "millilitre",
+      "dimension": "volume",
+      "precision": 0,
+      "fractional": false,
+      "factor": "0.001"
+    },
+    "M3": {
+      "label": "cubic metre",
+      "dimension": "volume",
+      "precision": 6,
+      "fractional": true,
+      "factor": "1000"
+    },
+    "PCS": {
+      "label": "declared item or retail pack",
+      "dimension": "count",
+      "precision": 0,
+      "fractional": false,
+      "factor": "1"
+    },
+    "SET": {
+      "label": "declared set",
+      "dimension": "set",
+      "precision": 0,
+      "fractional": false,
+      "factor": "1"
+    },
+    "M": {
+      "label": "metre",
+      "dimension": "length",
+      "precision": 3,
+      "fractional": true,
+      "factor": "1"
+    },
+    "M2": {
+      "label": "square metre",
+      "dimension": "area",
+      "precision": 3,
+      "fractional": true,
+      "factor": "1"
+    }
+  },
+  "groups": {
+    "food_bulk": {
+      "unit": "KG",
+      "permitted_units": [
+        "KG",
+        "G",
+        "TONNE"
+      ],
+      "group_reference": "4",
+      "increment": "0.5",
+      "stock": [
+        "20",
+        "800"
+      ],
+      "moq": [
+        "2",
+        "40"
+      ],
+      "rfq": [
+        "4",
+        "120"
+      ],
+      "maximum_order": null
+    },
+    "living_items": {
+      "unit": "PCS",
+      "permitted_units": [
+        "PCS"
+      ],
+      "group_reference": "20",
+      "increment": "1",
+      "stock": [
+        "12",
+        "100"
+      ],
+      "moq": [
+        "1",
+        "8"
+      ],
+      "rfq": [
+        "1",
+        "12"
+      ],
+      "maximum_order": null
+    },
+    "liquid_goods": {
+      "unit": "L",
+      "permitted_units": [
+        "L",
+        "ML"
+      ],
+      "group_reference": "3",
+      "increment": "0.5",
+      "stock": [
+        "20",
+        "600"
+      ],
+      "moq": [
+        "2",
+        "30"
+      ],
+      "rfq": [
+        "4",
+        "90"
+      ],
+      "maximum_order": null
+    },
+    "industrial_bulk": {
+      "unit": "KG",
+      "permitted_units": [
+        "KG",
+        "G",
+        "TONNE"
+      ],
+      "group_reference": "5",
+      "increment": "1",
+      "stock": [
+        "30",
+        "1000"
+      ],
+      "moq": [
+        "2",
+        "40"
+      ],
+      "rfq": [
+        "5",
+        "160"
+      ],
+      "maximum_order": null
+    },
+    "small_articles": {
+      "unit": "PCS",
+      "permitted_units": [
+        "PCS"
+      ],
+      "group_reference": "8",
+      "increment": "1",
+      "stock": [
+        "18",
+        "500"
+      ],
+      "moq": [
+        "1",
+        "25"
+      ],
+      "rfq": [
+        "2",
+        "90"
+      ],
+      "maximum_order": null
+    },
+    "specialized_equipment": {
+      "unit": "PCS",
+      "permitted_units": [
+        "PCS"
+      ],
+      "group_reference": "120",
+      "increment": "1",
+      "stock": [
+        "10",
+        "140"
+      ],
+      "moq": [
+        "1",
+        "10"
+      ],
+      "rfq": [
+        "1",
+        "25"
+      ],
+      "maximum_order": null
+    },
+    "fabric_area": {
+      "unit": "M2",
+      "permitted_units": [
+        "M2"
+      ],
+      "group_reference": "12",
+      "increment": "0.5",
+      "stock": [
+        "20",
+        "450"
+      ],
+      "moq": [
+        "2",
+        "30"
+      ],
+      "rfq": [
+        "3",
+        "75"
+      ],
+      "maximum_order": null
+    },
+    "high_value_items": {
+      "unit": "PCS",
+      "permitted_units": [
+        "PCS"
+      ],
+      "group_reference": "450",
+      "increment": "1",
+      "stock": [
+        "4",
+        "34"
+      ],
+      "moq": [
+        "1",
+        "3"
+      ],
+      "rfq": [
+        "1",
+        "7"
+      ],
+      "maximum_order": null
+    },
+    "medical_packs": {
+      "unit": "PCS",
+      "permitted_units": [
+        "PCS"
+      ],
+      "group_reference": "25",
+      "increment": "1",
+      "stock": [
+        "15",
+        "250"
+      ],
+      "moq": [
+        "1",
+        "15"
+      ],
+      "rfq": [
+        "1",
+        "45"
+      ],
+      "maximum_order": null
+    },
+    "catalog_only_articles": {
+      "unit": "PCS",
+      "permitted_units": [
+        "PCS"
+      ],
+      "group_reference": "20",
+      "increment": "1",
+      "stock": [
+        "12",
+        "100"
+      ],
+      "moq": [
+        "1",
+        "8"
+      ],
+      "rfq": [
+        "1",
+        "12"
+      ],
+      "maximum_order": null
+    },
+    "textile_mass": {
+      "unit": "KG",
+      "permitted_units": [
+        "KG",
+        "G",
+        "TONNE"
+      ],
+      "group_reference": "10",
+      "increment": "0.5",
+      "stock": [
+        "20",
+        "450"
+      ],
+      "moq": [
+        "2",
+        "30"
+      ],
+      "rfq": [
+        "3",
+        "75"
+      ],
+      "maximum_order": null
+    },
+    "length_goods": {
+      "unit": "M",
+      "permitted_units": [
+        "M"
+      ],
+      "group_reference": "16",
+      "increment": "0.5",
+      "stock": [
+        "20",
+        "450"
+      ],
+      "moq": [
+        "2",
+        "30"
+      ],
+      "rfq": [
+        "3",
+        "75"
+      ],
+      "maximum_order": null
+    },
+    "timber_volume": {
+      "unit": "M3",
+      "permitted_units": [
+        "M3"
+      ],
+      "group_reference": "180",
+      "increment": "0.1",
+      "stock": [
+        "4",
+        "65"
+      ],
+      "moq": [
+        "1",
+        "4"
+      ],
+      "rfq": [
+        "1",
+        "10"
+      ],
+      "maximum_order": null
+    },
+    "tool_sets": {
+      "unit": "SET",
+      "permitted_units": [
+        "SET"
+      ],
+      "group_reference": "32",
+      "increment": "1",
+      "stock": [
+        "14",
+        "140"
+      ],
+      "moq": [
+        "1",
+        "10"
+      ],
+      "rfq": [
+        "1",
+        "25"
+      ],
+      "maximum_order": null
+    },
+    "vehicle_parts": {
+      "unit": "PCS",
+      "permitted_units": [
+        "PCS"
+      ],
+      "group_reference": "75",
+      "increment": "1",
+      "stock": [
+        "12",
+        "220"
+      ],
+      "moq": [
+        "1",
+        "14"
+      ],
+      "rfq": [
+        "1",
+        "30"
+      ],
+      "maximum_order": null
+    }
+  },
+  "products": {
+    "010600": {
+      "group": "living_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention.",
+        "Review catalog suitability before any listing-stage approval."
+      ],
+      "reference_price": "55"
+    },
+    "020230": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "020329": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "020721": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "030342": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "030343": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "030349": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "040120": {
+      "group": "liquid_goods",
+      "group_assignment": "product_override",
+      "review_notes": [],
+      "reference_price": "1.5"
+    },
+    "040690": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "051191": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "060299": {
+      "group": "living_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ],
+      "reference_price": "13"
+    },
+    "060310": {
+      "group": "living_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "6"
+    },
+    "070200": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "071022": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "071290": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "071320": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "080410": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "6"
+    },
+    "080710": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "081340": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "090111": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "8"
+    },
+    "090121": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "13"
+    },
+    "090210": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "091099": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "100590": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "100890": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "110290": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "110311": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "110710": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "120740": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "120991": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "19"
+    },
+    "121190": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "130212": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "130219": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "150990": {
+      "group": "liquid_goods",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "151490": {
+      "group": "liquid_goods",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "151590": {
+      "group": "liquid_goods",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "160100": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "160239": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "160250": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "170199": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "170490": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "180631": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "180632": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "180690": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "190230": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "190490": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "190530": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "190590": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "200410": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "200899": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "200990": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "210390": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "210420": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "210690": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "220190": {
+      "group": "liquid_goods",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "220210": {
+      "group": "liquid_goods",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "220290": {
+      "group": "liquid_goods",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "220429": {
+      "group": "liquid_goods",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Review catalog suitability before any listing-stage approval."
+      ],
+      "reference_price": "8"
+    },
+    "220890": {
+      "group": "liquid_goods",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention.",
+        "Review catalog suitability before any listing-stage approval."
+      ],
+      "reference_price": "12"
+    },
+    "230400": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "230910": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "230990": {
+      "group": "food_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "240110": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "240220": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Review catalog suitability before any listing-stage approval."
+      ]
+    },
+    "240310": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "240391": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "251020": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "251611": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "252329": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ],
+      "reference_price": "0.65"
+    },
+    "260111": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "0.8"
+    },
+    "260300": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "2.8"
+    },
+    "270900": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "1.1"
+    },
+    "271000": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ],
+      "reference_price": "1.4"
+    },
+    "281410": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Review catalog suitability before any listing-stage approval."
+      ],
+      "reference_price": "2.3"
+    },
+    "281820": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "284020": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "290511": {
+      "group": "liquid_goods",
+      "group_assignment": "product_override",
+      "review_notes": [],
+      "reference_price": "2.5"
+    },
+    "293390": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "293490": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "293629": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "300220": {
+      "group": "medical_packs",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Review catalog suitability before any listing-stage approval.",
+        "PCS is a demo retail pack with no dosage or contents specified."
+      ],
+      "reference_price": "35"
+    },
+    "300239": {
+      "group": "medical_packs",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Review catalog suitability before any listing-stage approval.",
+        "PCS is a demo retail pack with no dosage or contents specified."
+      ],
+      "reference_price": "18"
+    },
+    "300490": {
+      "group": "medical_packs",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention.",
+        "PCS is a demo retail pack with no dosage or contents specified."
+      ]
+    },
+    "300660": {
+      "group": "medical_packs",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "PCS is a demo retail pack with no dosage or contents specified."
+      ]
+    },
+    "310210": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "310520": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "320890": {
+      "group": "liquid_goods",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "320990": {
+      "group": "liquid_goods",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "321490": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "321590": {
+      "group": "liquid_goods",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "330210": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "330300": {
+      "group": "liquid_goods",
+      "group_assignment": "product_override",
+      "review_notes": [],
+      "reference_price": "24"
+    },
+    "330499": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "330590": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "330741": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "340119": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "340211": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "340220": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "340290": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "340399": {
+      "group": "liquid_goods",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "350610": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "350691": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "350699": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "360690": {
+      "group": "industrial_bulk",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention.",
+        "Review catalog suitability before any listing-stage approval."
+      ]
+    },
+    "370790": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "381400": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "382000": {
+      "group": "liquid_goods",
+      "group_assignment": "product_override",
+      "review_notes": [],
+      "reference_price": "5"
+    },
+    "382100": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Review catalog suitability before any listing-stage approval."
+      ],
+      "reference_price": "30"
+    },
+    "382390": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "391910": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "392020": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "392330": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "392350": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "392690": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "400829": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "401010": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "401099": {
+      "group": "fabric_area",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "401693": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "401699": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "410229": {
+      "group": "industrial_bulk",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "410422": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "410431": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "420221": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "420222": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "420229": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "420292": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "420299": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "430130": {
+      "group": "industrial_bulk",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "430310": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "430390": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "440391": {
+      "group": "timber_volume",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ],
+      "reference_price": "230"
+    },
+    "442090": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "442190": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "450410": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "450490": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "460210": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "460290": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "470710": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "481820": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "481840": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "482110": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "482190": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "490110": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "490199": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "491000": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "491110": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "491199": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "510710": {
+      "group": "textile_mass",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "520100": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "520842": {
+      "group": "fabric_area",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "530720": {
+      "group": "textile_mass",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "531010": {
+      "group": "fabric_area",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "540249": {
+      "group": "textile_mass",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "540794": {
+      "group": "fabric_area",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "550320": {
+      "group": "textile_mass",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "550810": {
+      "group": "textile_mass",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "560790": {
+      "group": "length_goods",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "560900": {
+      "group": "length_goods",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "570190": {
+      "group": "fabric_area",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "570232": {
+      "group": "fabric_area",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "570500": {
+      "group": "fabric_area",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "580610": {
+      "group": "fabric_area",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "580632": {
+      "group": "fabric_area",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "590390": {
+      "group": "fabric_area",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "590610": {
+      "group": "fabric_area",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "600299": {
+      "group": "fabric_area",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "610442": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "610729": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "610910": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "610990": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "611030": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "611090": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "611592": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "620343": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "620433": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "620442": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "620462": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "620530": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "620630": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "620690": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "621050": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "630140": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "630231": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "630293": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "630631": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "630900": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "640299": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "640319": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "640340": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "640399": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "640411": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "650590": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "650610": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "650700": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "660110": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "660199": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "670419": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "670490": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "680293": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "680911": {
+      "group": "fabric_area",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "681310": {
+      "group": "vehicle_parts",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Review catalog suitability before any listing-stage approval."
+      ]
+    },
+    "690790": {
+      "group": "fabric_area",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "691190": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "691200": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "700910": {
+      "group": "vehicle_parts",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "701110": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "701399": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "701910": {
+      "group": "textile_mass",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "710239": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "2100"
+    },
+    "711319": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ],
+      "reference_price": "680"
+    },
+    "711590": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "711620": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "170"
+    },
+    "711790": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "720230": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "720249": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "720449": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "730410": {
+      "group": "length_goods",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "730630": {
+      "group": "length_goods",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "731815": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "731816": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "731822": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "731824": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "731829": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "732690": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "740721": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "741220": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "750300": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "760120": {
+      "group": "industrial_bulk",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "760200": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "761510": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "761690": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "780199": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "790790": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "800700": {
+      "group": "small_articles",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "810890": {
+      "group": "industrial_bulk",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "820551": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "820559": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "820600": {
+      "group": "tool_sets",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "820740": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "830150": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "830241": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "830260": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "830790": {
+      "group": "length_goods",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "840991": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "842123": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "847193": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "847199": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "847330": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "847990": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "848190": {
+      "group": "vehicle_parts",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "850434": {
+      "group": "high_value_items",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ],
+      "reference_price": "3800"
+    },
+    "850940": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "851110": {
+      "group": "vehicle_parts",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "851829": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "851830": {
+      "group": "tool_sets",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "852520": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "852810": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "853400": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "853650": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "853690": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "853710": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "854441": {
+      "group": "length_goods",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "860729": {
+      "group": "vehicle_parts",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "860900": {
+      "group": "high_value_items",
+      "group_assignment": "product_override",
+      "review_notes": [],
+      "reference_price": "1150"
+    },
+    "870120": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "22000"
+    },
+    "870332": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "8500"
+    },
+    "870421": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "14800"
+    },
+    "870810": {
+      "group": "vehicle_parts",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "870892": {
+      "group": "vehicle_parts",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "870899": {
+      "group": "vehicle_parts",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "871690": {
+      "group": "vehicle_parts",
+      "group_assignment": "product_override",
+      "review_notes": []
+    },
+    "880330": {
+      "group": "high_value_items",
+      "group_assignment": "product_override",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ],
+      "reference_price": "2200"
+    },
+    "890400": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "48000"
+    },
+    "901590": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "901890": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ],
+      "reference_price": "95"
+    },
+    "902130": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "350"
+    },
+    "903140": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "903289": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "910221": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "910229": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "910299": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "911410": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "920210": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "920290": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "930400": {
+      "group": "catalog_only_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Review catalog suitability before any listing-stage approval."
+      ]
+    },
+    "940330": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "940350": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "940360": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "940540": {
+      "group": "specialized_equipment",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "950390": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "950490": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "950691": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "950699": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "960321": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "960390": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [
+        "Broad description. The unit is a provisional demo convention."
+      ]
+    },
+    "960910": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "960990": {
+      "group": "small_articles",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "970110": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "600"
+    },
+    "970500": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": []
+    },
+    "970600": {
+      "group": "high_value_items",
+      "group_assignment": "reviewed_category_default",
+      "review_notes": [],
+      "reference_price": "490"
+    }
+  }
+}

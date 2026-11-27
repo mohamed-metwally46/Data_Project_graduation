@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "complete_global_coverage": false,
+    "source": "Available Excel-to-CSV export",
+    "limitation": "The supplied export reaches Excel's worksheet limit including the header.",
+    "trade_value_unit": null,
+    "quantity_unit": null,
+    "hs_revision": null
+  },
+  "rows": {
+    "original": 1048575,
+    "clean": 1048575,
+    "enriched": 1048575,
+    "invalid": 0
+  },
+  "product_matches": {
+    "exact": 995988,
+    "normalized": 1048575,
+    "recovered_from_exact_misses": 52587,
+    "exact_percent": 94.9849080895501,
+    "normalized_percent": 100.0
+  },
+  "quantity": {
+    "missing_before": 44579,
+    "missing_after": 45,
+    "imputed": 44534,
+    "originally_missing_and_unfilled": 45,
+    "invalid_nonblank": 0
+  },
+  "unfilled_quantity_by_product": [
+    {
+      "product_code": "271600",
+      "rows": 38
+    },
+    {
+      "product_code": "520535",
+      "rows": 2
+    },
+    {
+      "product_code": "640691",
+      "rows": 1
+    },
+    {
+      "product_code": "852020",
+      "rows": 2
+    },
+    {
+      "product_code": "852490",
+      "rows": 1
+    },
+    {
+      "product_code": "911019",
+      "rows": 1
+    }
+  ],
+  "country_iso2": {
+    "recovered": [
+      {
+        "code": 516,
+        "name": "Namibia",
+        "iso2": "NA",
+        "iso3": "NAM",
+        "source": "https://ungegn.un.org/dashboard/countries/details?id=516"
+      }
+    ],
+    "unresolved": [
+      {
+        "code": 490,
+        "name": "Other Asia, nes",
+        "iso3": "S19"
+      },
+      {
+        "code": 697,
+        "name": "Europe EFTA, nes",
+        "iso3": "R20"
+      },
+      {
+        "code": 711,
+        "name": "Southern African Customs Union (...1999)",
+        "iso3": "ZA1"
+      }
+    ],
+    "trade_rows_before": 13867,
+    "trade_rows_after": 8340
+  },
+  "join_validation": {
+    "exporter": {
+      "reference_keys_unique": true,
+      "before": 1048575,
+      "after": 1048575
+    },
+    "importer": {
+      "reference_keys_unique": true,
+      "before": 1048575,
+      "after": 1048575
+    },
+    "product": {
+      "reference_keys_unique": true,
+      "before": 1048575,
+      "after": 1048575
+    }
+  },
+  "unmatched_rows_by_join": {
+    "exporter": 0,
+    "importer": 0,
+    "product": 0
+  },
+  "duplicate_normalized_trade_keys_beyond_first": 0
+}

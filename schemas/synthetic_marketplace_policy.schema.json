@@ -1,0 +1,292 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Globiq SM-01 draft policy",
+  "type": "object",
+  "required": [
+    "configuration_version",
+    "source",
+    "policies",
+    "targets",
+    "initial_currency",
+    "default_allowed_bilateral_categories",
+    "proposed_defaults",
+    "unresolved",
+    "contract_status",
+    "generation_status"
+  ],
+  "properties": {
+    "configuration_version": {
+      "const": "1.0.0"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "release_id",
+        "dataset_fingerprint",
+        "year"
+      ],
+      "properties": {
+        "release_id": {
+          "type": "string",
+          "pattern": "^ti-[0-9a-f]{64}$"
+        },
+        "dataset_fingerprint": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "year": {
+          "const": 2024
+        }
+      },
+      "additionalProperties": false
+    },
+    "policies": {
+      "const": [
+        "SM-01.1",
+        "SM-01.2",
+        "SM-01.3",
+        "SM-01.4",
+        "SM-01.5",
+        "SM-01.6",
+        "SM-01.7",
+        "SM-01.8",
+        "SM-01.9"
+      ]
+    },
+    "targets": {
+      "type": "object",
+      "required": [
+        "products",
+        "companies",
+        "supplier_roles",
+        "importer_roles",
+        "listings",
+        "rfqs",
+        "offers"
+      ],
+      "properties": {
+        "products": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "companies": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "supplier_roles": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "importer_roles": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "listings": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rfqs": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "offers": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "initial_currency": {
+      "const": "USD"
+    },
+    "default_allowed_bilateral_categories": {
+      "const": [
+        "A",
+        "B"
+      ]
+    },
+    "proposed_defaults": {
+      "type": "object",
+      "required": [
+        "status",
+        "master_seed",
+        "products_per_supplier",
+        "products_per_importer",
+        "bilateral_percent",
+        "listing_statuses",
+        "rfq_types",
+        "offers_per_rfq"
+      ],
+      "properties": {
+        "status": {
+          "const": "proposed"
+        },
+        "master_seed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "products_per_supplier": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "products_per_importer": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bilateral_percent": {
+          "type": "object",
+          "required": [
+            "a_min",
+            "b_max",
+            "c"
+          ],
+          "properties": {
+            "a_min": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "b_max": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "c": {
+              "const": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        "listing_statuses": {
+          "type": "object",
+          "required": [
+            "active",
+            "out_of_stock",
+            "inactive"
+          ],
+          "properties": {
+            "active": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "out_of_stock": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "inactive": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        "rfq_types": {
+          "type": "object",
+          "required": [
+            "open",
+            "targeted"
+          ],
+          "properties": {
+            "open": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "targeted": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        "offers_per_rfq": {
+          "type": "object",
+          "required": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ],
+          "properties": {
+            "0": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "1": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "2": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "3": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "unresolved": {
+      "type": "object",
+      "required": [
+        "category_taxonomy_and_quotas",
+        "business_location_eligibility_and_role_caps",
+        "portfolio_and_coverage_constraints",
+        "commercial_ranges_units_precision",
+        "bilateral_caps_and_denominator",
+        "listing_and_rfq_scenario_mix",
+        "delivery_terms",
+        "master_seed",
+        "identifier_namespace_and_keys",
+        "backend_contract_and_isolation",
+        "joint_feasibility"
+      ],
+      "properties": {
+        "category_taxonomy_and_quotas": {
+          "const": null
+        },
+        "business_location_eligibility_and_role_caps": {
+          "const": null
+        },
+        "portfolio_and_coverage_constraints": {
+          "const": null
+        },
+        "commercial_ranges_units_precision": {
+          "const": null
+        },
+        "bilateral_caps_and_denominator": {
+          "const": null
+        },
+        "listing_and_rfq_scenario_mix": {
+          "const": null
+        },
+        "delivery_terms": {
+          "const": null
+        },
+        "master_seed": {
+          "const": null
+        },
+        "identifier_namespace_and_keys": {
+          "const": null
+        },
+        "backend_contract_and_isolation": {
+          "const": null
+        },
+        "joint_feasibility": {
+          "const": null
+        }
+      },
+      "additionalProperties": false
+    },
+    "contract_status": {
+      "const": "proposed_backend_confirmation_pending"
+    },
+    "generation_status": {
+      "const": "blocked"
+    }
+  },
+  "additionalProperties": false
+}

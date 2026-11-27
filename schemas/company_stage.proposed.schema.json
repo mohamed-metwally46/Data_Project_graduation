@@ -1,0 +1,598 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Globiq canonical intermediate company contract v1.0.0 (Backend mapping pending)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "metadata",
+    "companies",
+    "company_roles",
+    "company_products",
+    "slot_company_mapping",
+    "identity_registry"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "contract_version",
+        "stage",
+        "fixture_only",
+        "importable",
+        "plan_id",
+        "source",
+        "template_version",
+        "configuration_fingerprint",
+        "identity_namespace",
+        "population_id",
+        "identifier_algorithm",
+        "is_synthetic",
+        "is_intermediate",
+        "backend_importable",
+        "full_marketplace_release"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "stage": {
+          "enum": [
+            "SM-03A",
+            "SM-03B"
+          ]
+        },
+        "fixture_only": {
+          "type": "boolean"
+        },
+        "importable": {
+          "const": false
+        },
+        "plan_id": {
+          "type": "string",
+          "pattern": "^(?:fixture-[a-z0-9-]+|sm02-[a-f0-9]{64})$"
+        },
+        "source": {
+          "type": "object",
+          "required": [
+            "release_id",
+            "dataset_fingerprint",
+            "year"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "release_id": {
+              "type": "string",
+              "pattern": "^(?:fixture-[a-z0-9-]+|ti-[a-f0-9]{64})$"
+            },
+            "dataset_fingerprint": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            "year": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "template_version": {
+          "const": "1.0.0"
+        },
+        "configuration_fingerprint": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "identity_namespace": {
+          "$ref": "#/$defs/uuid5"
+        },
+        "population_id": {
+          "type": "string",
+          "pattern": "^(?:fixture-[a-z0-9-]+|globiq-marketplace-baseline-001)$"
+        },
+        "identifier_algorithm": {
+          "const": "hierarchical_uuid5_v1"
+        },
+        "is_synthetic": {
+          "const": true
+        },
+        "is_intermediate": {
+          "const": true
+        },
+        "backend_importable": {
+          "const": false
+        },
+        "full_marketplace_release": {
+          "const": false
+        }
+      }
+    },
+    "companies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/company"
+      },
+      "minItems": 1
+    },
+    "company_roles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/role"
+      }
+    },
+    "company_products": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/association"
+      }
+    },
+    "slot_company_mapping": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/mapping"
+      }
+    },
+    "identity_registry": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/registry_entry"
+      }
+    }
+  },
+  "$defs": {
+    "uuid5": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "product_code": {
+      "type": "string",
+      "pattern": "^(?:[0-9]{6}|9999AA)$"
+    },
+    "display": {
+      "type": "string",
+      "pattern": "^CMP-[0-9]{6}$"
+    },
+    "company": {
+      "type": "object",
+      "required": [
+        "external_id",
+        "display_code",
+        "brand",
+        "name",
+        "description",
+        "portfolio_focus",
+        "business_type",
+        "market_code",
+        "email",
+        "website",
+        "phone",
+        "street_address",
+        "tax_identifier",
+        "registration_number",
+        "verification_status",
+        "is_synthetic",
+        "industry_group",
+        "visual_identity",
+        "population_id",
+        "profile_language",
+        "provenance"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/uuid5"
+        },
+        "display_code": {
+          "$ref": "#/$defs/display"
+        },
+        "brand": {
+          "type": "string",
+          "pattern": "^[A-Za-z]{4,24}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "portfolio_focus": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "business_type": {
+          "enum": [
+            "trading_company",
+            "wholesale_distributor",
+            "export_trading_company",
+            "import_distribution_company",
+            "procurement_sourcing_company",
+            "diversified_trading_company"
+          ]
+        },
+        "market_code": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "email": {
+          "type": "string",
+          "pattern": "^sales@cmp-[0-9]{6}\\.example$"
+        },
+        "website": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^https://cmp-[0-9]{6}\\.example$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "phone": {
+          "type": "null"
+        },
+        "street_address": {
+          "type": "null"
+        },
+        "tax_identifier": {
+          "type": "null"
+        },
+        "registration_number": {
+          "type": "null"
+        },
+        "verification_status": {
+          "const": "not_verified"
+        },
+        "is_synthetic": {
+          "const": true
+        },
+        "industry_group": {
+          "enum": [
+            "agriculture_and_food",
+            "textiles_and_apparel",
+            "diversified_trading",
+            "general_trading"
+          ]
+        },
+        "visual_identity": {
+          "type": "object",
+          "required": [
+            "type",
+            "initials",
+            "palette_key"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "monogram"
+            },
+            "initials": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            },
+            "palette_key": {
+              "enum": [
+                "forest_green",
+                "ocean_blue",
+                "slate",
+                "warm_amber",
+                "plum"
+              ]
+            }
+          }
+        },
+        "population_id": {
+          "type": "string",
+          "pattern": "^(?:fixture-[a-z0-9-]+|globiq-marketplace-baseline-001)$"
+        },
+        "profile_language": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+        },
+        "provenance": {
+          "type": "object",
+          "required": [
+            "allocation_plan_id",
+            "release_id",
+            "dataset_fingerprint",
+            "year"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "allocation_plan_id": {
+              "type": "string",
+              "pattern": "^(?:fixture-[a-z0-9-]+|sm02-[a-f0-9]{64})$"
+            },
+            "release_id": {
+              "type": "string",
+              "pattern": "^(?:fixture-[a-z0-9-]+|ti-[a-f0-9]{64})$"
+            },
+            "dataset_fingerprint": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            },
+            "year": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+    "role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "company_external_id",
+        "role"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/uuid5"
+        },
+        "company_external_id": {
+          "$ref": "#/$defs/uuid5"
+        },
+        "role": {
+          "enum": [
+            "supplier",
+            "importer"
+          ]
+        }
+      }
+    },
+    "association": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "company_external_id",
+        "role_external_id",
+        "source_product_code",
+        "source_market_code",
+        "observed_role",
+        "release_id",
+        "dataset_fingerprint",
+        "year"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/uuid5"
+        },
+        "company_external_id": {
+          "$ref": "#/$defs/uuid5"
+        },
+        "role_external_id": {
+          "$ref": "#/$defs/uuid5"
+        },
+        "source_product_code": {
+          "$ref": "#/$defs/product_code"
+        },
+        "source_market_code": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "observed_role": {
+          "enum": [
+            "exporter",
+            "importer"
+          ]
+        },
+        "release_id": {
+          "type": "string",
+          "pattern": "^(?:fixture-[a-z0-9-]+|ti-[a-f0-9]{64})$"
+        },
+        "dataset_fingerprint": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "mapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "planning_slot_id",
+        "plan_id",
+        "company_external_id",
+        "identity_slot_key",
+        "display_code",
+        "market_code",
+        "role_external_id",
+        "product_codes",
+        "initial_role"
+      ],
+      "properties": {
+        "planning_slot_id": {
+          "type": "string",
+          "pattern": "^(?:SUP|IMP)-SLOT-[0-9]{4}$"
+        },
+        "plan_id": {
+          "type": "string",
+          "pattern": "^(?:fixture-[a-z0-9-]+|sm02-[a-f0-9]{64})$"
+        },
+        "company_external_id": {
+          "$ref": "#/$defs/uuid5"
+        },
+        "identity_slot_key": {
+          "type": "string",
+          "pattern": "^identity-(?!000000)[0-9]{6}$"
+        },
+        "display_code": {
+          "$ref": "#/$defs/display"
+        },
+        "market_code": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "role_external_id": {
+          "$ref": "#/$defs/uuid5"
+        },
+        "product_codes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/product_code"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "initial_role": {
+          "enum": [
+            "supplier",
+            "importer"
+          ]
+        }
+      }
+    },
+    "registry_entry": {
+      "type": "object",
+      "required": [
+        "population_id",
+        "persistent_company_key",
+        "originating_planning_slot_id",
+        "originating_plan_id",
+        "external_id",
+        "display_code",
+        "identity_status",
+        "reserved_brand",
+        "reserved_name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "population_id": {
+          "type": "string",
+          "pattern": "^(?:fixture-[a-z0-9-]+|globiq-marketplace-baseline-001)$"
+        },
+        "persistent_company_key": {
+          "type": "string",
+          "pattern": "^identity-(?!000000)[0-9]{6}$"
+        },
+        "originating_planning_slot_id": {
+          "type": "string",
+          "pattern": "^(?:SUP|IMP)-SLOT-[0-9]{4}$"
+        },
+        "originating_plan_id": {
+          "type": "string",
+          "pattern": "^(?:fixture-[a-z0-9-]+|sm02-[a-f0-9]{64})$"
+        },
+        "external_id": {
+          "$ref": "#/$defs/uuid5"
+        },
+        "display_code": {
+          "$ref": "#/$defs/display"
+        },
+        "identity_status": {
+          "enum": [
+            "active",
+            "retired"
+          ]
+        },
+        "reserved_brand": {
+          "type": "string",
+          "pattern": "^[A-Za-z]{4,24}$"
+        },
+        "reserved_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        }
+      }
+    }
+  },
+  "if": {
+    "properties": {
+      "metadata": {
+        "properties": {
+          "fixture_only": {
+            "const": true
+          }
+        }
+      }
+    }
+  },
+  "then": {
+    "properties": {
+      "metadata": {
+        "properties": {
+          "stage": {
+            "const": "SM-03A"
+          },
+          "plan_id": {
+            "type": "string",
+            "pattern": "^fixture-"
+          },
+          "population_id": {
+            "type": "string",
+            "pattern": "^fixture-"
+          },
+          "source": {
+            "properties": {
+              "release_id": {
+                "type": "string",
+                "pattern": "^fixture-"
+              }
+            }
+          }
+        }
+      },
+      "companies": {
+        "maxItems": 12
+      }
+    }
+  },
+  "else": {
+    "properties": {
+      "metadata": {
+        "properties": {
+          "stage": {
+            "const": "SM-03B"
+          },
+          "plan_id": {
+            "type": "string",
+            "pattern": "^sm02-"
+          },
+          "population_id": {
+            "const": "globiq-marketplace-baseline-001"
+          },
+          "source": {
+            "properties": {
+              "release_id": {
+                "type": "string",
+                "pattern": "^ti-"
+              }
+            }
+          }
+        }
+      },
+      "companies": {
+        "minItems": 500,
+        "maxItems": 500
+      },
+      "company_roles": {
+        "minItems": 500,
+        "maxItems": 500
+      },
+      "company_products": {
+        "minItems": 1800,
+        "maxItems": 1800
+      },
+      "slot_company_mapping": {
+        "minItems": 500,
+        "maxItems": 500
+      },
+      "identity_registry": {
+        "minItems": 500,
+        "maxItems": 500
+      }
+    }
+  }
+}

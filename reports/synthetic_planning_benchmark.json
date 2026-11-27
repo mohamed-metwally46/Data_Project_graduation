@@ -1,0 +1,21 @@
+{
+  "planning_artifact_id": "sm02-90bf5c26373c3d2c45f3fe7f371fbbe8a45b880825f9aa0ee9315de2a96b9ef3",
+  "pinned_source_verification_seconds": 204.97791790007614,
+  "source_initialization_seconds": 46.982513500144705,
+  "geographic_and_product_profiling_seconds": 1.2603243000339717,
+  "product_selection_seconds": 6.852160099893808,
+  "joint_allocation_seconds": 0.011710199993103743,
+  "repeat_allocation_seconds_with_loaded_indexes": 7.4265409000217915,
+  "independent_validation_seconds": 0.20766959991306067,
+  "scenario_comparison_seconds": 7.930002175271511e-05,
+  "total_planning_seconds_before_reporting": 269.41995380003937,
+  "artifact_sizes_bytes": {
+    "allocation_plan.json": 788184,
+    "geographic_eligibility.json": 120319,
+    "product_eligibility.json": 8477492
+  },
+  "memory": {
+    "peak_bytes": 820178944,
+    "method": "Windows PeakWorkingSetSize for the benchmark process"
+  }
+}

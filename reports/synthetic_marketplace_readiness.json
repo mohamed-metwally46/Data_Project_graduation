@@ -1,0 +1,195 @@
+{
+  "milestone": "SM-01",
+  "status": "complete",
+  "source": {
+    "pin": {
+      "release_id": "ti-3349f6e0cb6dde75fe7d5323af71463748cad3232bc7bcb476c6ff6dcd8cd41b",
+      "dataset_fingerprint": "sha256:4b65676dc1766ebd869df52fef1c3786beffb11fcc838a99eb14a3818e4c136e",
+      "year": 2024
+    },
+    "verification": {
+      "status": "validated",
+      "release_id": "ti-3349f6e0cb6dde75fe7d5323af71463748cad3232bc7bcb476c6ff6dcd8cd41b",
+      "dataset_fingerprint": "sha256:4b65676dc1766ebd869df52fef1c3786beffb11fcc838a99eb14a3818e4c136e",
+      "parquet_scan_seconds": 13.238815099932253,
+      "independent_fingerprint_seconds": 10.880843500141054,
+      "queries": {
+        "query_pages": 16,
+        "lookup_categories": [
+          "A",
+          "B",
+          "C"
+        ],
+        "route_detail_products": 7,
+        "validation_seconds": 4.371697399998084
+      },
+      "validation_seconds": 123.99289319990203
+    },
+    "statistics": {
+      "year": 2024,
+      "eligible_records": 1048575,
+      "unique_composite_keys": 1048575,
+      "duplicated_composite_keys": 0,
+      "records_on_duplicated_composite_keys": 0,
+      "self_trade_records": 0,
+      "observed_exporters": 29,
+      "observed_importers": 226,
+      "country_profiles": 238,
+      "zero_observation_country_profiles": 12,
+      "product_profiles": 4577,
+      "mapped_products": 4577,
+      "unmapped_products": 0,
+      "unobserved_reference_products": 445,
+      "directional_routes": 3734,
+      "routes_with_reverse": 396,
+      "reciprocal_pairs": 198,
+      "market_universe": {
+        "gross_combinations": 7312207,
+        "same_market_exclusions": 40474,
+        "external_relationships": 7271733,
+        "category_counts": {
+          "A": 1048575,
+          "B": 4694268,
+          "C": 1528890
+        },
+        "percentage_denominator": "All external relationships",
+        "category_percentages": {
+          "A": 14.419878,
+          "B": 64.55501,
+          "C": 21.025112
+        }
+      }
+    },
+    "manifest": "data/processed/analytics/trade_intelligence_release.json",
+    "mode": "read-only",
+    "required_artifacts": [
+      "country_intelligence",
+      "product_intelligence",
+      "route_intelligence",
+      "market_opportunity_summary"
+    ],
+    "checks": [
+      "validated manifest identity",
+      "input and artifact hashes",
+      "applicable schemas",
+      "independent Parquet reconciliation",
+      "representative public queries"
+    ]
+  },
+  "approved_policy_ids": [
+    "SM-01.1",
+    "SM-01.2",
+    "SM-01.3",
+    "SM-01.4",
+    "SM-01.5",
+    "SM-01.6",
+    "SM-01.7",
+    "SM-01.8",
+    "SM-01.9"
+  ],
+  "approved_targets": {
+    "products": 300,
+    "companies": 500,
+    "supplier_roles": 300,
+    "importer_roles": 200,
+    "listings": 1000,
+    "rfqs": 600,
+    "offers": 900
+  },
+  "approved_currency": "USD",
+  "approved_default_bilateral_categories": [
+    "A",
+    "B"
+  ],
+  "proposed_defaults": {
+    "status": "proposed",
+    "master_seed": 42,
+    "products_per_supplier": 4,
+    "products_per_importer": 3,
+    "bilateral_percent": {
+      "a_min": 80,
+      "b_max": 20,
+      "c": 0
+    },
+    "listing_statuses": {
+      "active": 850,
+      "out_of_stock": 100,
+      "inactive": 50
+    },
+    "rfq_types": {
+      "open": 420,
+      "targeted": 180
+    },
+    "offers_per_rfq": {
+      "0": 120,
+      "1": 180,
+      "2": 180,
+      "3": 120
+    }
+  },
+  "outstanding_parameters": [
+    "category_taxonomy_and_quotas",
+    "business_location_eligibility_and_role_caps",
+    "portfolio_and_coverage_constraints",
+    "commercial_ranges_units_precision",
+    "bilateral_caps_and_denominator",
+    "listing_and_rfq_scenario_mix",
+    "delivery_terms",
+    "master_seed",
+    "identifier_namespace_and_keys",
+    "backend_contract_and_isolation",
+    "joint_feasibility"
+  ],
+  "backend": {
+    "repository_available_in_inspected_workspace": false,
+    "formal_contract_available_in_inspected_workspace": false,
+    "compatibility": "pending_confirmation",
+    "proposal": "docs/MARKETPLACE_DATA_CONTRACT.md",
+    "draft_schema": "schemas/marketplace_bundle.proposed.schema.json"
+  },
+  "reusable_functionality": [
+    "shared eligibility and string product codes",
+    "read-only release verification",
+    "Country, Product, Route and Market Relationship Intelligence",
+    "Draft 2020-12 schema validation and unittest"
+  ],
+  "foundation": [
+    "strict draft policy",
+    "pinned source CLI",
+    "UUID v5 and display IDs",
+    "named deterministic random streams",
+    "proposed JSON contract"
+  ],
+  "preliminary_feasibility": {
+    "scope": "Preliminary arithmetic and observed breadth before geography, taxonomy, concentration and allocation constraints.",
+    "observed_mapped_products_with_both_roles": 4577,
+    "direct_product_importer_pairs": 418796,
+    "products_with_some_importer_reached_by_3_or_more_exporter_markets": 4211,
+    "direct_product_importer_pairs_with_3_or_more_exporter_markets": 148545,
+    "proposed_supplier_portfolio_slots": 1200,
+    "proposed_importer_portfolio_slots": 600,
+    "listings_as_percent_of_proposed_supplier_slots": 83.33,
+    "proposed_active_listings_above_one_per_selected_product": 550,
+    "proposed_open_requests_requiring_competition": 300,
+    "proposed_open_requests_remaining_for_zero_or_one_offer": 120,
+    "proposed_offers_total": 900,
+    "joint_feasibility": "not_established"
+  },
+  "automated_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 26,
+    "failed": 0,
+    "skipped": 0,
+    "foundation_tests": 7
+  },
+  "blockers_for_generation": [
+    "unapproved mandatory policy parameters and geographic eligibility",
+    "joint feasibility proof",
+    "Backend contract confirmation"
+  ],
+  "readiness": {
+    "sm02_planning": "ready_for_separate_instruction",
+    "full_generation": "blocked"
+  },
+  "marketplace_population_generated": false
+}

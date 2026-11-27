@@ -1,0 +1,411 @@
+{
+  "is_synthetic": true,
+  "is_planning_artifact": true,
+  "backend_importable": false,
+  "full_marketplace_release": false,
+  "listing_generation_authorized": false,
+  "status": "validated_proposal_awaiting_exact_approval",
+  "artifact_directory": "data/planning/marketplace_scope/proposals/c2ba6877a9b8816c2ebf80ab509eae5de81f59c3dd53f54affc38d1670df1d75",
+  "scope_id": "sm04as-8f0ef371ba33b53d69293693a7127f897a11184ea9a71bf02ea7e7abba5cbf0d",
+  "review_package_fingerprint": "sha256:c2ba6877a9b8816c2ebf80ab509eae5de81f59c3dd53f54affc38d1670df1d75",
+  "package": {
+    "version": "sm04as-specification-and-scope-review-v1",
+    "decision_authority": "User attachment eb48ea63-cba4-472c-bca8-27d7bba01b92, sections 1 and 2",
+    "strategy": "adaptive_scope_option_d",
+    "ceiling": 287,
+    "scope_id": "sm04as-8f0ef371ba33b53d69293693a7127f897a11184ea9a71bf02ea7e7abba5cbf0d",
+    "upstream": {
+      "trade_intelligence": {
+        "release_id": "ti-3349f6e0cb6dde75fe7d5323af71463748cad3232bc7bcb476c6ff6dcd8cd41b",
+        "dataset_fingerprint": "sha256:4b65676dc1766ebd869df52fef1c3786beffb11fcc838a99eb14a3818e4c136e",
+        "year": 2024
+      },
+      "structural_plan_id": "sm02-90bf5c26373c3d2c45f3fe7f371fbbe8a45b880825f9aa0ee9315de2a96b9ef3",
+      "structural_artifacts": {
+        "allocation_plan.json": {
+          "path": "allocation_plan.json",
+          "sha256": "48e4510a4c278adb69f3729399edc0ea044af93076ae479c5287bc7fdb97c44e",
+          "size_bytes": 788184
+        },
+        "geographic_eligibility.json": {
+          "path": "geographic_eligibility.json",
+          "sha256": "3819398da839787db2821b265cf762aa90d873cdc52f505857a84f7482f2bbcf",
+          "size_bytes": 120319
+        },
+        "product_eligibility.json": {
+          "path": "product_eligibility.json",
+          "sha256": "6227bcef0453d0dd7fa689ad64c32237c0d7b787c1a71b6b0daba9c3458bca17",
+          "size_bytes": 8477492
+        }
+      },
+      "company_stage_id": "sm03b-68a129e0877cc0b7405db11375d2ef72ee862b7545075bd36c06099fa8e42363",
+      "company_artifacts": {
+        "company_stage.json": {
+          "path": "company_stage.json",
+          "sha256": "5d41f334d6c5bac78046e21ca231df826a9c5d844dc89bc47c6c753c1a1abce4",
+          "size_bytes": 2219027
+        },
+        "company_validation_report.json": {
+          "path": "company_validation_report.json",
+          "sha256": "fa1b012c76171f61e7ca41a7cec4ec929e1d30883c6f66f42566f44b6c92d58e",
+          "size_bytes": 22022
+        }
+      },
+      "population_id": "globiq-marketplace-baseline-001",
+      "historical_plan_id": "sm04a-32558594b63919d38b643c249ef06aa8ba882430a330c30ef2ab959fec02910d",
+      "historical_artifacts": {
+        "commercial_feasibility_report.json": {
+          "path": "commercial_feasibility_report.json",
+          "sha256": "8f481d804b77a77569f7367f35c17b6e39cc74cf9a1a2ef1f39babdb05613eb3",
+          "size_bytes": 972
+        },
+        "commercial_quality_report.json": {
+          "path": "commercial_quality_report.json",
+          "sha256": "9d3ba2ed2dc082c76418bd7dc06ab603760fac21dbd2b8bc6c67b2abe974bd11",
+          "size_bytes": 547431
+        },
+        "listing_commercial_plan.json": {
+          "path": "listing_commercial_plan.json",
+          "sha256": "37ce8e0ce8bae0c536b0c2364a7fdb86738384d7754d72036e12521ad8538ca3",
+          "size_bytes": 665498
+        },
+        "offer_commercial_plan.json": {
+          "path": "offer_commercial_plan.json",
+          "sha256": "23ad64b8583055c6abc745c4fa8f4753acb612b6a8ab8e20d27db60e1f0ccffc",
+          "size_bytes": 675755
+        },
+        "product_commercial_review.md": {
+          "path": "product_commercial_review.md",
+          "sha256": "32433e528022b61e36dba6fc228338201ebb0ecb352d9063d0d0b25ed465e6b8",
+          "size_bytes": 105773
+        },
+        "resolved_product_profiles.json": {
+          "path": "resolved_product_profiles.json",
+          "sha256": "c2e6906b87aa6c64d3cff579361c44a8dc0e85c988a43fdadb6a6bcbe63d739c",
+          "size_bytes": 543769
+        },
+        "rfq_commercial_plan.json": {
+          "path": "rfq_commercial_plan.json",
+          "sha256": "0c5d3f98c8e6407ca6353e1a3344aa8d30ffc3fd07cd18c4b4d12d8d975ecf5e",
+          "size_bytes": 448045
+        }
+      },
+      "remediation_evidence": "sha256:eaf60b25a07960d86db0d64481b1e3abf42f2eda284b32d93ee4ef77a7268631"
+    },
+    "decision_input": {
+      "path": "configs/synthetic/commercial.scope.review.v1.json",
+      "sha256": "21d817573d899dc18bc527c030dbaeeb01c813964c910b9b3c3852777baabe84",
+      "size_bytes": 6285
+    },
+    "artifacts": {
+      "commercial.scope.proposed.v1.json": {
+        "path": "commercial.scope.proposed.v1.json",
+        "sha256": "0ee47c9bfe15c7433491f48059660a5e097bf40b63fbd0ac403a7e49f273c834",
+        "size_bytes": 942391
+      },
+      "product_specification_review.json": {
+        "path": "product_specification_review.json",
+        "sha256": "5512185b74971747d2d875e48870629db9afb8837f6a682de42a4f6a0e981141",
+        "size_bytes": 272142
+      },
+      "scope_coverage.json": {
+        "path": "scope_coverage.json",
+        "sha256": "0cc02cb2d5d45b7dad3ffb1e73d60ea5b248ce56655531c5b9913ae62ec39e8e",
+        "size_bytes": 24531
+      },
+      "scope_projection.json": {
+        "path": "scope_projection.json",
+        "sha256": "0075d079c41eb1c2f5c4f8bdcda2750ffb78ad2a24748d31cb2073e9da7d1f8d",
+        "size_bytes": 1255040
+      }
+    },
+    "source_codes_fingerprint": "sha256:d82e63cd9444768950e9cefef9f30a9bb9c4836f73cd473fd23f6a620fb01936",
+    "eligible_codes_fingerprint": "sha256:13ab2df07cc634ec162d6269828a44e33819fd2c89f938554bf40499a6df863a",
+    "offline_codes_fingerprint": "sha256:b1e35c44e608102d150d6ea834180571b7c88313c0a71892d2e1625bcb087782",
+    "unresolved_codes_fingerprint": "sha256:397188486c663809bb994e061f8886cd8c41168b84756d9df43289f73ce93a53",
+    "specification_fingerprint": "sha256:b900b4c01d63a8a9c20f09309ff92f2ad42d935c8caac60b1ce28462cfde07c1",
+    "configuration_fingerprint": "sha256:2c2b6438662b33e1aa65a7f705020d68043a96b5cb9d961d8ee7a28ba8a8c714",
+    "coverage_fingerprint": "sha256:9f3312ff1cbe40d0019a39074a80191cce396dad6fad955009bcd012d8e52316",
+    "implementation": {
+      "version": "scope-implementation-v1",
+      "remediation_binding": "sha256:5ac4990388a3a58c823d2b25d9c972d141ec524b71b0381e75d42f560273467f",
+      "files": [
+        {
+          "path": "src/synthetic/marketplace_scope.py",
+          "sha256": "507fd88c3e43bc599b885ba5c47904bd21906ccbcef9f0105ff6905d75c2c939",
+          "size_bytes": 17437
+        },
+        {
+          "path": "src/synthetic/marketplace_scope_validation.py",
+          "sha256": "c9bf8550fa51078ec64057b4059f5f495184d931eff632449ff3f2ef7a2a27fd",
+          "size_bytes": 15120
+        },
+        {
+          "path": "src/synthetic/sm04a_scope.py",
+          "sha256": "a2e9d0221173ae86cf6235ddc2b97d88b68c1caac90952292ee8d6fb5d185249",
+          "size_bytes": 19516
+        }
+      ],
+      "fingerprint": "sha256:560599c4e295ae7645433a6b5865485177faa0cd92078f04c8c526aefbc00b79"
+    },
+    "schemas": [
+      {
+        "path": "schemas/commercial.scope.proposed.v1.schema.json",
+        "sha256": "3102deec9442a4ce871f75f6a6643c63719c129328004b646752c71348a653a4",
+        "size_bytes": 16156
+      },
+      {
+        "path": "schemas/commercial_config.v1.schema.json",
+        "sha256": "37e692dd7e1ce29e9f6a74d3c527c4be15ceb3adc539ff8ecfcfaf8937896243",
+        "size_bytes": 11995
+      },
+      {
+        "path": "schemas/commercial_plan.v1.schema.json",
+        "sha256": "1ae3096269f5d34647ba3337ab7376adcd8f32902d51ff0552cc8475f3107a2d",
+        "size_bytes": 19408
+      },
+      {
+        "path": "schemas/commercial_remediation.v1.schema.json",
+        "sha256": "368cadd2dfe43dabad78655c37067769a329a13db0fd08f75c8316380729fb2e",
+        "size_bytes": 8763
+      },
+      {
+        "path": "schemas/listing_stage.remediation.v1.schema.json",
+        "sha256": "6fbf41832a3ce92f39751b19ba3a6f00205116181aef0770e56710b36d0c5026",
+        "size_bytes": 13483
+      },
+      {
+        "path": "schemas/marketplace_scope.v1.schema.json",
+        "sha256": "4396d37ec586b76e4b6ad5fa6dca24ab78780c3455d59eec7b6b1cd37215e5e5",
+        "size_bytes": 4928
+      }
+    ],
+    "proposed_counts": {
+      "products": 279,
+      "companies": 500,
+      "supplier_companies": 300,
+      "importer_companies": 200,
+      "supplier_associations": 1116,
+      "importer_associations": 556,
+      "listings": 932,
+      "active": 792,
+      "out_of_stock": 96,
+      "inactive": 44,
+      "visible_catalog": 888,
+      "generally_available": 792,
+      "rfqs": 558,
+      "open_rfqs": 392,
+      "targeted_rfqs": 166,
+      "responses": {
+        "0": 113,
+        "1": 166,
+        "2": 168,
+        "3": 111
+      },
+      "competitive_rfqs": 279,
+      "offers": 835,
+      "responding_suppliers": 295,
+      "category_records": {
+        "A": 1001,
+        "B": 0,
+        "C": 0
+      },
+      "unique_directional_relationships": 279,
+      "supplier_markets": 25,
+      "importer_markets": 75,
+      "combined_markets": 92,
+      "active_product_coverage": 279,
+      "rfq_product_coverage": 279,
+      "active_supplier_coverage": 300,
+      "listed_supplier_coverage": 300,
+      "rfq_importer_coverage": 199
+    },
+    "additional_coverage_exceptions": {
+      "companies_without_portfolio": [],
+      "suppliers_without_active_listing": [],
+      "importers_without_rfq": [],
+      "products_without_active_listings": [],
+      "products_without_rfqs": []
+    },
+    "competition_scenarios_below_ceiling": 8,
+    "proposed_inactive_zero": 22,
+    "authorization_scope": "corrected_provisional_commercial_planning_only"
+  },
+  "artifacts": {
+    "commercial.scope.proposed.v1.json": {
+      "path": "commercial.scope.proposed.v1.json",
+      "sha256": "0ee47c9bfe15c7433491f48059660a5e097bf40b63fbd0ac403a7e49f273c834",
+      "size_bytes": 942391
+    },
+    "product_specification_review.json": {
+      "path": "product_specification_review.json",
+      "sha256": "5512185b74971747d2d875e48870629db9afb8837f6a682de42a4f6a0e981141",
+      "size_bytes": 272142
+    },
+    "scope_coverage.json": {
+      "path": "scope_coverage.json",
+      "sha256": "0cc02cb2d5d45b7dad3ffb1e73d60ea5b248ce56655531c5b9913ae62ec39e8e",
+      "size_bytes": 24531
+    },
+    "scope_projection.json": {
+      "path": "scope_projection.json",
+      "sha256": "0075d079c41eb1c2f5c4f8bdcda2750ffb78ad2a24748d31cb2073e9da7d1f8d",
+      "size_bytes": 1255040
+    }
+  },
+  "reproducibility": {
+    "builds": [
+      {
+        "commercial.scope.proposed.v1.json": {
+          "path": "commercial.scope.proposed.v1.json",
+          "sha256": "0ee47c9bfe15c7433491f48059660a5e097bf40b63fbd0ac403a7e49f273c834",
+          "size_bytes": 942391
+        },
+        "product_specification_review.json": {
+          "path": "product_specification_review.json",
+          "sha256": "5512185b74971747d2d875e48870629db9afb8837f6a682de42a4f6a0e981141",
+          "size_bytes": 272142
+        },
+        "scope_coverage.json": {
+          "path": "scope_coverage.json",
+          "sha256": "0cc02cb2d5d45b7dad3ffb1e73d60ea5b248ce56655531c5b9913ae62ec39e8e",
+          "size_bytes": 24531
+        },
+        "scope_projection.json": {
+          "path": "scope_projection.json",
+          "sha256": "0075d079c41eb1c2f5c4f8bdcda2750ffb78ad2a24748d31cb2073e9da7d1f8d",
+          "size_bytes": 1255040
+        }
+      },
+      {
+        "commercial.scope.proposed.v1.json": {
+          "path": "commercial.scope.proposed.v1.json",
+          "sha256": "0ee47c9bfe15c7433491f48059660a5e097bf40b63fbd0ac403a7e49f273c834",
+          "size_bytes": 942391
+        },
+        "product_specification_review.json": {
+          "path": "product_specification_review.json",
+          "sha256": "5512185b74971747d2d875e48870629db9afb8837f6a682de42a4f6a0e981141",
+          "size_bytes": 272142
+        },
+        "scope_coverage.json": {
+          "path": "scope_coverage.json",
+          "sha256": "0cc02cb2d5d45b7dad3ffb1e73d60ea5b248ce56655531c5b9913ae62ec39e8e",
+          "size_bytes": 24531
+        },
+        "scope_projection.json": {
+          "path": "scope_projection.json",
+          "sha256": "0075d079c41eb1c2f5c4f8bdcda2750ffb78ad2a24748d31cb2073e9da7d1f8d",
+          "size_bytes": 1255040
+        }
+      }
+    ],
+    "byte_identical": true
+  },
+  "exact_scope_approved": false,
+  "exact_specifications_approved": false,
+  "corrected_commercial_plan_validated": false,
+  "validation": {
+    "status": "validated_proposed_scope",
+    "counts": {
+      "products": 279,
+      "companies": 500,
+      "supplier_companies": 300,
+      "importer_companies": 200,
+      "supplier_associations": 1116,
+      "importer_associations": 556,
+      "listings": 932,
+      "active": 792,
+      "out_of_stock": 96,
+      "inactive": 44,
+      "visible_catalog": 888,
+      "generally_available": 792,
+      "rfqs": 558,
+      "open_rfqs": 392,
+      "targeted_rfqs": 166,
+      "responses": {
+        "0": 113,
+        "1": 166,
+        "2": 168,
+        "3": 111
+      },
+      "competitive_rfqs": 279,
+      "offers": 835,
+      "responding_suppliers": 295,
+      "category_records": {
+        "A": 1001,
+        "B": 0,
+        "C": 0
+      },
+      "unique_directional_relationships": 279,
+      "supplier_markets": 25,
+      "importer_markets": 75,
+      "combined_markets": 92,
+      "active_product_coverage": 279,
+      "rfq_product_coverage": 279,
+      "active_supplier_coverage": 300,
+      "listed_supplier_coverage": 300,
+      "rfq_importer_coverage": 199
+    },
+    "corrected_feasibility_validated": false
+  },
+  "regression_suite": {
+    "status": "passed",
+    "tests_passed": 74,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "verified_pointers": [
+    {
+      "path": "data/processed/analytics/trade_intelligence_release.json",
+      "sha256": "f02a382ef38f44740458e845917416c6222dc2c32fdf6d710bf168d3ae0ca3ea",
+      "size_bytes": 9678
+    },
+    {
+      "path": "data/planning/synthetic_marketplace/allocation_plan_manifest.json",
+      "sha256": "231bfaab1c3afae6db4a58d503997ff38f3f47da7faa246c85b6246c25b33945",
+      "size_bytes": 4128
+    },
+    {
+      "path": "data/synthetic/stages/companies/company_stage_manifest.json",
+      "sha256": "c0483fb670cef4052c2ad61919614fd9a8cff2f7144680406b3922e925ccbf35",
+      "size_bytes": 6562
+    },
+    {
+      "path": "data/planning/commercial_feasibility/commercial_plan_manifest.json",
+      "sha256": "e49ff88b819e3a1234486258b0cd6d01ca4125ef52e9161f2a24bb40f6fbecd1",
+      "size_bytes": 9853
+    },
+    {
+      "path": "reports/sm04a_remediation_report.json",
+      "sha256": "9a3f8268e5f2692d60d07ca15e2e1c870c94ff2602e9f81a26a4c7638e6c81b9",
+      "size_bytes": 57147
+    }
+  ],
+  "review_counts": {
+    "offline_only": 13,
+    "existing_proposal": 240,
+    "new_proposal": 39,
+    "unresolved_excluded": 8
+  },
+  "corrected_full_plan_builds": 0,
+  "actual_generation": {
+    "permanent_product_ids": 0,
+    "permanent_listing_ids": 0,
+    "listings": 0,
+    "rfqs": 0,
+    "offers": 0
+  },
+  "operational": {
+    "seconds": {
+      "upstream_verification": 3.570786700118333,
+      "regression_suite": 45.75785050005652,
+      "independent_scope_builds": 6.62544359988533,
+      "publication_and_recheck": 2.5698667000979185,
+      "total_excluding_report_write": 58.523948800051585
+    },
+    "peak_memory": {
+      "peak_bytes": 100270080,
+      "method": "Windows PeakWorkingSetSize for the benchmark process"
+    }
+  }
+}

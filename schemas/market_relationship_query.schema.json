@@ -1,0 +1,417 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Globiq Market Relationship Query",
+  "type": "object",
+  "required": [
+    "metadata",
+    "filters",
+    "pagination",
+    "empty_reason",
+    "records"
+  ],
+  "properties": {
+    "metadata": {
+      "$ref": "#/$defs/metadata"
+    },
+    "filters": {
+      "type": "object",
+      "required": [
+        "product_code",
+        "exporter_code",
+        "importer_code",
+        "category"
+      ],
+      "properties": {
+        "product_code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/product"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "exporter_code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/positive"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "importer_code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/positive"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "category": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/category"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "pagination": {
+      "type": "object",
+      "required": [
+        "page",
+        "page_size",
+        "total_matches",
+        "total_pages",
+        "returned_count",
+        "has_previous",
+        "has_next"
+      ],
+      "properties": {
+        "page": {
+          "$ref": "#/$defs/positive"
+        },
+        "page_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 500
+        },
+        "total_matches": {
+          "$ref": "#/$defs/count"
+        },
+        "total_pages": {
+          "$ref": "#/$defs/count"
+        },
+        "returned_count": {
+          "$ref": "#/$defs/count"
+        },
+        "has_previous": {
+          "type": "boolean"
+        },
+        "has_next": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "empty_reason": {
+      "enum": [
+        null,
+        "product_unobserved",
+        "exporter_role_unobserved",
+        "importer_role_unobserved",
+        "no_matches",
+        "page_out_of_range"
+      ]
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationship"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "positive": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "product": {
+      "type": "string",
+      "pattern": "^([0-9]{6}|9999AA)$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "category": {
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "market": {
+      "type": "object",
+      "required": [
+        "code",
+        "name",
+        "iso2",
+        "iso3",
+        "reference_mapped"
+      ],
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/positive"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "iso2": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "iso3": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reference_mapped": {
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "complete_global_coverage",
+        "source",
+        "limitation",
+        "absence_meaning",
+        "trade_value_unit",
+        "quantity_unit",
+        "hs_revision"
+      ],
+      "properties": {
+        "complete_global_coverage": {
+          "const": false
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "absence_meaning": {
+          "type": "string",
+          "minLength": 1
+        },
+        "trade_value_unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "quantity_unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hs_revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "dataset_version",
+        "year",
+        "eligibility",
+        "record_grain",
+        "eligible_records",
+        "unique_composite_keys",
+        "observed_self_links",
+        "observed_exporters",
+        "observed_importers",
+        "observed_products",
+        "observed_routes",
+        "reciprocal_pairs",
+        "coverage"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "1.0"
+        },
+        "dataset_version": {
+          "$ref": "#/$defs/version"
+        },
+        "year": {
+          "$ref": "#/$defs/positive"
+        },
+        "eligibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_grain": {
+          "const": [
+            "year",
+            "exporter_code",
+            "importer_code",
+            "product_code"
+          ]
+        },
+        "eligible_records": {
+          "$ref": "#/$defs/count"
+        },
+        "unique_composite_keys": {
+          "$ref": "#/$defs/count"
+        },
+        "observed_self_links": {
+          "$ref": "#/$defs/count"
+        },
+        "observed_exporters": {
+          "$ref": "#/$defs/count"
+        },
+        "observed_importers": {
+          "$ref": "#/$defs/count"
+        },
+        "observed_products": {
+          "$ref": "#/$defs/count"
+        },
+        "observed_routes": {
+          "$ref": "#/$defs/count"
+        },
+        "reciprocal_pairs": {
+          "$ref": "#/$defs/count"
+        },
+        "coverage": {
+          "$ref": "#/$defs/coverage"
+        }
+      },
+      "additionalProperties": false
+    },
+    "relationship": {
+      "type": "object",
+      "required": [
+        "relationship_id",
+        "year",
+        "dataset_version",
+        "coverage",
+        "product_code",
+        "product_description",
+        "product_reference_mapped",
+        "exporter",
+        "importer",
+        "category",
+        "product_link_observed",
+        "directional_pair_observed",
+        "reverse_pair_observed",
+        "reverse_product_link_observed",
+        "evidence",
+        "explanation"
+      ],
+      "properties": {
+        "relationship_id": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*:[1-9][0-9]*:([0-9]{6}|9999AA):[1-9][0-9]*$"
+        },
+        "year": {
+          "$ref": "#/$defs/positive"
+        },
+        "dataset_version": {
+          "$ref": "#/$defs/version"
+        },
+        "coverage": {
+          "$ref": "#/$defs/coverage"
+        },
+        "product_code": {
+          "$ref": "#/$defs/product"
+        },
+        "product_description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "product_reference_mapped": {
+          "const": true
+        },
+        "exporter": {
+          "$ref": "#/$defs/market"
+        },
+        "importer": {
+          "$ref": "#/$defs/market"
+        },
+        "category": {
+          "$ref": "#/$defs/category"
+        },
+        "product_link_observed": {
+          "type": "boolean"
+        },
+        "directional_pair_observed": {
+          "type": "boolean"
+        },
+        "reverse_pair_observed": {
+          "type": "boolean"
+        },
+        "reverse_product_link_observed": {
+          "type": "boolean"
+        },
+        "evidence": {
+          "type": "object",
+          "required": [
+            "exporter_product_destinations",
+            "importer_product_sources",
+            "product_exporters",
+            "product_importers",
+            "exporter_product_diversity",
+            "importer_product_diversity",
+            "pair_product_count",
+            "other_pair_product_count"
+          ],
+          "properties": {
+            "exporter_product_destinations": {
+              "$ref": "#/$defs/positive"
+            },
+            "importer_product_sources": {
+              "$ref": "#/$defs/positive"
+            },
+            "product_exporters": {
+              "$ref": "#/$defs/positive"
+            },
+            "product_importers": {
+              "$ref": "#/$defs/positive"
+            },
+            "exporter_product_diversity": {
+              "$ref": "#/$defs/positive"
+            },
+            "importer_product_diversity": {
+              "$ref": "#/$defs/positive"
+            },
+            "pair_product_count": {
+              "$ref": "#/$defs/count"
+            },
+            "other_pair_product_count": {
+              "$ref": "#/$defs/count"
+            }
+          },
+          "additionalProperties": false
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,493 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "listing_stage.proposed",
+  "type": "object",
+  "required": [
+    "metadata",
+    "products",
+    "listings",
+    "identity_registry",
+    "planning_to_listing"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "version",
+        "fixture_only",
+        "population_id",
+        "is_synthetic",
+        "is_intermediate",
+        "backend_importable",
+        "full_marketplace_release",
+        "plan_id",
+        "configuration_fingerprint"
+      ],
+      "properties": {
+        "version": {
+          "const": "1.0.0"
+        },
+        "fixture_only": {
+          "type": "boolean"
+        },
+        "population_id": {
+          "type": "string",
+          "pattern": "^(fixture-[a-z0-9-]+|globiq-marketplace-baseline-001)$"
+        },
+        "is_synthetic": {
+          "const": true
+        },
+        "is_intermediate": {
+          "const": true
+        },
+        "backend_importable": {
+          "const": false
+        },
+        "full_marketplace_release": {
+          "const": false
+        },
+        "plan_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "configuration_fingerprint": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "external_id",
+          "source_product_code",
+          "classification_context",
+          "is_synthetic"
+        ],
+        "properties": {
+          "external_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-5[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "source_product_code": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^([0-9]{6}|9999AA)$"
+          },
+          "classification_context": {
+            "type": "string",
+            "minLength": 1
+          },
+          "is_synthetic": {
+            "const": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "listings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "external_id",
+          "supplier_external_id",
+          "product_external_id",
+          "variant",
+          "logical_key",
+          "display_code",
+          "population_id",
+          "supplier_role_external_id",
+          "supplier_product_association_external_id",
+          "source_product_code",
+          "market_code",
+          "title",
+          "description",
+          "language",
+          "image",
+          "tags",
+          "pricing_provenance",
+          "quantity_provenance",
+          "price",
+          "unit",
+          "stock",
+          "moq",
+          "quantity_increment",
+          "maximum_order_quantity",
+          "status",
+          "planning_listing_id",
+          "provenance",
+          "is_synthetic"
+        ],
+        "properties": {
+          "external_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-5[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "supplier_external_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-5[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "product_external_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-5[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "variant": {
+            "type": "string",
+            "minLength": 1
+          },
+          "logical_key": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "display_code": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^LST-[0-9]{6}$"
+          },
+          "population_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supplier_role_external_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-5[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "supplier_product_association_external_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-5[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "source_product_code": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^([0-9]{6}|9999AA)$"
+          },
+          "market_code": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "language": {
+            "const": "en"
+          },
+          "image": {
+            "const": null
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "pricing_provenance": {
+            "const": "synthetic"
+          },
+          "quantity_provenance": {
+            "const": "synthetic"
+          },
+          "price": {
+            "type": "object",
+            "required": [
+              "amount",
+              "currency",
+              "basis_quantity",
+              "basis_unit"
+            ],
+            "properties": {
+              "amount": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "currency": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[A-Z]{3}$"
+              },
+              "basis_quantity": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              "basis_unit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+              }
+            },
+            "additionalProperties": false
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9]{0,8}$"
+          },
+          "stock": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "moq": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "quantity_increment": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+          },
+          "maximum_order_quantity": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "enum": [
+              "active",
+              "inactive",
+              "out_of_stock"
+            ]
+          },
+          "planning_listing_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "provenance": {
+            "type": "object",
+            "required": [
+              "source_release",
+              "structural_plan_id",
+              "company_stage_id",
+              "commercial_plan_id",
+              "configuration_fingerprint",
+              "configuration_version"
+            ],
+            "properties": {
+              "source_release": {
+                "type": "string",
+                "minLength": 1
+              },
+              "structural_plan_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "company_stage_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "commercial_plan_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "configuration_fingerprint": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^sha256:[a-f0-9]{64}$"
+              },
+              "configuration_version": {
+                "const": "1.0.0"
+              }
+            },
+            "additionalProperties": false
+          },
+          "is_synthetic": {
+            "const": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "identity_registry": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "external_id",
+          "supplier_external_id",
+          "product_external_id",
+          "variant",
+          "logical_key",
+          "display_code",
+          "population_id",
+          "originating_plan_id",
+          "originating_planning_listing_id",
+          "identity_status"
+        ],
+        "properties": {
+          "external_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-5[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "supplier_external_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-5[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "product_external_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-5[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "variant": {
+            "type": "string",
+            "minLength": 1
+          },
+          "logical_key": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "display_code": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^LST-[0-9]{6}$"
+          },
+          "population_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "originating_plan_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "originating_planning_listing_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "identity_status": {
+            "enum": [
+              "active",
+              "retired"
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "planning_to_listing": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "planning_listing_id",
+          "listing_external_id",
+          "display_code"
+        ],
+        "properties": {
+          "planning_listing_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "listing_external_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-5[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+          },
+          "display_code": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^LST-[0-9]{6}$"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false,
+  "if": {
+    "properties": {
+      "metadata": {
+        "properties": {
+          "fixture_only": {
+            "const": true
+          }
+        }
+      }
+    }
+  },
+  "then": {
+    "properties": {
+      "metadata": {
+        "properties": {
+          "population_id": {
+            "pattern": "^fixture-"
+          }
+        }
+      },
+      "listings": {
+        "maxItems": 12
+      }
+    }
+  },
+  "else": {
+    "properties": {
+      "metadata": {
+        "properties": {
+          "population_id": {
+            "const": "globiq-marketplace-baseline-001"
+          },
+          "plan_id": {
+            "pattern": "^sm04a-[a-f0-9]{64}$"
+          }
+        }
+      },
+      "products": {
+        "minItems": 300,
+        "maxItems": 300
+      },
+      "listings": {
+        "minItems": 1000,
+        "maxItems": 1000
+      },
+      "identity_registry": {
+        "minItems": 1000,
+        "maxItems": 1000
+      },
+      "planning_to_listing": {
+        "minItems": 1000,
+        "maxItems": 1000
+      }
+    }
+  }
+}

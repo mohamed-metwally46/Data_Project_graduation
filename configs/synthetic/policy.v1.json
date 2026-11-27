@@ -1,0 +1,74 @@
+{
+  "configuration_version": "1.0.0",
+  "source": {
+    "release_id": "ti-3349f6e0cb6dde75fe7d5323af71463748cad3232bc7bcb476c6ff6dcd8cd41b",
+    "dataset_fingerprint": "sha256:4b65676dc1766ebd869df52fef1c3786beffb11fcc838a99eb14a3818e4c136e",
+    "year": 2024
+  },
+  "policies": [
+    "SM-01.1",
+    "SM-01.2",
+    "SM-01.3",
+    "SM-01.4",
+    "SM-01.5",
+    "SM-01.6",
+    "SM-01.7",
+    "SM-01.8",
+    "SM-01.9"
+  ],
+  "targets": {
+    "products": 300,
+    "companies": 500,
+    "supplier_roles": 300,
+    "importer_roles": 200,
+    "listings": 1000,
+    "rfqs": 600,
+    "offers": 900
+  },
+  "initial_currency": "USD",
+  "default_allowed_bilateral_categories": [
+    "A",
+    "B"
+  ],
+  "proposed_defaults": {
+    "status": "proposed",
+    "master_seed": 42,
+    "products_per_supplier": 4,
+    "products_per_importer": 3,
+    "bilateral_percent": {
+      "a_min": 80,
+      "b_max": 20,
+      "c": 0
+    },
+    "listing_statuses": {
+      "active": 850,
+      "out_of_stock": 100,
+      "inactive": 50
+    },
+    "rfq_types": {
+      "open": 420,
+      "targeted": 180
+    },
+    "offers_per_rfq": {
+      "0": 120,
+      "1": 180,
+      "2": 180,
+      "3": 120
+    }
+  },
+  "unresolved": {
+    "category_taxonomy_and_quotas": null,
+    "business_location_eligibility_and_role_caps": null,
+    "portfolio_and_coverage_constraints": null,
+    "commercial_ranges_units_precision": null,
+    "bilateral_caps_and_denominator": null,
+    "listing_and_rfq_scenario_mix": null,
+    "delivery_terms": null,
+    "master_seed": null,
+    "identifier_namespace_and_keys": null,
+    "backend_contract_and_isolation": null,
+    "joint_feasibility": null
+  },
+  "contract_status": "proposed_backend_confirmation_pending",
+  "generation_status": "blocked"
+}

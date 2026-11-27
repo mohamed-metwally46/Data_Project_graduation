@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Globiq proposed marketplace scope projection v1.0.0",
+  "type": "object",
+  "required": [
+    "scope_id",
+    "version",
+    "is_synthetic",
+    "is_planning_artifact",
+    "backend_importable",
+    "full_marketplace_release",
+    "listing_generation_authorized",
+    "approval_status",
+    "bindings",
+    "included_product_codes",
+    "offline_only_product_codes",
+    "unresolved_product_codes",
+    "exclusion_reasons",
+    "historical_products",
+    "specification_keys",
+    "portfolio_associations",
+    "listings",
+    "rfqs",
+    "offers",
+    "bilateral_evidence",
+    "counts"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "scope_id": {
+      "type": "string",
+      "pattern": "^sm04as-[a-f0-9]{64}$"
+    },
+    "version": {
+      "const": "1.0.0"
+    },
+    "is_synthetic": {
+      "const": true
+    },
+    "is_planning_artifact": {
+      "const": true
+    },
+    "backend_importable": {
+      "const": false
+    },
+    "full_marketplace_release": {
+      "const": false
+    },
+    "listing_generation_authorized": {
+      "const": false
+    },
+    "approval_status": {
+      "const": "proposed"
+    },
+    "bindings": {
+      "type": "object"
+    },
+    "included_product_codes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(?:[0-9]{6}|9999AA)$"
+      },
+      "uniqueItems": true,
+      "maxItems": 287
+    },
+    "offline_only_product_codes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(?:[0-9]{6}|9999AA)$"
+      },
+      "uniqueItems": true,
+      "minItems": 13,
+      "maxItems": 13
+    },
+    "unresolved_product_codes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(?:[0-9]{6}|9999AA)$"
+      },
+      "uniqueItems": true
+    },
+    "exclusion_reasons": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^(?:[0-9]{6}|9999AA)$"
+      },
+      "additionalProperties": {
+        "enum": [
+          "RESTRICTED_OFFLINE_QA",
+          "SPECIFICATION_REVIEW_REQUIRED"
+        ]
+      }
+    },
+    "historical_products": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "minItems": 300,
+      "maxItems": 300
+    },
+    "specification_keys": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^(?:[0-9]{6}|9999AA)$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "portfolio_associations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "slot_id",
+          "role",
+          "product_code",
+          "market_code",
+          "association_external_id",
+          "company_display_code"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "slot_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "enum": [
+              "supplier",
+              "importer"
+            ]
+          },
+          "product_code": {
+            "type": "string",
+            "pattern": "^(?:[0-9]{6}|9999AA)$"
+          },
+          "market_code": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "association_external_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "company_display_code": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "listings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "rfqs": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "offers": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "bilateral_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "reference",
+          "kind",
+          "category",
+          "product_code",
+          "exporter_market",
+          "importer_market"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "targeted_rfq",
+              "offer"
+            ]
+          },
+          "category": {
+            "const": "A"
+          },
+          "product_code": {
+            "type": "string",
+            "pattern": "^(?:[0-9]{6}|9999AA)$"
+          },
+          "exporter_market": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "importer_market": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "minProperties": 1
+    }
+  }
+}

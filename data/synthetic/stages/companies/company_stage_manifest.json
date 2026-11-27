@@ -1,0 +1,152 @@
+{
+  "status": "validated",
+  "stage": "SM-03B",
+  "stage_id": "sm03b-68a129e0877cc0b7405db11375d2ef72ee862b7545075bd36c06099fa8e42363",
+  "artifact_directory": "data/synthetic/stages/companies/populations/sm03b-68a129e0877cc0b7405db11375d2ef72ee862b7545075bd36c06099fa8e42363",
+  "population_id": "globiq-marketplace-baseline-001",
+  "is_synthetic": true,
+  "is_intermediate": true,
+  "backend_importable": false,
+  "full_marketplace_release": false,
+  "source": {
+    "release_id": "ti-3349f6e0cb6dde75fe7d5323af71463748cad3232bc7bcb476c6ff6dcd8cd41b",
+    "dataset_fingerprint": "sha256:4b65676dc1766ebd869df52fef1c3786beffb11fcc838a99eb14a3818e4c136e",
+    "year": 2024
+  },
+  "approved_sm02_plan_id": "sm02-90bf5c26373c3d2c45f3fe7f371fbbe8a45b880825f9aa0ee9315de2a96b9ef3",
+  "planning_configuration_fingerprint": "sha256:852bd021302a857f1da4cd685bc0ca9052f2710055498e6fc868a4be72b591f8",
+  "planning_artifacts": {
+    "allocation_plan.json": {
+      "path": "allocation_plan.json",
+      "sha256": "48e4510a4c278adb69f3729399edc0ea044af93076ae479c5287bc7fdb97c44e",
+      "size_bytes": 788184
+    },
+    "geographic_eligibility.json": {
+      "path": "geographic_eligibility.json",
+      "sha256": "3819398da839787db2821b265cf762aa90d873cdc52f505857a84f7482f2bbcf",
+      "size_bytes": 120319
+    },
+    "product_eligibility.json": {
+      "path": "product_eligibility.json",
+      "sha256": "6227bcef0453d0dd7fa689ad64c32237c0d7b787c1a71b6b0daba9c3458bca17",
+      "size_bytes": 8477492
+    }
+  },
+  "schema": {
+    "version": "1.0.0",
+    "path": "schemas/company_stage.proposed.schema.json",
+    "sha256": "f37213461ede31e9ab233a2727716706173afdb5e2d61f679b08feaa79406417",
+    "scope": "canonical_intermediate_not_backend_importable"
+  },
+  "identity_configuration_fingerprint": "sha256:24503f5214ffb421b6becd738c7ac4616c9dbcfb9b378d8e41dea278e45cbedc",
+  "master_seed": 42,
+  "root_namespace": "9e5fdfc5-2675-57fe-8e94-81dc91ed9639",
+  "derived_population_namespace": "6894b6d2-eb16-57fb-88c9-7235a969bd8f",
+  "identifier_algorithm": "hierarchical_uuid5_v1",
+  "company_key_format": "identity-NNNNNN",
+  "validation": {
+    "status": "passed",
+    "companies": 500,
+    "role_assignments": 500,
+    "roles": {
+      "importer": 200,
+      "supplier": 300
+    },
+    "markets_by_role": {
+      "supplier": 25,
+      "importer": 75
+    },
+    "portfolio_associations": 1800,
+    "portfolios_by_role": {
+      "importer": 600,
+      "supplier": 1200
+    },
+    "slot_mappings": 500,
+    "registry_entries": 500,
+    "listing_refs": 1000,
+    "rfq_refs": 600,
+    "targeted_rfq_supplier_refs": 180,
+    "offer_refs": 900
+  },
+  "artifacts": {
+    "company_stage.json": {
+      "path": "company_stage.json",
+      "sha256": "5d41f334d6c5bac78046e21ca231df826a9c5d844dc89bc47c6c753c1a1abce4",
+      "size_bytes": 2219027
+    },
+    "company_validation_report.json": {
+      "path": "company_validation_report.json",
+      "sha256": "fa1b012c76171f61e7ca41a7cec4ec929e1d30883c6f66f42566f44b6c92d58e",
+      "size_bytes": 22022
+    }
+  },
+  "reproducibility": {
+    "byte_identical": true,
+    "independent_builds": [
+      {
+        "bundle": {
+          "path": "company_stage.json",
+          "sha256": "5d41f334d6c5bac78046e21ca231df826a9c5d844dc89bc47c6c753c1a1abce4",
+          "size_bytes": 2219027
+        },
+        "collection_fingerprints": {
+          "metadata": "sha256:4b6d18e1239a7e88de62e33444cb438a33f5db387cf114cb8d8474fe65e049b7",
+          "companies": "sha256:a0235a5a14cab76fb104dd474ea58ea1e989faad53b482dff3d78acb987e47c3",
+          "company_roles": "sha256:04d0a6efb8818fde6a7b1509cb2aaef7343646d442fa25f625cfebf666005f62",
+          "company_products": "sha256:d3c25594bd8ac41433d53da2431eeb339bc7b040b75aeeece3a1f394db557307",
+          "slot_company_mapping": "sha256:dddb82725d1ba33b98a8fef8bf9ec5c55142217f576e09bd21be0144d33de05a",
+          "identity_registry": "sha256:418ed75cf418a209bae4b10152446c0368e7899e04b7b3b3ad8aa69979fc0d6e"
+        }
+      },
+      {
+        "bundle": {
+          "path": "company_stage.json",
+          "sha256": "5d41f334d6c5bac78046e21ca231df826a9c5d844dc89bc47c6c753c1a1abce4",
+          "size_bytes": 2219027
+        },
+        "collection_fingerprints": {
+          "metadata": "sha256:4b6d18e1239a7e88de62e33444cb438a33f5db387cf114cb8d8474fe65e049b7",
+          "companies": "sha256:a0235a5a14cab76fb104dd474ea58ea1e989faad53b482dff3d78acb987e47c3",
+          "company_roles": "sha256:04d0a6efb8818fde6a7b1509cb2aaef7343646d442fa25f625cfebf666005f62",
+          "company_products": "sha256:d3c25594bd8ac41433d53da2431eeb339bc7b040b75aeeece3a1f394db557307",
+          "slot_company_mapping": "sha256:dddb82725d1ba33b98a8fef8bf9ec5c55142217f576e09bd21be0144d33de05a",
+          "identity_registry": "sha256:418ed75cf418a209bae4b10152446c0368e7899e04b7b3b3ad8aa69979fc0d6e"
+        }
+      }
+    ],
+    "collection_fingerprint_encoding": "Planning fingerprint of each parsed collection"
+  },
+  "approvals": {
+    "strategy_decisions": {
+      "SM-03.R1": "exact_sm02_baseline_and_demo_geography",
+      "SM-03.R2": "hierarchical_entity_specific_namespace_architecture",
+      "SM-03.R3": "canonical_company_contract_with_separate_backend_adapter",
+      "SM-03.R4": "deterministic_context_aware",
+      "SM-03.R5": "dependency_aware_stage_authorization"
+    },
+    "company_population": {
+      "reference": "User attachment d044fc1c-4991-452b-b6e4-e5d57192afd8, sections 2, 7 and 20",
+      "scope": "isolated_canonical_company_stage_only",
+      "planning_artifact_id": "sm02-90bf5c26373c3d2c45f3fe7f371fbbe8a45b880825f9aa0ee9315de2a96b9ef3",
+      "planning_configuration_fingerprint": "sha256:852bd021302a857f1da4cd685bc0ca9052f2710055498e6fc868a4be72b591f8",
+      "canonical_schema_sha256": "f37213461ede31e9ab233a2727716706173afdb5e2d61f679b08feaa79406417",
+      "company_key_format": "identity-NNNNNN"
+    },
+    "root_namespace": "User attachment d044fc1c-4991-452b-b6e4-e5d57192afd8, SM-03B section 2",
+    "canonical_key_review": "User attachment d044fc1c-4991-452b-b6e4-e5d57192afd8, sections 2 and 7. Existing hierarchical_uuid5_v1 and identity-NNNNNN approved."
+  },
+  "remaining_dependencies": [
+    "product_specific_measurement_units",
+    "product_level_price_ranges",
+    "price_basis",
+    "decimal_precision",
+    "stock_bounds",
+    "minimum_order_quantities",
+    "quantity_increments",
+    "rfq_requested_quantity_rules",
+    "offer_fulfillment_compatibility",
+    "commercial_feasibility",
+    "actual_backend_field_mappings",
+    "separate_sm04_authorization"
+  ]
+}

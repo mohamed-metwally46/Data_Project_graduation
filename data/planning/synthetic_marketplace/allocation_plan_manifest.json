@@ -1,0 +1,170 @@
+{
+  "planning_schema_version": "1.0.0",
+  "planning_only": true,
+  "importable": false,
+  "planning_artifact_id": "sm02-90bf5c26373c3d2c45f3fe7f371fbbe8a45b880825f9aa0ee9315de2a96b9ef3",
+  "planning_content_fingerprint": "sha256:168cc01d92491c5ef630e8a1a029a47d1069290e88347eafbc29fbb9af835c6c",
+  "configuration_fingerprint": "sha256:852bd021302a857f1da4cd685bc0ca9052f2710055498e6fc868a4be72b591f8",
+  "source": {
+    "release_id": "ti-3349f6e0cb6dde75fe7d5323af71463748cad3232bc7bcb476c6ff6dcd8cd41b",
+    "dataset_fingerprint": "sha256:4b65676dc1766ebd869df52fef1c3786beffb11fcc838a99eb14a3818e4c136e",
+    "year": 2024
+  },
+  "scenario": {
+    "version": "1.0.0",
+    "scenario_id": "sm02-provisional-v1",
+    "approval_status": "proposed",
+    "supplier_market_cap": 20,
+    "importer_market_cap": 6,
+    "product_prefix_cap": 12,
+    "geography": {
+      "source_code_crosswalk": {
+        "699": 356
+      },
+      "territorial_market_codes": [
+        16,
+        60,
+        86,
+        92,
+        136,
+        162,
+        166,
+        175,
+        184,
+        238,
+        258,
+        260,
+        292,
+        304,
+        316,
+        344,
+        446,
+        500,
+        531,
+        533,
+        534,
+        535,
+        540,
+        570,
+        574,
+        580,
+        612,
+        652,
+        654,
+        660,
+        666,
+        772,
+        796,
+        876
+      ],
+      "historical_market_codes": [
+        58,
+        200,
+        278,
+        280,
+        530,
+        736,
+        810,
+        891
+      ],
+      "statistical_market_codes": [
+        490,
+        697,
+        711
+      ],
+      "special_review_market_codes": [
+        251,
+        275,
+        579,
+        757,
+        842,
+        849
+      ]
+    },
+    "sensitivity": {
+      "supplier_market_cap": 8
+    }
+  },
+  "fixed_targets": {
+    "products": 300,
+    "companies": 500,
+    "supplier_roles": 300,
+    "importer_roles": 200,
+    "listings": 1000,
+    "rfqs": 600,
+    "offers": 900
+  },
+  "proposed_defaults": {
+    "status": "proposed",
+    "master_seed": 42,
+    "products_per_supplier": 4,
+    "products_per_importer": 3,
+    "bilateral_percent": {
+      "a_min": 80,
+      "b_max": 20,
+      "c": 0
+    },
+    "listing_statuses": {
+      "active": 850,
+      "out_of_stock": 100,
+      "inactive": 50
+    },
+    "rfq_types": {
+      "open": 420,
+      "targeted": 180
+    },
+    "offers_per_rfq": {
+      "0": 120,
+      "1": 180,
+      "2": 180,
+      "3": 120
+    }
+  },
+  "artifact_directory": "data/planning/synthetic_marketplace/plans/sm02-90bf5c26373c3d2c45f3fe7f371fbbe8a45b880825f9aa0ee9315de2a96b9ef3",
+  "artifacts": {
+    "allocation_plan.json": {
+      "path": "allocation_plan.json",
+      "sha256": "48e4510a4c278adb69f3729399edc0ea044af93076ae479c5287bc7fdb97c44e",
+      "size_bytes": 788184
+    },
+    "geographic_eligibility.json": {
+      "path": "geographic_eligibility.json",
+      "sha256": "3819398da839787db2821b265cf762aa90d873cdc52f505857a84f7482f2bbcf",
+      "size_bytes": 120319
+    },
+    "product_eligibility.json": {
+      "path": "product_eligibility.json",
+      "sha256": "6227bcef0453d0dd7fa689ad64c32237c0d7b787c1a71b6b0daba9c3458bca17",
+      "size_bytes": 8477492
+    }
+  },
+  "structural_feasibility": "validated_provisional",
+  "commercial_feasibility": "conditional_on_approved_units_stock_moq_and_quantity_bounds",
+  "validation": {
+    "status": "passed",
+    "counts": {
+      "products": 300,
+      "company_slots": 500,
+      "supplier_slots": 300,
+      "importer_slots": 200,
+      "listings": 1000,
+      "rfqs": 600,
+      "offers": 900
+    },
+    "reproducibility": "byte_identical_repeat_allocation"
+  },
+  "outstanding_approvals": [
+    "category_taxonomy_and_quotas",
+    "business_location_eligibility_and_role_caps",
+    "portfolio_and_coverage_constraints",
+    "commercial_ranges_units_precision",
+    "bilateral_caps_and_denominator",
+    "listing_and_rfq_scenario_mix",
+    "delivery_terms",
+    "master_seed",
+    "identifier_namespace_and_keys",
+    "backend_contract_and_isolation",
+    "joint_feasibility"
+  ],
+  "full_generation": "blocked"
+}
