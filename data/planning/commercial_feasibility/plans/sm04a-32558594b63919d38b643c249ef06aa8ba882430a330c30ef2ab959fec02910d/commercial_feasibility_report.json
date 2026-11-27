@@ -1,0 +1,49 @@
+{
+  "is_synthetic": true,
+  "is_planning_artifact": true,
+  "backend_importable": false,
+  "full_marketplace_release": false,
+  "status": "passed",
+  "counts": {
+    "profiles": 300,
+    "listings": 1000,
+    "rfqs": 600,
+    "offers": 900
+  },
+  "listing_statuses": {
+    "active": 850,
+    "inactive": 50,
+    "out_of_stock": 100
+  },
+  "inactive_stock": {
+    "positive": 25,
+    "zero": 25
+  },
+  "rfq_types": {
+    "open": 420,
+    "targeted": 180
+  },
+  "response_histogram": {
+    "2": 180,
+    "0": 120,
+    "3": 120,
+    "1": 180
+  },
+  "competitive_rfqs": 300,
+  "full_fulfillment_responses": 900,
+  "infeasible_responses": 0,
+  "unresolved_scenarios": 0,
+  "bilateral_records": {
+    "A": 1080,
+    "B": 0,
+    "C": 0
+  },
+  "unique_bilateral_relationships": 300,
+  "findings": [
+    {
+      "severity": "INFO",
+      "code": "PROVISIONAL_SCENARIOS_VALIDATED",
+      "detail": "Independent scenarios use full quantities without stock reservations."
+    }
+  ]
+}

@@ -1,0 +1,916 @@
+{
+  "validation": {
+    "status": "passed",
+    "companies": 500,
+    "role_assignments": 500,
+    "roles": {
+      "importer": 200,
+      "supplier": 300
+    },
+    "markets_by_role": {
+      "supplier": 25,
+      "importer": 75
+    },
+    "portfolio_associations": 1800,
+    "portfolios_by_role": {
+      "importer": 600,
+      "supplier": 1200
+    },
+    "slot_mappings": 500,
+    "registry_entries": 500,
+    "listing_refs": 1000,
+    "rfq_refs": 600,
+    "targeted_rfq_supplier_refs": 180,
+    "offer_refs": 900
+  },
+  "name_quality": {
+    "unique_normalized_company_names": 500,
+    "near_duplicate_warning_count": 0,
+    "warning_pairs_by_display_code": [],
+    "near_duplicate_rule": "Normalized whole names within one edit",
+    "legal_or_trademark_review_performed": false
+  },
+  "brand_quality": {
+    "unique_brands": 500,
+    "distinct_configured_stems_used": 73,
+    "counts_by_stem": {
+      "Adra": 8,
+      "Aru": 5,
+      "Aven": 11,
+      "Avon": 10,
+      "Bel": 7,
+      "Brava": 10,
+      "Brena": 5,
+      "Brin": 13,
+      "Cal": 6,
+      "Canta": 9,
+      "Cev": 5,
+      "Cevra": 11,
+      "Dolan": 9,
+      "Dova": 8,
+      "Dren": 9,
+      "Elar": 6,
+      "Evara": 8,
+      "Evra": 6,
+      "Fara": 7,
+      "Fenn": 14,
+      "Gal": 9,
+      "Gavra": 5,
+      "Hav": 4,
+      "Helva": 6,
+      "Ira": 9,
+      "Isva": 12,
+      "Iven": 8,
+      "Javra": 6,
+      "Jor": 5,
+      "Kaiva": 4,
+      "Kelm": 9,
+      "Lerva": 7,
+      "Lor": 6,
+      "Lun": 9,
+      "Mara": 6,
+      "Mav": 6,
+      "Mir": 4,
+      "Ner": 8,
+      "Nes": 8,
+      "Niva": 10,
+      "Nor": 6,
+      "Olan": 2,
+      "Or": 4,
+      "Orev": 10,
+      "Perav": 2,
+      "Pra": 5,
+      "Qual": 7,
+      "Quen": 9,
+      "Rav": 5,
+      "Riva": 5,
+      "Seln": 10,
+      "Selva": 3,
+      "Sol": 8,
+      "Tal": 5,
+      "Terva": 4,
+      "Tor": 4,
+      "Trel": 4,
+      "Ulva": 8,
+      "Urv": 11,
+      "Val": 3,
+      "Vel": 5,
+      "Veska": 4,
+      "Vey": 6,
+      "Vor": 7,
+      "Wenda": 7,
+      "Wren": 5,
+      "Xav": 5,
+      "Xela": 11,
+      "Yel": 8,
+      "Yorda": 9,
+      "Zavra": 4,
+      "Zen": 3,
+      "Zor": 3
+    },
+    "near_duplicate_brand_pairs": 0,
+    "stem_attribution": "Longest matching configured brand prefix"
+  },
+  "business_types": {
+    "procurement_sourcing_company": 67,
+    "import_distribution_company": 70,
+    "trading_company": 149,
+    "wholesale_distributor": 95,
+    "export_trading_company": 119
+  },
+  "industry_groups": {
+    "diversified_trading": 497,
+    "general_trading": 3
+  },
+  "descriptions": {
+    "length_min": 91,
+    "length_max": 141,
+    "length_mean": 113.066,
+    "unique": 176
+  },
+  "geography": {
+    "markets_by_role": {
+      "supplier": [
+        {
+          "market_code": 4,
+          "name": "Afghanistan",
+          "region": "Asia",
+          "company_count": 8
+        },
+        {
+          "market_code": 8,
+          "name": "Albania",
+          "region": "Europe",
+          "company_count": 12
+        },
+        {
+          "market_code": 12,
+          "name": "Algeria",
+          "region": "Africa",
+          "company_count": 20
+        },
+        {
+          "market_code": 20,
+          "name": "Andorra",
+          "region": "Europe",
+          "company_count": 8
+        },
+        {
+          "market_code": 24,
+          "name": "Angola",
+          "region": "Africa",
+          "company_count": 20
+        },
+        {
+          "market_code": 28,
+          "name": "Antigua and Barbuda",
+          "region": "Americas",
+          "company_count": 8
+        },
+        {
+          "market_code": 31,
+          "name": "Azerbaijan",
+          "region": "Asia",
+          "company_count": 12
+        },
+        {
+          "market_code": 32,
+          "name": "Argentina",
+          "region": "Americas",
+          "company_count": 12
+        },
+        {
+          "market_code": 36,
+          "name": "Australia",
+          "region": "Oceania",
+          "company_count": 20
+        },
+        {
+          "market_code": 40,
+          "name": "Austria",
+          "region": "Europe",
+          "company_count": 12
+        },
+        {
+          "market_code": 44,
+          "name": "Bahamas",
+          "region": "Americas",
+          "company_count": 8
+        },
+        {
+          "market_code": 48,
+          "name": "Bahrain",
+          "region": "Asia",
+          "company_count": 12
+        },
+        {
+          "market_code": 50,
+          "name": "Bangladesh",
+          "region": "Asia",
+          "company_count": 12
+        },
+        {
+          "market_code": 51,
+          "name": "Armenia",
+          "region": "Asia",
+          "company_count": 8
+        },
+        {
+          "market_code": 52,
+          "name": "Barbados",
+          "region": "Americas",
+          "company_count": 8
+        },
+        {
+          "market_code": 56,
+          "name": "Belgium",
+          "region": "Europe",
+          "company_count": 12
+        },
+        {
+          "market_code": 64,
+          "name": "Bhutan",
+          "region": "Asia",
+          "company_count": 8
+        },
+        {
+          "market_code": 68,
+          "name": "Bolivia (Plurinational State of)",
+          "region": "Americas",
+          "company_count": 8
+        },
+        {
+          "market_code": 70,
+          "name": "Bosnia Herzegovina",
+          "region": "Europe",
+          "company_count": 12
+        },
+        {
+          "market_code": 72,
+          "name": "Botswana",
+          "region": "Africa",
+          "company_count": 20
+        },
+        {
+          "market_code": 76,
+          "name": "Brazil",
+          "region": "Americas",
+          "company_count": 12
+        },
+        {
+          "market_code": 84,
+          "name": "Belize",
+          "region": "Americas",
+          "company_count": 8
+        },
+        {
+          "market_code": 90,
+          "name": "Solomon Isds",
+          "region": "Oceania",
+          "company_count": 20
+        },
+        {
+          "market_code": 96,
+          "name": "Brunei Darussalam",
+          "region": "Asia",
+          "company_count": 8
+        },
+        {
+          "market_code": 100,
+          "name": "Bulgaria",
+          "region": "Europe",
+          "company_count": 12
+        }
+      ],
+      "importer": [
+        {
+          "market_code": 28,
+          "name": "Antigua and Barbuda",
+          "region": "Americas",
+          "company_count": 3
+        },
+        {
+          "market_code": 32,
+          "name": "Argentina",
+          "region": "Americas",
+          "company_count": 2
+        },
+        {
+          "market_code": 36,
+          "name": "Australia",
+          "region": "Oceania",
+          "company_count": 3
+        },
+        {
+          "market_code": 40,
+          "name": "Austria",
+          "region": "Europe",
+          "company_count": 2
+        },
+        {
+          "market_code": 48,
+          "name": "Bahrain",
+          "region": "Asia",
+          "company_count": 3
+        },
+        {
+          "market_code": 76,
+          "name": "Brazil",
+          "region": "Americas",
+          "company_count": 3
+        },
+        {
+          "market_code": 90,
+          "name": "Solomon Isds",
+          "region": "Oceania",
+          "company_count": 3
+        },
+        {
+          "market_code": 100,
+          "name": "Bulgaria",
+          "region": "Europe",
+          "company_count": 3
+        },
+        {
+          "market_code": 112,
+          "name": "Belarus",
+          "region": "Europe",
+          "company_count": 2
+        },
+        {
+          "market_code": 116,
+          "name": "Cambodia",
+          "region": "Asia",
+          "company_count": 3
+        },
+        {
+          "market_code": 124,
+          "name": "Canada",
+          "region": "Americas",
+          "company_count": 2
+        },
+        {
+          "market_code": 152,
+          "name": "Chile",
+          "region": "Americas",
+          "company_count": 3
+        },
+        {
+          "market_code": 156,
+          "name": "China",
+          "region": "Asia",
+          "company_count": 3
+        },
+        {
+          "market_code": 170,
+          "name": "Colombia",
+          "region": "Americas",
+          "company_count": 3
+        },
+        {
+          "market_code": 188,
+          "name": "Costa Rica",
+          "region": "Americas",
+          "company_count": 2
+        },
+        {
+          "market_code": 203,
+          "name": "Czechia",
+          "region": "Europe",
+          "company_count": 3
+        },
+        {
+          "market_code": 208,
+          "name": "Denmark",
+          "region": "Europe",
+          "company_count": 2
+        },
+        {
+          "market_code": 218,
+          "name": "Ecuador",
+          "region": "Americas",
+          "company_count": 3
+        },
+        {
+          "market_code": 222,
+          "name": "El Salvador",
+          "region": "Americas",
+          "company_count": 3
+        },
+        {
+          "market_code": 242,
+          "name": "Fiji",
+          "region": "Oceania",
+          "company_count": 2
+        },
+        {
+          "market_code": 246,
+          "name": "Finland",
+          "region": "Europe",
+          "company_count": 2
+        },
+        {
+          "market_code": 268,
+          "name": "Georgia",
+          "region": "Asia",
+          "company_count": 3
+        },
+        {
+          "market_code": 270,
+          "name": "Gambia",
+          "region": "Africa",
+          "company_count": 3
+        },
+        {
+          "market_code": 296,
+          "name": "Kiribati",
+          "region": "Oceania",
+          "company_count": 3
+        },
+        {
+          "market_code": 300,
+          "name": "Greece",
+          "region": "Europe",
+          "company_count": 2
+        },
+        {
+          "market_code": 320,
+          "name": "Guatemala",
+          "region": "Americas",
+          "company_count": 3
+        },
+        {
+          "market_code": 324,
+          "name": "Guinea",
+          "region": "Africa",
+          "company_count": 2
+        },
+        {
+          "market_code": 360,
+          "name": "Indonesia",
+          "region": "Asia",
+          "company_count": 3
+        },
+        {
+          "market_code": 376,
+          "name": "Israel",
+          "region": "Asia",
+          "company_count": 3
+        },
+        {
+          "market_code": 380,
+          "name": "Italy",
+          "region": "Europe",
+          "company_count": 3
+        },
+        {
+          "market_code": 392,
+          "name": "Japan",
+          "region": "Asia",
+          "company_count": 2
+        },
+        {
+          "market_code": 398,
+          "name": "Kazakhstan",
+          "region": "Asia",
+          "company_count": 2
+        },
+        {
+          "market_code": 410,
+          "name": "Rep. of Korea",
+          "region": "Asia",
+          "company_count": 3
+        },
+        {
+          "market_code": 414,
+          "name": "Kuwait",
+          "region": "Asia",
+          "company_count": 3
+        },
+        {
+          "market_code": 426,
+          "name": "Lesotho",
+          "region": "Africa",
+          "company_count": 3
+        },
+        {
+          "market_code": 430,
+          "name": "Liberia",
+          "region": "Africa",
+          "company_count": 3
+        },
+        {
+          "market_code": 450,
+          "name": "Madagascar",
+          "region": "Africa",
+          "company_count": 3
+        },
+        {
+          "market_code": 458,
+          "name": "Malaysia",
+          "region": "Asia",
+          "company_count": 3
+        },
+        {
+          "market_code": 498,
+          "name": "Rep. of Moldova",
+          "region": "Europe",
+          "company_count": 3
+        },
+        {
+          "market_code": 504,
+          "name": "Morocco",
+          "region": "Africa",
+          "company_count": 3
+        },
+        {
+          "market_code": 516,
+          "name": "Namibia",
+          "region": "Africa",
+          "company_count": 3
+        },
+        {
+          "market_code": 520,
+          "name": "Nauru",
+          "region": "Oceania",
+          "company_count": 2
+        },
+        {
+          "market_code": 548,
+          "name": "Vanuatu",
+          "region": "Oceania",
+          "company_count": 3
+        },
+        {
+          "market_code": 554,
+          "name": "New Zealand",
+          "region": "Oceania",
+          "company_count": 2
+        },
+        {
+          "market_code": 566,
+          "name": "Nigeria",
+          "region": "Africa",
+          "company_count": 2
+        },
+        {
+          "market_code": 584,
+          "name": "Marshall Isds",
+          "region": "Oceania",
+          "company_count": 2
+        },
+        {
+          "market_code": 585,
+          "name": "Palau",
+          "region": "Oceania",
+          "company_count": 3
+        },
+        {
+          "market_code": 591,
+          "name": "Panama",
+          "region": "Americas",
+          "company_count": 3
+        },
+        {
+          "market_code": 598,
+          "name": "Papua New Guinea",
+          "region": "Oceania",
+          "company_count": 2
+        },
+        {
+          "market_code": 600,
+          "name": "Paraguay",
+          "region": "Americas",
+          "company_count": 3
+        },
+        {
+          "market_code": 604,
+          "name": "Peru",
+          "region": "Americas",
+          "company_count": 3
+        },
+        {
+          "market_code": 608,
+          "name": "Philippines",
+          "region": "Asia",
+          "company_count": 3
+        },
+        {
+          "market_code": 616,
+          "name": "Poland",
+          "region": "Europe",
+          "company_count": 3
+        },
+        {
+          "market_code": 620,
+          "name": "Portugal",
+          "region": "Europe",
+          "company_count": 2
+        },
+        {
+          "market_code": 642,
+          "name": "Romania",
+          "region": "Europe",
+          "company_count": 3
+        },
+        {
+          "market_code": 643,
+          "name": "Russian Federation",
+          "region": "Europe",
+          "company_count": 3
+        },
+        {
+          "market_code": 686,
+          "name": "Senegal",
+          "region": "Africa",
+          "company_count": 2
+        },
+        {
+          "market_code": 690,
+          "name": "Seychelles",
+          "region": "Africa",
+          "company_count": 3
+        },
+        {
+          "market_code": 699,
+          "name": "India",
+          "region": "Asia",
+          "company_count": 2
+        },
+        {
+          "market_code": 702,
+          "name": "Singapore",
+          "region": "Asia",
+          "company_count": 3
+        },
+        {
+          "market_code": 703,
+          "name": "Slovakia",
+          "region": "Europe",
+          "company_count": 3
+        },
+        {
+          "market_code": 705,
+          "name": "Slovenia",
+          "region": "Europe",
+          "company_count": 3
+        },
+        {
+          "market_code": 710,
+          "name": "South Africa",
+          "region": "Africa",
+          "company_count": 2
+        },
+        {
+          "market_code": 716,
+          "name": "Zimbabwe",
+          "region": "Africa",
+          "company_count": 2
+        },
+        {
+          "market_code": 729,
+          "name": "Sudan",
+          "region": "Africa",
+          "company_count": 2
+        },
+        {
+          "market_code": 752,
+          "name": "Sweden",
+          "region": "Europe",
+          "company_count": 3
+        },
+        {
+          "market_code": 764,
+          "name": "Thailand",
+          "region": "Asia",
+          "company_count": 3
+        },
+        {
+          "market_code": 776,
+          "name": "Tonga",
+          "region": "Oceania",
+          "company_count": 3
+        },
+        {
+          "market_code": 788,
+          "name": "Tunisia",
+          "region": "Africa",
+          "company_count": 3
+        },
+        {
+          "market_code": 792,
+          "name": "TÃ¼rkiye",
+          "region": "Asia",
+          "company_count": 2
+        },
+        {
+          "market_code": 834,
+          "name": "United Rep. of Tanzania",
+          "region": "Africa",
+          "company_count": 3
+        },
+        {
+          "market_code": 854,
+          "name": "Burkina Faso",
+          "region": "Africa",
+          "company_count": 3
+        },
+        {
+          "market_code": 858,
+          "name": "Uruguay",
+          "region": "Americas",
+          "company_count": 2
+        },
+        {
+          "market_code": 862,
+          "name": "Venezuela",
+          "region": "Americas",
+          "company_count": 3
+        },
+        {
+          "market_code": 882,
+          "name": "Samoa",
+          "region": "Oceania",
+          "company_count": 3
+        }
+      ]
+    },
+    "regions_by_role": {
+      "supplier": {
+        "Europe": 68,
+        "Americas": 64,
+        "Asia": 68,
+        "Africa": 60,
+        "Oceania": 40
+      },
+      "importer": {
+        "Africa": 42,
+        "Asia": 44,
+        "Europe": 42,
+        "Americas": 41,
+        "Oceania": 31
+      }
+    }
+  },
+  "portfolios": {
+    "supplier": {
+      "companies_by_portfolio_size": {
+        "4": 300
+      },
+      "associations": 1200,
+      "distinct_products": 300
+    },
+    "importer": {
+      "companies_by_portfolio_size": {
+        "3": 200
+      },
+      "associations": 600,
+      "distinct_products": 300
+    }
+  },
+  "safety_and_identity": {
+    "validated_reserved_example_contacts": 500,
+    "null_websites": 500,
+    "null_phone_address_tax_and_registration": 500,
+    "not_verified": 500,
+    "monograms": 500,
+    "synthetic_labels": 500,
+    "unique_external_ids": 500,
+    "unique_display_codes": 500,
+    "unique_persistent_keys": 500,
+    "resolved_slots": 500
+  },
+  "samples": [
+    {
+      "is_synthetic": true,
+      "display_code": "CMP-000001",
+      "name": "Iracalis Procurement Partners",
+      "market": "Zimbabwe",
+      "market_code": 716,
+      "role": "importer",
+      "industry_group": "diversified_trading",
+      "business_type": "procurement_sourcing_company",
+      "description": "Synthetic demo importer in Zimbabwe. Portfolio focus: diversified trading across provisional product groups.",
+      "product_codes": [
+        "392690",
+        "847330",
+        "901890"
+      ]
+    },
+    {
+      "is_synthetic": true,
+      "display_code": "CMP-000003",
+      "name": "Adraolaris Portfolio Sourcing",
+      "market": "Thailand",
+      "market_code": 764,
+      "role": "importer",
+      "industry_group": "diversified_trading",
+      "business_type": "import_distribution_company",
+      "description": "Synthetic demo importer in Thailand. Portfolio focus: diversified trading across provisional product groups.",
+      "product_codes": [
+        "852520",
+        "271000",
+        "300490"
+      ]
+    },
+    {
+      "is_synthetic": true,
+      "display_code": "CMP-000006",
+      "name": "Nivavora Sourcing Commerce",
+      "market": "Russian Federation",
+      "market_code": 643,
+      "role": "importer",
+      "industry_group": "diversified_trading",
+      "business_type": "trading_company",
+      "description": "Synthetic demo importer in Russian Federation. Portfolio focus: diversified trading across provisional product groups.",
+      "product_codes": [
+        "490199",
+        "210690",
+        "870899"
+      ]
+    },
+    {
+      "is_synthetic": true,
+      "display_code": "CMP-000072",
+      "name": "Cevraulron Import Partners",
+      "market": "Ecuador",
+      "market_code": 218,
+      "role": "importer",
+      "industry_group": "general_trading",
+      "business_type": "import_distribution_company",
+      "description": "Synthetic demo importer in Ecuador. Portfolio focus: products in a provisional catalog group.",
+      "product_codes": [
+        "030342",
+        "030343",
+        "030349"
+      ]
+    },
+    {
+      "is_synthetic": true,
+      "display_code": "CMP-000130",
+      "name": "Wendaperon Buying Group",
+      "market": "Sudan",
+      "market_code": 729,
+      "role": "importer",
+      "industry_group": "general_trading",
+      "business_type": "procurement_sourcing_company",
+      "description": "Synthetic demo importer in Sudan. Portfolio focus: products in a provisional catalog group.",
+      "product_codes": [
+        "853710",
+        "851830",
+        "851829"
+      ]
+    },
+    {
+      "is_synthetic": true,
+      "display_code": "CMP-000201",
+      "name": "Selnvantis Supply Partners",
+      "market": "Austria",
+      "market_code": 40,
+      "role": "supplier",
+      "industry_group": "diversified_trading",
+      "business_type": "wholesale_distributor",
+      "description": "Synthetic demo supplier in Austria. Portfolio focus: diversified trading across provisional product groups.",
+      "product_codes": [
+        "392690",
+        "847330",
+        "901890",
+        "732690"
+      ]
+    },
+    {
+      "is_synthetic": true,
+      "display_code": "CMP-000208",
+      "name": "Trelselin Supply Partners",
+      "market": "Brazil",
+      "market_code": 76,
+      "role": "supplier",
+      "industry_group": "diversified_trading",
+      "business_type": "export_trading_company",
+      "description": "Fictional supplier profile for Brazil. Demo portfolio focus: diversified trading across provisional product groups.",
+      "product_codes": [
+        "852520",
+        "271000",
+        "300490",
+        "401693"
+      ]
+    },
+    {
+      "is_synthetic": true,
+      "display_code": "CMP-000209",
+      "name": "Solzelan Wholesale Trading",
+      "market": "Azerbaijan",
+      "market_code": 31,
+      "role": "supplier",
+      "industry_group": "diversified_trading",
+      "business_type": "trading_company",
+      "description": "Fictional supplier profile for Azerbaijan. Demo portfolio focus: diversified trading across provisional product groups.",
+      "product_codes": [
+        "490199",
+        "210690",
+        "870899",
+        "382390"
+      ]
+    }
+  ]
+}

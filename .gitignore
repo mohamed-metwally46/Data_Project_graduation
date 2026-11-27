@@ -3,7 +3,3 @@
 __pycache__/
 data/processed/
 *.csv
-data/planning/commercial_feasibility/plans/
-data/planning/synthetic_marketplace/plans/
-data/synthetic/stages/companies/populations/
-data/planning/commercial_feasibility/commercial_plan_manifest.json
