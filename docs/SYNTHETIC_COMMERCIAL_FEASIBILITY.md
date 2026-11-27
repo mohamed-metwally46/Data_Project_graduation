@@ -110,3 +110,33 @@ The supported production-shaped validator checked two independent isolated fixtu
 ## SM-04A-S scope projection
 
 The scope comparison now includes the final 279-product proposal, its original allocation references and the eight excluded unresolved codes. All 500 companies retain eligible portfolio associations, and the proposed scope preserves active listings for all 300 suppliers. The isolated scope-aware numerical fixture exercises the planning interface. The published scope evidence contains zero corrected full-plan builds. [Full comparison and review package](SM04A_MARKETPLACE_SCOPE_APPROVAL.md)
+
+## Corrected 279-product feasibility
+
+Corrected plan `sm04ac-c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67` passed full serialized validation. It preserves all original retained allocation references, including statuses, targeted suppliers and responding suppliers. All 835 responses support their entire requested quantity, with zero infeasible responses and zero unresolved scenarios. Shared listings are checked against each individual request, with no reservation or deduction. Non-binding RFQ targets, USD pricing, explicit basis and units, quantity ticks and exact Decimal rounding remain in force.
+
+| Measure | Corrected scope |
+| --- | ---: |
+| Profiles / listings / RFQs / offers | 279 / 932 / 558 / 835 |
+| Company associations, supplier / importer | 1,116 / 556 |
+| Active / out of stock / inactive | 792 / 96 / 44 |
+| Inactive zero stock / positive stock | 22 / 22 |
+| Projected visible catalog listings | 888 |
+| Open / targeted RFQs | 392 / 166 |
+| RFQs with zero / one / two / three responses | 113 / 166 / 168 / 111 |
+| Competitive RFQs | 279 |
+| Category A records / distinct directional relationships | 1,001 / 279 |
+| Category B / C records | 0 / 0 |
+| Active supplier / responding supplier coverage | 300 / 295 |
+| RFQ importer coverage | 199 |
+| Supplier / importer market coverage | 25 / 75 |
+
+All 500 companies and each of the 279 products retain eligible portfolio coverage. All 279 products retain an active listing and an RFQ. CMP-000043 / IMP-SLOT-0043 remains the sole importer without RFQ coverage.
+
+### Corrected commercial quality
+
+Candidate analysis covers 558 RFQs and their same-product eligible catalog, conditioned on the original targeted supplier where applicable. Of 1,478 structurally eligible Category A request–listing combinations, 1,204 satisfy commercial constraints, including 835 allocated responses and 369 eligible nonresponding pairs. Another 274 structurally eligible pairs are commercially incompatible. Of 113 unanswered RFQs, 105 have a compatible candidate and 8 do not in this catalog. Allocated feasibility provides no ranking ground truth.
+
+Across 279 products, price, active stock and offer price varied in 279, 279 and 279 products, respectively. MOQ varied in 277, and RFQ quantity varied in 273. There are 6 listing prices at effective price endpoints, 7 positive stock values at configured endpoints, and 109 MOQ values at configured endpoints. The solver used zero fallback search nodes. Unit, candidate, diversity and per-product diagnostics remain synthetic and scope-specific.
+
+[Corrected manifest](../data/planning/commercial_feasibility/corrected_plan_manifest.json) · [Full quality report](../data/planning/commercial_feasibility/corrected_plans/sm04ac-c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67/commercial_quality_report.json)

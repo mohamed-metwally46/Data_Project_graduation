@@ -64,3 +64,9 @@ The product owner authorized the remediation methods in attachment `2875cb26-360
 The product owner selected Option D in attachment `eb48ea63-cba4-472c-bca8-27d7bba01b92`, sections 1 and 2. The 287-product ceiling excludes 13 offline-only codes and keeps the original Trade Intelligence, SM-02, and SM-03B inputs and portfolios immutable. The owner accepted the restriction-only coverage exceptions, subject to exact reconciliation. The full review accounts for the 47 outstanding profiles, and unresolved profiles stay outside the proposed scope.
 
 Corrected provisional commercial planning may proceed after the product owner approves the exact eligible code set, specifications, numerical configuration, and any additional coverage exceptions. The ceiling approval grants no exact-profile, allocation revision, replacement, permanent identity, listing, RFQ, offer, Backend import, or release permission. [Exact pending scope package](SM04A_MARKETPLACE_SCOPE_APPROVAL.md)
+
+## SM-04A exact scope and commercial planning approval
+
+The product owner explicitly approved the 279-product MVP package `sha256:c2ba6877a9b8816c2ebf80ab509eae5de81f59c3dd53f54affc38d1670df1d75` and configuration `sha256:2c2b6438662b33e1aa65a7f705020d68043a96b5cb9d961d8ee7a28ba8a8c714` in attachment `0e5826a1-e26d-4aa4-972d-d878678b6819`, sections 2 and 18. Approval covers corrected provisional planning for 932 listings, 558 RFQs and 835 offers on the original allocations. It accepts eight unresolved and 13 offline-only exclusions, eight fewer competitive RFQs and three fewer distinct responding suppliers than the ceiling, and the existing RFQ coverage exception for CMP-000043. [Machine-readable authorization](../configs/synthetic/commercial.scope.approval.v1.json)
+
+SM-04B needs explicit listing-only authorization. SM-05, SM-06, Backend import, and full marketplace generation remain blocked.

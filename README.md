@@ -94,4 +94,8 @@ Run `python -m src.synthetic.sm04a_remediation inspect` for read-only reconcilia
 
 ## SM-04A-S proposed marketplace scope
 
-The product owner approved the adaptive strategy with a 287-product ceiling. The independently verified proposal retains 279 products, 932 listings, 558 RFQs, and 835 offers from the pinned allocation. The exact scope, specifications, commercial values, and coverage effects await approval. Run `python -m src.synthetic.sm04a_scope verify-proposal` to verify the package and `prepare-planning` to check the exact approval gate. [Scope decision](docs/SM04A_MARKETPLACE_SCOPE_APPROVAL.md) [47-product review](docs/SM04A_PRODUCT_SPECIFICATION_REVIEW.md)
+The product owner approved the adaptive strategy with a 287-product ceiling. The independently verified proposal retains 279 products, 932 listings, 558 RFQs, and 835 offers from the pinned allocation. The product owner approved the exact scope, specifications, commercial values, and coverage effects for provisional planning. Run `python -m src.synthetic.sm04a_scope verify-proposal` to verify the package and `prepare-planning` to check the exact approval gate. [Scope decision](docs/SM04A_MARKETPLACE_SCOPE_APPROVAL.md) [47-product review](docs/SM04A_PRODUCT_SPECIFICATION_REVIEW.md)
+
+## Corrected commercial feasibility
+
+The approved MVP plan validated 279 profiles, 932 listings, 558 RFQs and 835 offers. All 835 responses passed full-fulfillment checks. Run `python -m src.synthetic.corrected_commercial_stage validate` to reverify the published plan. The exact SM-04B review package awaits separate authorization. [Corrected planning manifest](data/planning/commercial_feasibility/corrected_plan_manifest.json) · [Listing approval](docs/SM04_LISTING_STAGE_AUTHORIZATION.md)

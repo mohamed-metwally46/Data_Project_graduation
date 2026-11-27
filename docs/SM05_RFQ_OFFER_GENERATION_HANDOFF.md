@@ -11,3 +11,7 @@ The planning assumptions use individual full fulfillment, non-binding target pri
 The adaptive scope proposal retains 558 RFQs and 835 offers. Those are original planning references in the proposed subset. Exact scope approval and corrected commercial feasibility precede any later handoff. [Scope approval](SM04A_MARKETPLACE_SCOPE_APPROVAL.md)
 
 The original 600 RFQs and 900 offers are historical planning counts. Removing the 13 offline-only products leaves a restriction-only projection of 574 RFQs and 858 offers. An approved structural scope, completed product reviews and validated applicable commercial plan are prerequisites before those figures can be used as proposed commercial population targets. No RFQ or offer entities were instantiated. [Remediation evidence](../reports/sm04a_remediation_report.json)
+
+## Corrected provisional handoff
+
+The validated 279-product corrected plan retains 558 original RFQ references and 835 original offer references. Each planned response can meet its entire request independently. Preserve the corrected plan's price basis, specifications, response relationships, and 113/166/168/111 response histogram. SM-05 still requires a validated listing stage, exact reconciliation with that stage, and separate RFQ/offer approval. [Corrected planning manifest](../data/planning/commercial_feasibility/corrected_plan_manifest.json)

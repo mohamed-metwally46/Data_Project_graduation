@@ -1,0 +1,72 @@
+{
+  "is_synthetic": true,
+  "is_planning_artifact": true,
+  "backend_importable": false,
+  "full_marketplace_release": false,
+  "status": "passed",
+  "scope_counts": {
+    "products": 279,
+    "companies": 500,
+    "supplier_companies": 300,
+    "importer_companies": 200,
+    "supplier_associations": 1116,
+    "importer_associations": 556,
+    "listings": 932,
+    "active": 792,
+    "out_of_stock": 96,
+    "inactive": 44,
+    "visible_catalog": 888,
+    "generally_available": 792,
+    "rfqs": 558,
+    "open_rfqs": 392,
+    "targeted_rfqs": 166,
+    "responses": {
+      "0": 113,
+      "1": 166,
+      "2": 168,
+      "3": 111
+    },
+    "competitive_rfqs": 279,
+    "offers": 835,
+    "responding_suppliers": 295,
+    "category_records": {
+      "A": 1001,
+      "B": 0,
+      "C": 0
+    },
+    "unique_directional_relationships": 279,
+    "supplier_markets": 25,
+    "importer_markets": 75,
+    "combined_markets": 92,
+    "active_product_coverage": 279,
+    "rfq_product_coverage": 279,
+    "active_supplier_coverage": 300,
+    "listed_supplier_coverage": 300,
+    "rfq_importer_coverage": 199
+  },
+  "inactive_stock": {
+    "positive_stock": 22,
+    "zero_stock": 22
+  },
+  "verified_profiles": 279,
+  "verified_listings": 932,
+  "verified_rfqs": 558,
+  "feasible_allocated_responses": 835,
+  "infeasible_allocated_responses": 0,
+  "unresolved_scenarios": 0,
+  "preserved_competitive_rfqs": 279,
+  "coverage_exceptions": {
+    "companies_without_portfolio": [],
+    "suppliers_without_active_listing": [],
+    "importers_without_rfq": [
+      {
+        "slot_id": "IMP-SLOT-0043",
+        "display_code": "CMP-000043"
+      }
+    ],
+    "products_without_active_listings": [],
+    "products_without_rfqs": []
+  },
+  "independent_source": "pinned SQLite eligible triples and serialized original associations",
+  "fulfillment": "full_independent_no_reservation"
+}

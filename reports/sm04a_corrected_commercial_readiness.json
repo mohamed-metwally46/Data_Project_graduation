@@ -1,0 +1,1156 @@
+{
+  "is_synthetic": true,
+  "is_planning_artifact": true,
+  "backend_importable": false,
+  "full_marketplace_release": false,
+  "status": "validated_corrected_provisional",
+  "commercial_plan_id": "sm04ac-c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67",
+  "artifact_directory": "data/planning/commercial_feasibility/corrected_plans/sm04ac-c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67",
+  "bindings": {
+    "approved_scope_package": "sha256:c2ba6877a9b8816c2ebf80ab509eae5de81f59c3dd53f54affc38d1670df1d75",
+    "scope_id": "sm04as-8f0ef371ba33b53d69293693a7127f897a11184ea9a71bf02ea7e7abba5cbf0d",
+    "approval_evidence": {
+      "path": "configs/synthetic/commercial.scope.approval.v1.json",
+      "sha256": "5089075c02408b48968347e0fb29414c60f2346aee5814e4515836d459c1436a",
+      "size_bytes": 795
+    },
+    "configuration_fingerprint": "sha256:2c2b6438662b33e1aa65a7f705020d68043a96b5cb9d961d8ee7a28ba8a8c714",
+    "eligible_codes_fingerprint": "sha256:13ab2df07cc634ec162d6269828a44e33819fd2c89f938554bf40499a6df863a",
+    "specification_fingerprint": "sha256:b900b4c01d63a8a9c20f09309ff92f2ad42d935c8caac60b1ce28462cfde07c1",
+    "suitability_fingerprint": "sha256:a74472dbe8d16d71cc922982138de055a97f02a03c7fd5131273c507e9a4d958",
+    "offline_codes_fingerprint": "sha256:b1e35c44e608102d150d6ea834180571b7c88313c0a71892d2e1625bcb087782",
+    "unresolved_codes_fingerprint": "sha256:397188486c663809bb994e061f8886cd8c41168b84756d9df43289f73ce93a53",
+    "identifier_policy_fingerprint": "sha256:4d0c8f1db426cf95d8c24e3b6baecaf3975cf235cb8d50ada0a3b2f682df4c24",
+    "upstream": {
+      "trade_intelligence": {
+        "release_id": "ti-3349f6e0cb6dde75fe7d5323af71463748cad3232bc7bcb476c6ff6dcd8cd41b",
+        "dataset_fingerprint": "sha256:4b65676dc1766ebd869df52fef1c3786beffb11fcc838a99eb14a3818e4c136e",
+        "year": 2024
+      },
+      "structural_plan_id": "sm02-90bf5c26373c3d2c45f3fe7f371fbbe8a45b880825f9aa0ee9315de2a96b9ef3",
+      "structural_artifacts": {
+        "allocation_plan.json": {
+          "path": "allocation_plan.json",
+          "sha256": "48e4510a4c278adb69f3729399edc0ea044af93076ae479c5287bc7fdb97c44e",
+          "size_bytes": 788184
+        },
+        "geographic_eligibility.json": {
+          "path": "geographic_eligibility.json",
+          "sha256": "3819398da839787db2821b265cf762aa90d873cdc52f505857a84f7482f2bbcf",
+          "size_bytes": 120319
+        },
+        "product_eligibility.json": {
+          "path": "product_eligibility.json",
+          "sha256": "6227bcef0453d0dd7fa689ad64c32237c0d7b787c1a71b6b0daba9c3458bca17",
+          "size_bytes": 8477492
+        }
+      },
+      "company_stage_id": "sm03b-68a129e0877cc0b7405db11375d2ef72ee862b7545075bd36c06099fa8e42363",
+      "company_artifacts": {
+        "company_stage.json": {
+          "path": "company_stage.json",
+          "sha256": "5d41f334d6c5bac78046e21ca231df826a9c5d844dc89bc47c6c753c1a1abce4",
+          "size_bytes": 2219027
+        },
+        "company_validation_report.json": {
+          "path": "company_validation_report.json",
+          "sha256": "fa1b012c76171f61e7ca41a7cec4ec929e1d30883c6f66f42566f44b6c92d58e",
+          "size_bytes": 22022
+        }
+      },
+      "population_id": "globiq-marketplace-baseline-001",
+      "historical_plan_id": "sm04a-32558594b63919d38b643c249ef06aa8ba882430a330c30ef2ab959fec02910d",
+      "historical_artifacts": {
+        "commercial_feasibility_report.json": {
+          "path": "commercial_feasibility_report.json",
+          "sha256": "8f481d804b77a77569f7367f35c17b6e39cc74cf9a1a2ef1f39babdb05613eb3",
+          "size_bytes": 972
+        },
+        "commercial_quality_report.json": {
+          "path": "commercial_quality_report.json",
+          "sha256": "9d3ba2ed2dc082c76418bd7dc06ab603760fac21dbd2b8bc6c67b2abe974bd11",
+          "size_bytes": 547431
+        },
+        "listing_commercial_plan.json": {
+          "path": "listing_commercial_plan.json",
+          "sha256": "37ce8e0ce8bae0c536b0c2364a7fdb86738384d7754d72036e12521ad8538ca3",
+          "size_bytes": 665498
+        },
+        "offer_commercial_plan.json": {
+          "path": "offer_commercial_plan.json",
+          "sha256": "23ad64b8583055c6abc745c4fa8f4753acb612b6a8ab8e20d27db60e1f0ccffc",
+          "size_bytes": 675755
+        },
+        "product_commercial_review.md": {
+          "path": "product_commercial_review.md",
+          "sha256": "32433e528022b61e36dba6fc228338201ebb0ecb352d9063d0d0b25ed465e6b8",
+          "size_bytes": 105773
+        },
+        "resolved_product_profiles.json": {
+          "path": "resolved_product_profiles.json",
+          "sha256": "c2e6906b87aa6c64d3cff579361c44a8dc0e85c988a43fdadb6a6bcbe63d739c",
+          "size_bytes": 543769
+        },
+        "rfq_commercial_plan.json": {
+          "path": "rfq_commercial_plan.json",
+          "sha256": "0c5d3f98c8e6407ca6353e1a3344aa8d30ffc3fd07cd18c4b4d12d8d975ecf5e",
+          "size_bytes": 448045
+        }
+      },
+      "remediation_evidence": "sha256:eaf60b25a07960d86db0d64481b1e3abf42f2eda284b32d93ee4ef77a7268631"
+    },
+    "implementation": {
+      "version": "corrected-implementation-v1",
+      "files": [
+        {
+          "path": "requirements-dev.txt",
+          "sha256": "860ab73ec874e98df3218a1ab7820c2cefc7a1ecdf276a82722a90ba28c6f640",
+          "size_bytes": 39
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "f262ca4ee450296864393b91fecc54c934972e398fb7d88d2b82dfb6ac01bd89",
+          "size_bytes": 17
+        },
+        {
+          "path": "src/analytics/market_opportunity_intelligence.py",
+          "sha256": "9b0071a7409be9c5b94f4f8d271e6495cd3e172560ce60b4ec3bbf6a9a296267",
+          "size_bytes": 19589
+        },
+        {
+          "path": "src/analytics/observed.py",
+          "sha256": "7b7920bfbfb93d7f436facbb05dc12b7321b3cd0be71cfe829b8890581b6f2b9",
+          "size_bytes": 3122
+        },
+        {
+          "path": "src/analytics/release.py",
+          "sha256": "e6cbe82a2c19bc90fd51fe334f7cb699150ad833269f5ff69740b9c785f005e5",
+          "size_bytes": 13954
+        },
+        {
+          "path": "src/analytics/release_validation.py",
+          "sha256": "079f7d9839efd56f4723674318efb5aab7a630ae74f02f8e497be86d16669304",
+          "size_bytes": 19535
+        },
+        {
+          "path": "src/enrichment/references.py",
+          "sha256": "21317199ce429a41aab11998da21b044da1e82454ae48bb4b3fe2e3784d4cda7",
+          "size_bytes": 2003
+        },
+        {
+          "path": "src/pipeline.py",
+          "sha256": "ff896dd92a1ead82efdf1a4efbe4f54e9522aa1ecdd48e498c5af9a0708f3a44",
+          "size_bytes": 11856
+        },
+        {
+          "path": "src/preprocessing/trade.py",
+          "sha256": "49a10fd69a3a15a11ac2d2858bc6e5de4c8485b01db8d16d572a6c8572ff0948",
+          "size_bytes": 2036
+        },
+        {
+          "path": "src/synthetic/allocation.py",
+          "sha256": "ed752b377e2184bc49ba59157b4588235386c32a7c2a4530ceb081e7ed7c2167",
+          "size_bytes": 17495
+        },
+        {
+          "path": "src/synthetic/commercial_config.py",
+          "sha256": "741baf700916d2c832289c853f340500bab776975503f3f6677a7063e3bbf5d6",
+          "size_bytes": 10237
+        },
+        {
+          "path": "src/synthetic/commercial_planning.py",
+          "sha256": "b5c61528072a37101c3c4dbdcfb08f1ba4167fc6e3fca8bdf5e771f536c73d5e",
+          "size_bytes": 11175
+        },
+        {
+          "path": "src/synthetic/commercial_remediation.py",
+          "sha256": "2c8cb075410d59c2c3b4d5ca4a37ef70e49fc47540c762a7652f78676d91b5ae",
+          "size_bytes": 15142
+        },
+        {
+          "path": "src/synthetic/commercial_stage.py",
+          "sha256": "fc29624b3d071945d14c30b7a1b3dfaff4c7e825e238ac3774e0dc7b830cac37",
+          "size_bytes": 18430
+        },
+        {
+          "path": "src/synthetic/commercial_validation.py",
+          "sha256": "8550a7f1466aee7e8991850d824218c0bc6a283ceaa06ddfd3a2664fdb538548",
+          "size_bytes": 15843
+        },
+        {
+          "path": "src/synthetic/company_identity.py",
+          "sha256": "5d81fed69e40e6d7e65c2954e49d3b22dbd71cca52187764b3fbb19a487d4872",
+          "size_bytes": 16116
+        },
+        {
+          "path": "src/synthetic/company_publication.py",
+          "sha256": "87e67be0aa6b340c51bfcd4fe3dbfcb2a141acfe041a54878c4ee3fcbdb404ef",
+          "size_bytes": 16758
+        },
+        {
+          "path": "src/synthetic/company_stage.py",
+          "sha256": "306fc93861c62e435ed0379cb617e3cc9efa83c51c571b8b3cbc56ec6cdf7e70",
+          "size_bytes": 17458
+        },
+        {
+          "path": "src/synthetic/company_validation.py",
+          "sha256": "12782ac5951e182514ca43101d99accacd7d1d3df9527a2a0488a4ae57c1f00b",
+          "size_bytes": 12990
+        },
+        {
+          "path": "src/synthetic/corrected_commercial_stage.py",
+          "sha256": "3d38f10dba9564c2fc23148e86446fb8366a8ee8bbbe120644e2851d89d6c030",
+          "size_bytes": 19582
+        },
+        {
+          "path": "src/synthetic/determinism.py",
+          "sha256": "d66e616dcb6570798e2bcc4c1299bb6b102c6979454115e6a6e8f29786ca83f9",
+          "size_bytes": 5077
+        },
+        {
+          "path": "src/synthetic/foundation.py",
+          "sha256": "03ecadf91c5131111455b2f92f6327d8bb1613683f296d544b13d2d57ccbde6c",
+          "size_bytes": 4240
+        },
+        {
+          "path": "src/synthetic/listing_population_validation.py",
+          "sha256": "315444d082d4c1cd235f984a9fd89557d6f68fb579e8fc9bdfd195d347e9cc7e",
+          "size_bytes": 11339
+        },
+        {
+          "path": "src/synthetic/listing_stage.py",
+          "sha256": "27ebb253e399e5bc077db1e0a1ce6be95f42f7e7a361fc4aaca972f5db7be47c",
+          "size_bytes": 17800
+        },
+        {
+          "path": "src/synthetic/marketplace_scope.py",
+          "sha256": "507fd88c3e43bc599b885ba5c47904bd21906ccbcef9f0105ff6905d75c2c939",
+          "size_bytes": 17437
+        },
+        {
+          "path": "src/synthetic/marketplace_scope_validation.py",
+          "sha256": "c9bf8550fa51078ec64057b4059f5f495184d931eff632449ff3f2ef7a2a27fd",
+          "size_bytes": 15120
+        },
+        {
+          "path": "src/synthetic/planning.py",
+          "sha256": "6a0af219feea1833b33fa8f0cdae00be2e753bf0269d598ceb8c5cab0b141003",
+          "size_bytes": 13297
+        },
+        {
+          "path": "src/synthetic/planning_validation.py",
+          "sha256": "6f67796bdb5c007994c665ee5a58251753cbacc0e6b2f296ce3d7b9b0c08dc11",
+          "size_bytes": 12253
+        },
+        {
+          "path": "src/synthetic/sm04a_remediation.py",
+          "sha256": "bee9a33d3ca2894d24c01851bbf0b3fb7e5625c777af7234d2fa5e70c18786a5",
+          "size_bytes": 11846
+        },
+        {
+          "path": "src/synthetic/sm04a_scope.py",
+          "sha256": "a2e9d0221173ae86cf6235ddc2b97d88b68c1caac90952292ee8d6fb5d185249",
+          "size_bytes": 19516
+        }
+      ],
+      "fingerprint": "sha256:85bd599db2b75953ba7389cff1c3ffda4195b257cba421e8c5b5a2641c0b29dc"
+    },
+    "schemas": {
+      "schemas/commercial.scope.proposed.v1.schema.json": {
+        "path": "schemas/commercial.scope.proposed.v1.schema.json",
+        "sha256": "3102deec9442a4ce871f75f6a6643c63719c129328004b646752c71348a653a4",
+        "size_bytes": 16156
+      },
+      "schemas/commercial_config.v1.schema.json": {
+        "path": "schemas/commercial_config.v1.schema.json",
+        "sha256": "37e692dd7e1ce29e9f6a74d3c527c4be15ceb3adc539ff8ecfcfaf8937896243",
+        "size_bytes": 11995
+      },
+      "schemas/commercial_plan.v1.schema.json": {
+        "path": "schemas/commercial_plan.v1.schema.json",
+        "sha256": "1ae3096269f5d34647ba3337ab7376adcd8f32902d51ff0552cc8475f3107a2d",
+        "size_bytes": 19408
+      },
+      "schemas/commercial_remediation.v1.schema.json": {
+        "path": "schemas/commercial_remediation.v1.schema.json",
+        "sha256": "368cadd2dfe43dabad78655c37067769a329a13db0fd08f75c8316380729fb2e",
+        "size_bytes": 8763
+      },
+      "schemas/listing_stage.remediation.v1.schema.json": {
+        "path": "schemas/listing_stage.remediation.v1.schema.json",
+        "sha256": "6fbf41832a3ce92f39751b19ba3a6f00205116181aef0770e56710b36d0c5026",
+        "size_bytes": 13483
+      },
+      "schemas/marketplace_scope.v1.schema.json": {
+        "path": "schemas/marketplace_scope.v1.schema.json",
+        "sha256": "4396d37ec586b76e4b6ad5fa6dca24ab78780c3455d59eec7b6b1cd37215e5e5",
+        "size_bytes": 4928
+      },
+      "schemas/commercial_plan.corrected.v1.schema.json": {
+        "path": "schemas/commercial_plan.corrected.v1.schema.json",
+        "sha256": "e86ea661956681e67636b833174d95f91b48d470e29033b5ec8a168a16a2aec8",
+        "size_bytes": 24582
+      }
+    },
+    "master_seed": 42,
+    "method": "corrected-commercial-plan-v1"
+  },
+  "deterministic_content_fingerprint": "sha256:c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67",
+  "artifacts": {
+    "commercial_feasibility_report.json": {
+      "path": "commercial_feasibility_report.json",
+      "sha256": "ace5e73cb44d6d75c3e82836b75bea80d86d79f841ab25b1ab674ebc46cc99db",
+      "size_bytes": 1872
+    },
+    "commercial_quality_report.json": {
+      "path": "commercial_quality_report.json",
+      "sha256": "eaf44ef73aeb6fe466812fd4f2d73ce622ed299969cbc86f2b6ee55441e5a9c7",
+      "size_bytes": 519835
+    },
+    "listing_commercial_plan.json": {
+      "path": "listing_commercial_plan.json",
+      "sha256": "97174192aa5ab6cd754fc9ff4047800572288d5b25e0f73d9c831672875f4881",
+      "size_bytes": 719638
+    },
+    "offer_commercial_plan.json": {
+      "path": "offer_commercial_plan.json",
+      "sha256": "7432ad8486802b2839c0bd341fe191934ff2ca6f7e4e756cc14368ecc58a752c",
+      "size_bytes": 715890
+    },
+    "resolved_product_profiles.json": {
+      "path": "resolved_product_profiles.json",
+      "sha256": "afeb221b1b186678e0efa002feccc8e7540de36c84745a44b9d7419ee1e41629",
+      "size_bytes": 821160
+    },
+    "rfq_commercial_plan.json": {
+      "path": "rfq_commercial_plan.json",
+      "sha256": "7bdb3fabbc8451acea57770221c81dca0952447911055bd5d0e6ad00968c7de5",
+      "size_bytes": 479493
+    }
+  },
+  "validation": {
+    "is_synthetic": true,
+    "is_planning_artifact": true,
+    "backend_importable": false,
+    "full_marketplace_release": false,
+    "status": "passed",
+    "scope_counts": {
+      "products": 279,
+      "companies": 500,
+      "supplier_companies": 300,
+      "importer_companies": 200,
+      "supplier_associations": 1116,
+      "importer_associations": 556,
+      "listings": 932,
+      "active": 792,
+      "out_of_stock": 96,
+      "inactive": 44,
+      "visible_catalog": 888,
+      "generally_available": 792,
+      "rfqs": 558,
+      "open_rfqs": 392,
+      "targeted_rfqs": 166,
+      "responses": {
+        "0": 113,
+        "1": 166,
+        "2": 168,
+        "3": 111
+      },
+      "competitive_rfqs": 279,
+      "offers": 835,
+      "responding_suppliers": 295,
+      "category_records": {
+        "A": 1001,
+        "B": 0,
+        "C": 0
+      },
+      "unique_directional_relationships": 279,
+      "supplier_markets": 25,
+      "importer_markets": 75,
+      "combined_markets": 92,
+      "active_product_coverage": 279,
+      "rfq_product_coverage": 279,
+      "active_supplier_coverage": 300,
+      "listed_supplier_coverage": 300,
+      "rfq_importer_coverage": 199
+    },
+    "inactive_stock": {
+      "positive_stock": 22,
+      "zero_stock": 22
+    },
+    "verified_profiles": 279,
+    "verified_listings": 932,
+    "verified_rfqs": 558,
+    "feasible_allocated_responses": 835,
+    "infeasible_allocated_responses": 0,
+    "unresolved_scenarios": 0,
+    "preserved_competitive_rfqs": 279,
+    "coverage_exceptions": {
+      "companies_without_portfolio": [],
+      "suppliers_without_active_listing": [],
+      "importers_without_rfq": [
+        {
+          "slot_id": "IMP-SLOT-0043",
+          "display_code": "CMP-000043"
+        }
+      ],
+      "products_without_active_listings": [],
+      "products_without_rfqs": []
+    },
+    "independent_source": "pinned SQLite eligible triples and serialized original associations",
+    "fulfillment": "full_independent_no_reservation"
+  },
+  "reproducibility": {
+    "byte_identical": true,
+    "builds": [
+      {
+        "commercial_feasibility_report.json": {
+          "path": "commercial_feasibility_report.json",
+          "sha256": "ace5e73cb44d6d75c3e82836b75bea80d86d79f841ab25b1ab674ebc46cc99db",
+          "size_bytes": 1872
+        },
+        "commercial_quality_report.json": {
+          "path": "commercial_quality_report.json",
+          "sha256": "eaf44ef73aeb6fe466812fd4f2d73ce622ed299969cbc86f2b6ee55441e5a9c7",
+          "size_bytes": 519835
+        },
+        "listing_commercial_plan.json": {
+          "path": "listing_commercial_plan.json",
+          "sha256": "97174192aa5ab6cd754fc9ff4047800572288d5b25e0f73d9c831672875f4881",
+          "size_bytes": 719638
+        },
+        "offer_commercial_plan.json": {
+          "path": "offer_commercial_plan.json",
+          "sha256": "7432ad8486802b2839c0bd341fe191934ff2ca6f7e4e756cc14368ecc58a752c",
+          "size_bytes": 715890
+        },
+        "resolved_product_profiles.json": {
+          "path": "resolved_product_profiles.json",
+          "sha256": "afeb221b1b186678e0efa002feccc8e7540de36c84745a44b9d7419ee1e41629",
+          "size_bytes": 821160
+        },
+        "rfq_commercial_plan.json": {
+          "path": "rfq_commercial_plan.json",
+          "sha256": "7bdb3fabbc8451acea57770221c81dca0952447911055bd5d0e6ad00968c7de5",
+          "size_bytes": 479493
+        }
+      },
+      {
+        "commercial_feasibility_report.json": {
+          "path": "commercial_feasibility_report.json",
+          "sha256": "ace5e73cb44d6d75c3e82836b75bea80d86d79f841ab25b1ab674ebc46cc99db",
+          "size_bytes": 1872
+        },
+        "commercial_quality_report.json": {
+          "path": "commercial_quality_report.json",
+          "sha256": "eaf44ef73aeb6fe466812fd4f2d73ce622ed299969cbc86f2b6ee55441e5a9c7",
+          "size_bytes": 519835
+        },
+        "listing_commercial_plan.json": {
+          "path": "listing_commercial_plan.json",
+          "sha256": "97174192aa5ab6cd754fc9ff4047800572288d5b25e0f73d9c831672875f4881",
+          "size_bytes": 719638
+        },
+        "offer_commercial_plan.json": {
+          "path": "offer_commercial_plan.json",
+          "sha256": "7432ad8486802b2839c0bd341fe191934ff2ca6f7e4e756cc14368ecc58a752c",
+          "size_bytes": 715890
+        },
+        "resolved_product_profiles.json": {
+          "path": "resolved_product_profiles.json",
+          "sha256": "afeb221b1b186678e0efa002feccc8e7540de36c84745a44b9d7419ee1e41629",
+          "size_bytes": 821160
+        },
+        "rfq_commercial_plan.json": {
+          "path": "rfq_commercial_plan.json",
+          "sha256": "7bdb3fabbc8451acea57770221c81dca0952447911055bd5d0e6ad00968c7de5",
+          "size_bytes": 479493
+        }
+      }
+    ]
+  },
+  "fallback_search_nodes": 0,
+  "listing_generation_authorized": false,
+  "sm04b_approval_package": {
+    "version": "sm04b-exact-listing-review-v1",
+    "status": "pending_explicit_approval",
+    "authorization_scope": "SM-04B isolated canonical product and listing population only",
+    "commercial_plan_id": "sm04ac-c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67",
+    "deterministic_content_fingerprint": "sha256:c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67",
+    "bindings": {
+      "approved_scope_package": "sha256:c2ba6877a9b8816c2ebf80ab509eae5de81f59c3dd53f54affc38d1670df1d75",
+      "scope_id": "sm04as-8f0ef371ba33b53d69293693a7127f897a11184ea9a71bf02ea7e7abba5cbf0d",
+      "approval_evidence": {
+        "path": "configs/synthetic/commercial.scope.approval.v1.json",
+        "sha256": "5089075c02408b48968347e0fb29414c60f2346aee5814e4515836d459c1436a",
+        "size_bytes": 795
+      },
+      "configuration_fingerprint": "sha256:2c2b6438662b33e1aa65a7f705020d68043a96b5cb9d961d8ee7a28ba8a8c714",
+      "eligible_codes_fingerprint": "sha256:13ab2df07cc634ec162d6269828a44e33819fd2c89f938554bf40499a6df863a",
+      "specification_fingerprint": "sha256:b900b4c01d63a8a9c20f09309ff92f2ad42d935c8caac60b1ce28462cfde07c1",
+      "suitability_fingerprint": "sha256:a74472dbe8d16d71cc922982138de055a97f02a03c7fd5131273c507e9a4d958",
+      "offline_codes_fingerprint": "sha256:b1e35c44e608102d150d6ea834180571b7c88313c0a71892d2e1625bcb087782",
+      "unresolved_codes_fingerprint": "sha256:397188486c663809bb994e061f8886cd8c41168b84756d9df43289f73ce93a53",
+      "identifier_policy_fingerprint": "sha256:4d0c8f1db426cf95d8c24e3b6baecaf3975cf235cb8d50ada0a3b2f682df4c24",
+      "upstream": {
+        "trade_intelligence": {
+          "release_id": "ti-3349f6e0cb6dde75fe7d5323af71463748cad3232bc7bcb476c6ff6dcd8cd41b",
+          "dataset_fingerprint": "sha256:4b65676dc1766ebd869df52fef1c3786beffb11fcc838a99eb14a3818e4c136e",
+          "year": 2024
+        },
+        "structural_plan_id": "sm02-90bf5c26373c3d2c45f3fe7f371fbbe8a45b880825f9aa0ee9315de2a96b9ef3",
+        "structural_artifacts": {
+          "allocation_plan.json": {
+            "path": "allocation_plan.json",
+            "sha256": "48e4510a4c278adb69f3729399edc0ea044af93076ae479c5287bc7fdb97c44e",
+            "size_bytes": 788184
+          },
+          "geographic_eligibility.json": {
+            "path": "geographic_eligibility.json",
+            "sha256": "3819398da839787db2821b265cf762aa90d873cdc52f505857a84f7482f2bbcf",
+            "size_bytes": 120319
+          },
+          "product_eligibility.json": {
+            "path": "product_eligibility.json",
+            "sha256": "6227bcef0453d0dd7fa689ad64c32237c0d7b787c1a71b6b0daba9c3458bca17",
+            "size_bytes": 8477492
+          }
+        },
+        "company_stage_id": "sm03b-68a129e0877cc0b7405db11375d2ef72ee862b7545075bd36c06099fa8e42363",
+        "company_artifacts": {
+          "company_stage.json": {
+            "path": "company_stage.json",
+            "sha256": "5d41f334d6c5bac78046e21ca231df826a9c5d844dc89bc47c6c753c1a1abce4",
+            "size_bytes": 2219027
+          },
+          "company_validation_report.json": {
+            "path": "company_validation_report.json",
+            "sha256": "fa1b012c76171f61e7ca41a7cec4ec929e1d30883c6f66f42566f44b6c92d58e",
+            "size_bytes": 22022
+          }
+        },
+        "population_id": "globiq-marketplace-baseline-001",
+        "historical_plan_id": "sm04a-32558594b63919d38b643c249ef06aa8ba882430a330c30ef2ab959fec02910d",
+        "historical_artifacts": {
+          "commercial_feasibility_report.json": {
+            "path": "commercial_feasibility_report.json",
+            "sha256": "8f481d804b77a77569f7367f35c17b6e39cc74cf9a1a2ef1f39babdb05613eb3",
+            "size_bytes": 972
+          },
+          "commercial_quality_report.json": {
+            "path": "commercial_quality_report.json",
+            "sha256": "9d3ba2ed2dc082c76418bd7dc06ab603760fac21dbd2b8bc6c67b2abe974bd11",
+            "size_bytes": 547431
+          },
+          "listing_commercial_plan.json": {
+            "path": "listing_commercial_plan.json",
+            "sha256": "37ce8e0ce8bae0c536b0c2364a7fdb86738384d7754d72036e12521ad8538ca3",
+            "size_bytes": 665498
+          },
+          "offer_commercial_plan.json": {
+            "path": "offer_commercial_plan.json",
+            "sha256": "23ad64b8583055c6abc745c4fa8f4753acb612b6a8ab8e20d27db60e1f0ccffc",
+            "size_bytes": 675755
+          },
+          "product_commercial_review.md": {
+            "path": "product_commercial_review.md",
+            "sha256": "32433e528022b61e36dba6fc228338201ebb0ecb352d9063d0d0b25ed465e6b8",
+            "size_bytes": 105773
+          },
+          "resolved_product_profiles.json": {
+            "path": "resolved_product_profiles.json",
+            "sha256": "c2e6906b87aa6c64d3cff579361c44a8dc0e85c988a43fdadb6a6bcbe63d739c",
+            "size_bytes": 543769
+          },
+          "rfq_commercial_plan.json": {
+            "path": "rfq_commercial_plan.json",
+            "sha256": "0c5d3f98c8e6407ca6353e1a3344aa8d30ffc3fd07cd18c4b4d12d8d975ecf5e",
+            "size_bytes": 448045
+          }
+        },
+        "remediation_evidence": "sha256:eaf60b25a07960d86db0d64481b1e3abf42f2eda284b32d93ee4ef77a7268631"
+      },
+      "implementation": {
+        "version": "corrected-implementation-v1",
+        "files": [
+          {
+            "path": "requirements-dev.txt",
+            "sha256": "860ab73ec874e98df3218a1ab7820c2cefc7a1ecdf276a82722a90ba28c6f640",
+            "size_bytes": 39
+          },
+          {
+            "path": "requirements.txt",
+            "sha256": "f262ca4ee450296864393b91fecc54c934972e398fb7d88d2b82dfb6ac01bd89",
+            "size_bytes": 17
+          },
+          {
+            "path": "src/analytics/market_opportunity_intelligence.py",
+            "sha256": "9b0071a7409be9c5b94f4f8d271e6495cd3e172560ce60b4ec3bbf6a9a296267",
+            "size_bytes": 19589
+          },
+          {
+            "path": "src/analytics/observed.py",
+            "sha256": "7b7920bfbfb93d7f436facbb05dc12b7321b3cd0be71cfe829b8890581b6f2b9",
+            "size_bytes": 3122
+          },
+          {
+            "path": "src/analytics/release.py",
+            "sha256": "e6cbe82a2c19bc90fd51fe334f7cb699150ad833269f5ff69740b9c785f005e5",
+            "size_bytes": 13954
+          },
+          {
+            "path": "src/analytics/release_validation.py",
+            "sha256": "079f7d9839efd56f4723674318efb5aab7a630ae74f02f8e497be86d16669304",
+            "size_bytes": 19535
+          },
+          {
+            "path": "src/enrichment/references.py",
+            "sha256": "21317199ce429a41aab11998da21b044da1e82454ae48bb4b3fe2e3784d4cda7",
+            "size_bytes": 2003
+          },
+          {
+            "path": "src/pipeline.py",
+            "sha256": "ff896dd92a1ead82efdf1a4efbe4f54e9522aa1ecdd48e498c5af9a0708f3a44",
+            "size_bytes": 11856
+          },
+          {
+            "path": "src/preprocessing/trade.py",
+            "sha256": "49a10fd69a3a15a11ac2d2858bc6e5de4c8485b01db8d16d572a6c8572ff0948",
+            "size_bytes": 2036
+          },
+          {
+            "path": "src/synthetic/allocation.py",
+            "sha256": "ed752b377e2184bc49ba59157b4588235386c32a7c2a4530ceb081e7ed7c2167",
+            "size_bytes": 17495
+          },
+          {
+            "path": "src/synthetic/commercial_config.py",
+            "sha256": "741baf700916d2c832289c853f340500bab776975503f3f6677a7063e3bbf5d6",
+            "size_bytes": 10237
+          },
+          {
+            "path": "src/synthetic/commercial_planning.py",
+            "sha256": "b5c61528072a37101c3c4dbdcfb08f1ba4167fc6e3fca8bdf5e771f536c73d5e",
+            "size_bytes": 11175
+          },
+          {
+            "path": "src/synthetic/commercial_remediation.py",
+            "sha256": "2c8cb075410d59c2c3b4d5ca4a37ef70e49fc47540c762a7652f78676d91b5ae",
+            "size_bytes": 15142
+          },
+          {
+            "path": "src/synthetic/commercial_stage.py",
+            "sha256": "fc29624b3d071945d14c30b7a1b3dfaff4c7e825e238ac3774e0dc7b830cac37",
+            "size_bytes": 18430
+          },
+          {
+            "path": "src/synthetic/commercial_validation.py",
+            "sha256": "8550a7f1466aee7e8991850d824218c0bc6a283ceaa06ddfd3a2664fdb538548",
+            "size_bytes": 15843
+          },
+          {
+            "path": "src/synthetic/company_identity.py",
+            "sha256": "5d81fed69e40e6d7e65c2954e49d3b22dbd71cca52187764b3fbb19a487d4872",
+            "size_bytes": 16116
+          },
+          {
+            "path": "src/synthetic/company_publication.py",
+            "sha256": "87e67be0aa6b340c51bfcd4fe3dbfcb2a141acfe041a54878c4ee3fcbdb404ef",
+            "size_bytes": 16758
+          },
+          {
+            "path": "src/synthetic/company_stage.py",
+            "sha256": "306fc93861c62e435ed0379cb617e3cc9efa83c51c571b8b3cbc56ec6cdf7e70",
+            "size_bytes": 17458
+          },
+          {
+            "path": "src/synthetic/company_validation.py",
+            "sha256": "12782ac5951e182514ca43101d99accacd7d1d3df9527a2a0488a4ae57c1f00b",
+            "size_bytes": 12990
+          },
+          {
+            "path": "src/synthetic/corrected_commercial_stage.py",
+            "sha256": "3d38f10dba9564c2fc23148e86446fb8366a8ee8bbbe120644e2851d89d6c030",
+            "size_bytes": 19582
+          },
+          {
+            "path": "src/synthetic/determinism.py",
+            "sha256": "d66e616dcb6570798e2bcc4c1299bb6b102c6979454115e6a6e8f29786ca83f9",
+            "size_bytes": 5077
+          },
+          {
+            "path": "src/synthetic/foundation.py",
+            "sha256": "03ecadf91c5131111455b2f92f6327d8bb1613683f296d544b13d2d57ccbde6c",
+            "size_bytes": 4240
+          },
+          {
+            "path": "src/synthetic/listing_population_validation.py",
+            "sha256": "315444d082d4c1cd235f984a9fd89557d6f68fb579e8fc9bdfd195d347e9cc7e",
+            "size_bytes": 11339
+          },
+          {
+            "path": "src/synthetic/listing_stage.py",
+            "sha256": "27ebb253e399e5bc077db1e0a1ce6be95f42f7e7a361fc4aaca972f5db7be47c",
+            "size_bytes": 17800
+          },
+          {
+            "path": "src/synthetic/marketplace_scope.py",
+            "sha256": "507fd88c3e43bc599b885ba5c47904bd21906ccbcef9f0105ff6905d75c2c939",
+            "size_bytes": 17437
+          },
+          {
+            "path": "src/synthetic/marketplace_scope_validation.py",
+            "sha256": "c9bf8550fa51078ec64057b4059f5f495184d931eff632449ff3f2ef7a2a27fd",
+            "size_bytes": 15120
+          },
+          {
+            "path": "src/synthetic/planning.py",
+            "sha256": "6a0af219feea1833b33fa8f0cdae00be2e753bf0269d598ceb8c5cab0b141003",
+            "size_bytes": 13297
+          },
+          {
+            "path": "src/synthetic/planning_validation.py",
+            "sha256": "6f67796bdb5c007994c665ee5a58251753cbacc0e6b2f296ce3d7b9b0c08dc11",
+            "size_bytes": 12253
+          },
+          {
+            "path": "src/synthetic/sm04a_remediation.py",
+            "sha256": "bee9a33d3ca2894d24c01851bbf0b3fb7e5625c777af7234d2fa5e70c18786a5",
+            "size_bytes": 11846
+          },
+          {
+            "path": "src/synthetic/sm04a_scope.py",
+            "sha256": "a2e9d0221173ae86cf6235ddc2b97d88b68c1caac90952292ee8d6fb5d185249",
+            "size_bytes": 19516
+          }
+        ],
+        "fingerprint": "sha256:85bd599db2b75953ba7389cff1c3ffda4195b257cba421e8c5b5a2641c0b29dc"
+      },
+      "schemas": {
+        "schemas/commercial.scope.proposed.v1.schema.json": {
+          "path": "schemas/commercial.scope.proposed.v1.schema.json",
+          "sha256": "3102deec9442a4ce871f75f6a6643c63719c129328004b646752c71348a653a4",
+          "size_bytes": 16156
+        },
+        "schemas/commercial_config.v1.schema.json": {
+          "path": "schemas/commercial_config.v1.schema.json",
+          "sha256": "37e692dd7e1ce29e9f6a74d3c527c4be15ceb3adc539ff8ecfcfaf8937896243",
+          "size_bytes": 11995
+        },
+        "schemas/commercial_plan.v1.schema.json": {
+          "path": "schemas/commercial_plan.v1.schema.json",
+          "sha256": "1ae3096269f5d34647ba3337ab7376adcd8f32902d51ff0552cc8475f3107a2d",
+          "size_bytes": 19408
+        },
+        "schemas/commercial_remediation.v1.schema.json": {
+          "path": "schemas/commercial_remediation.v1.schema.json",
+          "sha256": "368cadd2dfe43dabad78655c37067769a329a13db0fd08f75c8316380729fb2e",
+          "size_bytes": 8763
+        },
+        "schemas/listing_stage.remediation.v1.schema.json": {
+          "path": "schemas/listing_stage.remediation.v1.schema.json",
+          "sha256": "6fbf41832a3ce92f39751b19ba3a6f00205116181aef0770e56710b36d0c5026",
+          "size_bytes": 13483
+        },
+        "schemas/marketplace_scope.v1.schema.json": {
+          "path": "schemas/marketplace_scope.v1.schema.json",
+          "sha256": "4396d37ec586b76e4b6ad5fa6dca24ab78780c3455d59eec7b6b1cd37215e5e5",
+          "size_bytes": 4928
+        },
+        "schemas/commercial_plan.corrected.v1.schema.json": {
+          "path": "schemas/commercial_plan.corrected.v1.schema.json",
+          "sha256": "e86ea661956681e67636b833174d95f91b48d470e29033b5ec8a168a16a2aec8",
+          "size_bytes": 24582
+        }
+      },
+      "master_seed": 42,
+      "method": "corrected-commercial-plan-v1"
+    },
+    "artifacts": {
+      "commercial_feasibility_report.json": {
+        "path": "commercial_feasibility_report.json",
+        "sha256": "ace5e73cb44d6d75c3e82836b75bea80d86d79f841ab25b1ab674ebc46cc99db",
+        "size_bytes": 1872
+      },
+      "commercial_quality_report.json": {
+        "path": "commercial_quality_report.json",
+        "sha256": "eaf44ef73aeb6fe466812fd4f2d73ce622ed299969cbc86f2b6ee55441e5a9c7",
+        "size_bytes": 519835
+      },
+      "listing_commercial_plan.json": {
+        "path": "listing_commercial_plan.json",
+        "sha256": "97174192aa5ab6cd754fc9ff4047800572288d5b25e0f73d9c831672875f4881",
+        "size_bytes": 719638
+      },
+      "offer_commercial_plan.json": {
+        "path": "offer_commercial_plan.json",
+        "sha256": "7432ad8486802b2839c0bd341fe191934ff2ca6f7e4e756cc14368ecc58a752c",
+        "size_bytes": 715890
+      },
+      "resolved_product_profiles.json": {
+        "path": "resolved_product_profiles.json",
+        "sha256": "afeb221b1b186678e0efa002feccc8e7540de36c84745a44b9d7419ee1e41629",
+        "size_bytes": 821160
+      },
+      "rfq_commercial_plan.json": {
+        "path": "rfq_commercial_plan.json",
+        "sha256": "7bdb3fabbc8451acea57770221c81dca0952447911055bd5d0e6ad00968c7de5",
+        "size_bytes": 479493
+      }
+    },
+    "identifier_specifications": {
+      "status": "proposed",
+      "version": "1.0.0",
+      "algorithm": "hierarchical_uuid5_v1",
+      "root": "9e5fdfc5-2675-57fe-8e94-81dc91ed9639",
+      "population": "globiq-marketplace-baseline-001",
+      "product_entity": "product",
+      "listing_entity": "listing",
+      "classification_context": "globiq-trade-reference-2024-v1",
+      "product_logical_key": [
+        "classification_context",
+        "normalized_source_product_code"
+      ],
+      "listing_logical_key": [
+        "supplier_external_uuid",
+        "product_external_uuid",
+        "variant"
+      ],
+      "initial_variant": "default",
+      "variant_pattern": "[a-z][a-z0-9-]{0,39}",
+      "display_prefix": "LST",
+      "text_encoding": "NFC strings inside compact UTF-8 ordered JSON arrays",
+      "code_encoding": "ASCII six digits or literal 9999AA, leading zeros preserved",
+      "classification_revision": "unverified; version the source context if its code semantics change",
+      "continuity": "Existing classification context persists across releases with identical code semantics. Explicit migration for changed semantics.",
+      "display_allocation": "Allocate by sorted original planning reference, retain issued codes in registry and never recycle them.",
+      "retirement": "Registry reservations survive retirement. Reactivation requires explicit review of the same logical listing.",
+      "fingerprint": "sha256:4d0c8f1db426cf95d8c24e3b6baecaf3975cf235cb8d50ada0a3b2f682df4c24",
+      "fixture_namespace": "c97a6984-c193-5da2-8da8-f97c7a560025",
+      "fixture_product": {
+        "logical_key": [
+          "globiq-trade-reference-2024-v1",
+          "010600"
+        ],
+        "external_id": "cbfaeac3-71c0-52aa-b85c-d4c394cd026c"
+      },
+      "fixture_listing": {
+        "logical_key": [
+          "b177b893-55f6-588a-9b6e-7009953461c6",
+          "cbfaeac3-71c0-52aa-b85c-d4c394cd026c",
+          "default"
+        ],
+        "external_id": "fb51050e-3b24-59e2-adae-e5a094b16411",
+        "display_code": "LST-000001"
+      }
+    },
+    "validation": {
+      "is_synthetic": true,
+      "is_planning_artifact": true,
+      "backend_importable": false,
+      "full_marketplace_release": false,
+      "status": "passed",
+      "scope_counts": {
+        "products": 279,
+        "companies": 500,
+        "supplier_companies": 300,
+        "importer_companies": 200,
+        "supplier_associations": 1116,
+        "importer_associations": 556,
+        "listings": 932,
+        "active": 792,
+        "out_of_stock": 96,
+        "inactive": 44,
+        "visible_catalog": 888,
+        "generally_available": 792,
+        "rfqs": 558,
+        "open_rfqs": 392,
+        "targeted_rfqs": 166,
+        "responses": {
+          "0": 113,
+          "1": 166,
+          "2": 168,
+          "3": 111
+        },
+        "competitive_rfqs": 279,
+        "offers": 835,
+        "responding_suppliers": 295,
+        "category_records": {
+          "A": 1001,
+          "B": 0,
+          "C": 0
+        },
+        "unique_directional_relationships": 279,
+        "supplier_markets": 25,
+        "importer_markets": 75,
+        "combined_markets": 92,
+        "active_product_coverage": 279,
+        "rfq_product_coverage": 279,
+        "active_supplier_coverage": 300,
+        "listed_supplier_coverage": 300,
+        "rfq_importer_coverage": 199
+      },
+      "inactive_stock": {
+        "positive_stock": 22,
+        "zero_stock": 22
+      },
+      "verified_profiles": 279,
+      "verified_listings": 932,
+      "verified_rfqs": 558,
+      "feasible_allocated_responses": 835,
+      "infeasible_allocated_responses": 0,
+      "unresolved_scenarios": 0,
+      "preserved_competitive_rfqs": 279,
+      "coverage_exceptions": {
+        "companies_without_portfolio": [],
+        "suppliers_without_active_listing": [],
+        "importers_without_rfq": [
+          {
+            "slot_id": "IMP-SLOT-0043",
+            "display_code": "CMP-000043"
+          }
+        ],
+        "products_without_active_listings": [],
+        "products_without_rfqs": []
+      },
+      "independent_source": "pinned SQLite eligible triples and serialized original associations",
+      "fulfillment": "full_independent_no_reservation"
+    },
+    "reproducibility": {
+      "byte_identical": true,
+      "builds": [
+        {
+          "commercial_feasibility_report.json": {
+            "path": "commercial_feasibility_report.json",
+            "sha256": "ace5e73cb44d6d75c3e82836b75bea80d86d79f841ab25b1ab674ebc46cc99db",
+            "size_bytes": 1872
+          },
+          "commercial_quality_report.json": {
+            "path": "commercial_quality_report.json",
+            "sha256": "eaf44ef73aeb6fe466812fd4f2d73ce622ed299969cbc86f2b6ee55441e5a9c7",
+            "size_bytes": 519835
+          },
+          "listing_commercial_plan.json": {
+            "path": "listing_commercial_plan.json",
+            "sha256": "97174192aa5ab6cd754fc9ff4047800572288d5b25e0f73d9c831672875f4881",
+            "size_bytes": 719638
+          },
+          "offer_commercial_plan.json": {
+            "path": "offer_commercial_plan.json",
+            "sha256": "7432ad8486802b2839c0bd341fe191934ff2ca6f7e4e756cc14368ecc58a752c",
+            "size_bytes": 715890
+          },
+          "resolved_product_profiles.json": {
+            "path": "resolved_product_profiles.json",
+            "sha256": "afeb221b1b186678e0efa002feccc8e7540de36c84745a44b9d7419ee1e41629",
+            "size_bytes": 821160
+          },
+          "rfq_commercial_plan.json": {
+            "path": "rfq_commercial_plan.json",
+            "sha256": "7bdb3fabbc8451acea57770221c81dca0952447911055bd5d0e6ad00968c7de5",
+            "size_bytes": 479493
+          }
+        },
+        {
+          "commercial_feasibility_report.json": {
+            "path": "commercial_feasibility_report.json",
+            "sha256": "ace5e73cb44d6d75c3e82836b75bea80d86d79f841ab25b1ab674ebc46cc99db",
+            "size_bytes": 1872
+          },
+          "commercial_quality_report.json": {
+            "path": "commercial_quality_report.json",
+            "sha256": "eaf44ef73aeb6fe466812fd4f2d73ce622ed299969cbc86f2b6ee55441e5a9c7",
+            "size_bytes": 519835
+          },
+          "listing_commercial_plan.json": {
+            "path": "listing_commercial_plan.json",
+            "sha256": "97174192aa5ab6cd754fc9ff4047800572288d5b25e0f73d9c831672875f4881",
+            "size_bytes": 719638
+          },
+          "offer_commercial_plan.json": {
+            "path": "offer_commercial_plan.json",
+            "sha256": "7432ad8486802b2839c0bd341fe191934ff2ca6f7e4e756cc14368ecc58a752c",
+            "size_bytes": 715890
+          },
+          "resolved_product_profiles.json": {
+            "path": "resolved_product_profiles.json",
+            "sha256": "afeb221b1b186678e0efa002feccc8e7540de36c84745a44b9d7419ee1e41629",
+            "size_bytes": 821160
+          },
+          "rfq_commercial_plan.json": {
+            "path": "rfq_commercial_plan.json",
+            "sha256": "7bdb3fabbc8451acea57770221c81dca0952447911055bd5d0e6ad00968c7de5",
+            "size_bytes": 479493
+          }
+        }
+      ]
+    },
+    "quality": {
+      "artifact": {
+        "path": "commercial_quality_report.json",
+        "sha256": "eaf44ef73aeb6fe466812fd4f2d73ce622ed299969cbc86f2b6ee55441e5a9c7",
+        "size_bytes": 519835
+      },
+      "rfq_diagnostics": {
+        "compatible_candidates": 1204,
+        "eligible_nonresponding": 369,
+        "valid_but_incompatible": 274,
+        "unanswered_with_compatible_candidate": 105,
+        "unanswered_without_compatible_candidate": 8
+      },
+      "products_with_diversity": {
+        "listing_prices": 279,
+        "moqs": 277,
+        "rfq_quantities": 273,
+        "offer_prices": 279,
+        "active_stock": 279
+      },
+      "boundaries": {
+        "price_boundary_count": 6,
+        "positive_stock_boundary_count": 7,
+        "moq_boundary_count": 109
+      }
+    },
+    "accepted_coverage_exceptions": {
+      "companies": {
+        "companies_without_portfolio": [],
+        "suppliers_without_active_listing": [],
+        "importers_without_rfq": [
+          {
+            "slot_id": "IMP-SLOT-0043",
+            "display_code": "CMP-000043"
+          }
+        ],
+        "products_without_active_listings": [],
+        "products_without_rfqs": []
+      },
+      "unresolved_product_exclusions": [
+        "382390",
+        "430130",
+        "710239",
+        "880330",
+        "890400",
+        "901890",
+        "970500",
+        "970600"
+      ],
+      "offline_only_product_exclusions": [
+        "010600",
+        "220429",
+        "220890",
+        "240220",
+        "281410",
+        "300220",
+        "300239",
+        "300490",
+        "300660",
+        "360690",
+        "382100",
+        "681310",
+        "930400"
+      ],
+      "competition_scenarios_below_ceiling": 8,
+      "responding_suppliers_below_ceiling": 3
+    },
+    "population_targets": {
+      "products": 279,
+      "permanent_product_uuids": 279,
+      "listings": 932,
+      "permanent_listing_uuids": 932,
+      "registry_entries": 932,
+      "planning_mappings": 932,
+      "active": 792,
+      "out_of_stock": 96,
+      "inactive": 44
+    },
+    "required_before_publication": [
+      "explicit listing-only execution approval",
+      "validate all production-shaped serialized records",
+      "verify registry and mappings",
+      "independent full listing-stage reproducibility",
+      "isolated publication"
+    ],
+    "backend_importable": false,
+    "full_marketplace_release": false,
+    "rfq_and_offer_generation_authorized": false
+  },
+  "sm04b_approval_package_fingerprint": "sha256:35fea3b4bab5c4b1b7b63618dde85b2a9e19495a76ea0eed172c6d4c601df5ef",
+  "regression_suite": {
+    "status": "passed",
+    "tests_passed": 76,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "unchanged_upstream": [
+    {
+      "path": "data/processed/analytics/trade_intelligence_release.json",
+      "sha256": "f02a382ef38f44740458e845917416c6222dc2c32fdf6d710bf168d3ae0ca3ea",
+      "size_bytes": 9678
+    },
+    {
+      "path": "data/planning/synthetic_marketplace/allocation_plan_manifest.json",
+      "sha256": "231bfaab1c3afae6db4a58d503997ff38f3f47da7faa246c85b6246c25b33945",
+      "size_bytes": 4128
+    },
+    {
+      "path": "data/synthetic/stages/companies/company_stage_manifest.json",
+      "sha256": "c0483fb670cef4052c2ad61919614fd9a8cff2f7144680406b3922e925ccbf35",
+      "size_bytes": 6562
+    },
+    {
+      "path": "data/planning/commercial_feasibility/commercial_plan_manifest.json",
+      "sha256": "e49ff88b819e3a1234486258b0cd6d01ca4125ef52e9161f2a24bb40f6fbecd1",
+      "size_bytes": 9853
+    },
+    {
+      "path": "data/planning/marketplace_scope/scope_manifest.json",
+      "sha256": "61eb8646677ec75438c768614fa330b22e90aabac61661488a77b80283c42e21",
+      "size_bytes": 12530
+    },
+    {
+      "path": "reports/sm04a_remediation_report.json",
+      "sha256": "9a3f8268e5f2692d60d07ca15e2e1c870c94ff2602e9f81a26a4c7638e6c81b9",
+      "size_bytes": 57147
+    },
+    {
+      "path": "configs/synthetic/commercial.scope.approval.v1.json",
+      "sha256": "5089075c02408b48968347e0fb29414c60f2346aee5814e4515836d459c1436a",
+      "size_bytes": 795
+    }
+  ],
+  "corrected_full_builds": 2,
+  "actual_generation": {
+    "permanent_product_ids": 0,
+    "permanent_listing_ids": 0,
+    "listings": 0,
+    "rfqs": 0,
+    "offers": 0
+  },
+  "authorization": {
+    "sm04b": "pending",
+    "sm05": "blocked",
+    "sm06": "blocked",
+    "backend_import": "blocked",
+    "full_marketplace": "blocked"
+  },
+  "operational": {
+    "seconds": {
+      "upstream_verification": 4.221437600208446,
+      "regression_suite": 37.910004399949685,
+      "first_build": {
+        "solver": 0.3363316000904888,
+        "independent_serialized_validation": 1.4370908001437783,
+        "serialization": 0.17486050026491284,
+        "constraint_graph": 0.00698870001360774,
+        "quantity_solving": 0.0543523000087589,
+        "price_solving": 0.15076470002532005
+      },
+      "second_build_and_comparison": 2.212968099862337,
+      "publication_and_reverification": 1.3489290000870824,
+      "total_excluding_report_write": 47.756036300212145
+    },
+    "peak_memory": {
+      "peak_bytes": 104177664,
+      "method": "Windows PeakWorkingSetSize for the benchmark process"
+    }
+  }
+}

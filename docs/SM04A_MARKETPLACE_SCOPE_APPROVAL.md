@@ -1,6 +1,6 @@
 # SM-04A-S exact scope approval package
 
-**The adaptive strategy is approved. The exact scope, product specifications, numerical configuration, and additional coverage effects await approval.** This is a planning-only proposal. It carries no permanent identifier or listing, RFQ, offer, import, or release authorization.
+**The product owner approved this exact scope and commercial configuration for corrected provisional planning.** The immutable scope files retain their original proposal metadata. The separate authorization record binds the approved package and accepted coverage effects. SM-04B and later stages require separate authorization. [Exact approval record](../configs/synthetic/commercial.scope.approval.v1.json)
 
 - Scope ID `sm04as-8f0ef371ba33b53d69293693a7127f897a11184ea9a71bf02ea7e7abba5cbf0d`
 - Scope and specification review package `sha256:c2ba6877a9b8816c2ebf80ab509eae5de81f59c3dd53f54affc38d1670df1d75`
@@ -83,7 +83,7 @@ Compared with the restriction-only ceiling, the eight exclusions remove 26 listi
 
 ## Workflow and verification
 
-Run `python -m src.synthetic.sm04a_scope verify-proposal` to reverify the proposal. The `prepare-planning` command requires an explicit exact-package approval record, then verifies the bound projection and prepares shared-solver inputs. No such record exists for this checkpoint. The numerical adapter and independent commercial checks ran on an isolated fixture only.
+Run `python -m src.synthetic.sm04a_scope verify-proposal` to reverify the immutable projection. The `prepare-planning` command reads the exact approval record and prepares shared-solver inputs. Use `python -m src.synthetic.corrected_commercial_stage validate` to inspect the corrected planning publication.
 
 After exact approval, execute two corrected provisional builds within the approved scope. Independently check every retained listing, RFQ, offer, quantity lattice, price envelope, allocation reference, observed relationship and original response count. Recompute competition, candidate compatibility, unanswered scenarios, diversity, and price/quantity boundaries using corrected scope denominators. Publish corrected planning evidence separately. Production listing authorization remains its own checkpoint.
 
@@ -91,6 +91,6 @@ AI & Data should use the scope and specification bindings before constructing ca
 
 [Scope manifest](../data/planning/marketplace_scope/scope_manifest.json) · [Run evidence](../reports/sm04a_scope_resolution_report.json) · [Product decision package](SM04A_PRODUCT_SPECIFICATION_REVIEW.md)
 
-## Proposed exact approval
+## Recorded scope decision wording
 
 > I approve scope and specification package sha256:c2ba6877a9b8816c2ebf80ab509eae5de81f59c3dd53f54affc38d1670df1d75 for 279 products, 932 retained listings, 558 retained RFQs, and 835 retained offers, and the exact configuration sha256:2c2b6438662b33e1aa65a7f705020d68043a96b5cb9d961d8ee7a28ba8a8c714. I accept the eight unresolved product exclusions and the resulting reduction of 8 competitive scenarios and 3 distinct responding suppliers from the restriction-only ceiling, along with the already accepted RFQ coverage exception for CMP-000043. I authorize corrected provisional commercial feasibility planning only.

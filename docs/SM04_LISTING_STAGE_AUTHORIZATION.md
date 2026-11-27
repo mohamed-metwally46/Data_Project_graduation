@@ -1,6 +1,6 @@
 # SM-04 stage authorization
 
-**Current commercial planning gate: `EXACT_SCOPE_APPROVAL_REQUIRED`.** The adaptive ceiling is approved, and the exact SM-04A-S proposal awaits review. SM-04B requires a later listing-only execution package. The SM-04A package below remains historical evidence and was never approved for execution. [SM-04A-S scope package](SM04A_MARKETPLACE_SCOPE_APPROVAL.md)
+**Corrected provisional planning is validated. SM-04B awaits explicit listing-only execution approval.** The historical SM-04A package below remains preserved. The current package is documented at the end of this file. [Corrected planning manifest](../data/planning/commercial_feasibility/corrected_plan_manifest.json)
 
 The user brief authorizes SM-04A and all seven Option D architecture decisions. The exact numerical configuration, plan, product and listing keys, canonical schemas, quality review and execution each require separate SM-04B approval. [Decision register](MARKETPLACE_DECISION_REGISTER.md) · [Authoritative proposal configuration](../configs/synthetic/commercial.v1.json)
 
@@ -46,3 +46,42 @@ Both independent builds matched every listed content artifact. The manifest hold
 Review the 121 flagged product profiles, the demo unit assumptions, simulated price and stock bands, candidate coverage and MOQ boundary concentration. For concepts represented as undefined example items or packages, approve or replace the demo convention before approving the exact parameters. [300-product review table](../data/planning/commercial_feasibility/plans/sm04a-32558594b63919d38b643c249ef06aa8ba882430a330c30ef2ab959fec02910d/product_commercial_review.md) ? [Commercial quality report](../data/planning/commercial_feasibility/plans/sm04a-32558594b63919d38b643c249ef06aa8ba882430a330c30ef2ab959fec02910d/commercial_quality_report.json)
 
 A future exact listing-generation package requires an approved marketplace scope, resolved commercial specifications, reviewed exact configuration, finalized identifiers and schemas, validated corrected feasibility, reproducibility, quality review, fixture/production validator readiness, and explicit listing-only authorization. No historic approval transfers.
+
+## Current exact SM-04B review package
+
+- Exact listing-only review package fingerprint `sha256:35fea3b4bab5c4b1b7b63618dde85b2a9e19495a76ea0eed172c6d4c601df5ef`
+- Corrected commercial plan `sm04ac-c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67`
+- Deterministic content fingerprint `sha256:c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67`
+- Approved scope package `sha256:c2ba6877a9b8816c2ebf80ab509eae5de81f59c3dd53f54affc38d1670df1d75`
+- Approved commercial configuration `sha256:2c2b6438662b33e1aa65a7f705020d68043a96b5cb9d961d8ee7a28ba8a8c714`
+- Corrected implementation fingerprint `sha256:85bd599db2b75953ba7389cff1c3ffda4195b257cba421e8c5b5a2641c0b29dc`
+- Identifier policy fingerprint `sha256:4d0c8f1db426cf95d8c24e3b6baecaf3975cf235cb8d50ada0a3b2f682df4c24`
+
+The canonical package is embedded in the corrected planning manifest. Its digest uses the existing compact UTF-8 JSON varargs procedure with the domain `sm04b-exact-listing-review-v1`. Both independent full builds matched every deterministic artifact below. The package binds the full validation, two build hash maps, corrected quality findings and accepted coverage exceptions.
+
+| Corrected planning artifact | Bytes | SHA-256 |
+| --- | ---: | --- |
+| [commercial_feasibility_report.json](../data/planning/commercial_feasibility/corrected_plans/sm04ac-c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67/commercial_feasibility_report.json) | 1,872 | `ace5e73cb44d6d75c3e82836b75bea80d86d79f841ab25b1ab674ebc46cc99db` |
+| [commercial_quality_report.json](../data/planning/commercial_feasibility/corrected_plans/sm04ac-c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67/commercial_quality_report.json) | 519,835 | `eaf44ef73aeb6fe466812fd4f2d73ce622ed299969cbc86f2b6ee55441e5a9c7` |
+| [listing_commercial_plan.json](../data/planning/commercial_feasibility/corrected_plans/sm04ac-c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67/listing_commercial_plan.json) | 719,638 | `97174192aa5ab6cd754fc9ff4047800572288d5b25e0f73d9c831672875f4881` |
+| [offer_commercial_plan.json](../data/planning/commercial_feasibility/corrected_plans/sm04ac-c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67/offer_commercial_plan.json) | 715,890 | `7432ad8486802b2839c0bd341fe191934ff2ca6f7e4e756cc14368ecc58a752c` |
+| [resolved_product_profiles.json](../data/planning/commercial_feasibility/corrected_plans/sm04ac-c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67/resolved_product_profiles.json) | 821,160 | `afeb221b1b186678e0efa002feccc8e7540de36c84745a44b9d7419ee1e41629` |
+| [rfq_commercial_plan.json](../data/planning/commercial_feasibility/corrected_plans/sm04ac-c0a3f73dd4605fc700801412dcd8fe2d9ccc3e1280e21d7349725f0c96942b67/rfq_commercial_plan.json) | 479,493 | `7bdb3fabbc8451acea57770221c81dca0952447911055bd5d0e6ad00968c7de5` |
+
+| Bound schema | SHA-256 |
+| --- | --- |
+| [schemas/commercial.scope.proposed.v1.schema.json](../schemas/commercial.scope.proposed.v1.schema.json) | `3102deec9442a4ce871f75f6a6643c63719c129328004b646752c71348a653a4` |
+| [schemas/commercial_config.v1.schema.json](../schemas/commercial_config.v1.schema.json) | `37e692dd7e1ce29e9f6a74d3c527c4be15ceb3adc539ff8ecfcfaf8937896243` |
+| [schemas/commercial_plan.v1.schema.json](../schemas/commercial_plan.v1.schema.json) | `1ae3096269f5d34647ba3337ab7376adcd8f32902d51ff0552cc8475f3107a2d` |
+| [schemas/commercial_remediation.v1.schema.json](../schemas/commercial_remediation.v1.schema.json) | `368cadd2dfe43dabad78655c37067769a329a13db0fd08f75c8316380729fb2e` |
+| [schemas/listing_stage.remediation.v1.schema.json](../schemas/listing_stage.remediation.v1.schema.json) | `6fbf41832a3ce92f39751b19ba3a6f00205116181aef0770e56710b36d0c5026` |
+| [schemas/marketplace_scope.v1.schema.json](../schemas/marketplace_scope.v1.schema.json) | `4396d37ec586b76e4b6ad5fa6dca24ab78780c3455d59eec7b6b1cd37215e5e5` |
+| [schemas/commercial_plan.corrected.v1.schema.json](../schemas/commercial_plan.corrected.v1.schema.json) | `e86ea661956681e67636b833174d95f91b48d470e29033b5ec8a168a16a2aec8` |
+
+Product identities use the `product` entity token and logical key `["globiq-trade-reference-2024-v1","<normalized source code>"]`. Listing identities use `listing` and `["<supplier UUID>","<product UUID>","default"]`. Both use `hierarchical_uuid5_v1` under the approved root and population. Listing display identifiers use `LST-NNNNNN` and preserve registry reservations. The package includes the exact policies and fixture examples. Permanent product and listing UUID derivation has not run.
+
+The future isolated population target is 279 canonical product references and 932 listings, registry entries and mappings. The listing split remains 792 active, 96 out of stock and 44 inactive. After explicit listing-only authorization, verify exact package bindings, implement the authorized population path, validate every production-shaped serialized record, reconcile all mappings and registry entries, independently reproduce the full listing stage, and publish only to the isolated listing pointer. Backend compatibility remains unconfirmed.
+
+> I approve SM-04B package `sha256:35fea3b4bab5c4b1b7b63618dde85b2a9e19495a76ea0eed172c6d4c601df5ef` and authorize only the isolated population of 279 canonical product references and 932 canonical listings, including their permanent product and listing UUIDs, persistent listing registry and planning-to-listing mappings, with 792 active, 96 out of stock, and 44 inactive listings. Authorization covers exact reuse of the bound plan and schemas, independent validation, reproducibility verification, and isolated listing-stage publication. RFQ and offer generation, Backend import, and full marketplace publication remain blocked.
+
+[Corrected planning manifest](../data/planning/commercial_feasibility/corrected_plan_manifest.json) · [Run evidence](../reports/sm04a_corrected_commercial_readiness.json)

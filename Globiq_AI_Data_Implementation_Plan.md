@@ -804,3 +804,7 @@ Persist the historical SM-04A commercial plan and its original bindings. Apply e
 ## SM-04A-S adaptive marketplace scope
 
 The product owner approved the adaptive strategy and its 287-product ceiling. The 47-profile review adds 39 proposals and keeps eight unresolved profiles excluded. The proposed 279-product scope has 932 original listing allocations, 558 RFQs, and 835 offers. Independent scope validation and two matching deterministic builds passed. Exact scope and specification approval, commercial values and coverage acceptance, corrected commercial feasibility, and later listing-only approval are pending. [Approval package](docs/SM04A_MARKETPLACE_SCOPE_APPROVAL.md)
+
+## SM-04A corrected commercial feasibility
+
+The product owner approved the exact 279-product MVP scope and commercial configuration. Two complete corrected builds matched byte for byte, all 76 tests passed, and independent serialized validation confirmed full fulfillment for all 835 planned offers across 558 RFQs and 932 listing plans. The isolated corrected plan is published with a pending exact SM-04B package. SM-04B, SM-05, SM-06, Backend import, and marketplace release remain blocked. [Corrected planning manifest](data/planning/commercial_feasibility/corrected_plan_manifest.json) · [SM-04B authorization](docs/SM04_LISTING_STAGE_AUTHORIZATION.md)

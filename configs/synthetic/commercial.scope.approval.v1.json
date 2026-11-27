@@ -1,0 +1,10 @@
+{
+  "scope_id": "sm04as-8f0ef371ba33b53d69293693a7127f897a11184ea9a71bf02ea7e7abba5cbf0d",
+  "eligible_codes_fingerprint": "sha256:13ab2df07cc634ec162d6269828a44e33819fd2c89f938554bf40499a6df863a",
+  "specification_fingerprint": "sha256:b900b4c01d63a8a9c20f09309ff92f2ad42d935c8caac60b1ce28462cfde07c1",
+  "configuration_fingerprint": "sha256:2c2b6438662b33e1aa65a7f705020d68043a96b5cb9d961d8ee7a28ba8a8c714",
+  "coverage_fingerprint": "sha256:9f3312ff1cbe40d0019a39074a80191cce396dad6fad955009bcd012d8e52316",
+  "package_fingerprint": "sha256:c2ba6877a9b8816c2ebf80ab509eae5de81f59c3dd53f54affc38d1670df1d75",
+  "authorize": "corrected_provisional_commercial_planning_only",
+  "authority": "Product owner explicit approval, attachment 0e5826a1-e26d-4aa4-972d-d878678b6819, sections 2 and 18"
+}
